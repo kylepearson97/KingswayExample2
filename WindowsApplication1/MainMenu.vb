@@ -23,6 +23,11 @@
         Customer.Image = My.Resources.BlueUnclick
     End Sub
 
+    Private Sub Customer_Click(sender As Object, e As EventArgs) Handles Customer.Click
+        Dim oForm As New CustomerForm
+        Hide()
+        oForm.Show()
+    End Sub
     Private Sub Reactive_MouseHover(sender As Object, e As EventArgs) Handles Reactive.MouseHover
         Reactive.Image = My.Resources.GreenClick
 
