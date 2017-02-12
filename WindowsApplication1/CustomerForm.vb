@@ -17,13 +17,17 @@
     End Sub
 
     Private Sub MembersID_TextChanged(sender As Object, e As EventArgs) Handles MembersID.TextChanged
-        Dim setRow As String
-        setRow = MembersID.Text
-   
-        Firstname.Text = KingswayFitnessDataSet1.Members.Rows(setRow).Item("Forename")
+        Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
+        Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
+        'rows 2 not working at min'
+        Firstname.Text = rows(0).Item("Forename")
+        Lastname.Text = rows(0).Item("Surname")
+
+
+
     End Sub
 
-    Private Sub Firstname_TextChanged(sender As Object, e As EventArgs) Handles Firstname.TextChanged
+    Private Sub Address1_TextChanged(sender As Object, e As EventArgs) Handles Address1.TextChanged
 
     End Sub
 End Class
