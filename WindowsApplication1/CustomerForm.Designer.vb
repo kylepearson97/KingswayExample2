@@ -22,6 +22,7 @@ Partial Class CustomerForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Logo = New System.Windows.Forms.PictureBox()
         Me.Forename = New System.Windows.Forms.Label()
         Me.Surname = New System.Windows.Forms.Label()
@@ -56,8 +57,20 @@ Partial Class CustomerForm
         Me.Lastname = New System.Windows.Forms.TextBox()
         Me.MembersID = New System.Windows.Forms.TextBox()
         Me.Address5 = New System.Windows.Forms.TextBox()
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KingswayFitnessDataSet = New WindowsApplication1.KingswayFitnessDataSet()
+        Me.MembersTableAdapter = New WindowsApplication1.KingswayFitnessDataSetTableAdapters.MembersTableAdapter()
+        Me.TableAdapterManager = New WindowsApplication1.KingswayFitnessDataSetTableAdapters.TableAdapterManager()
+        Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
+        Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
+        Me.TableAdapterManager1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MemPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KingswayFitnessDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Logo
@@ -393,6 +406,60 @@ Partial Class CustomerForm
         Me.Address5.Size = New System.Drawing.Size(168, 20)
         Me.Address5.TabIndex = 3
         '
+        'MembersBindingSource
+        '
+        Me.MembersBindingSource.DataMember = "Members"
+        Me.MembersBindingSource.DataSource = Me.KingswayFitnessDataSet
+        '
+        'KingswayFitnessDataSet
+        '
+        Me.KingswayFitnessDataSet.DataSetName = "KingswayFitnessDataSet"
+        Me.KingswayFitnessDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersTableAdapter
+        '
+        Me.MembersTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.Emergency_ContactTableAdapter = Nothing
+        Me.TableAdapterManager.InductionsTableAdapter = Nothing
+        Me.TableAdapterManager.Medical_TableTableAdapter = Nothing
+        Me.TableAdapterManager.Members_Address_TableTableAdapter = Nothing
+        Me.TableAdapterManager.Members_ReasonsTableAdapter = Nothing
+        Me.TableAdapterManager.Membership_TypeTableAdapter = Nothing
+        Me.TableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter
+        Me.TableAdapterManager.StaffTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = WindowsApplication1.KingswayFitnessDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'KingswayFitnessDataSet1
+        '
+        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
+        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource1
+        '
+        Me.MembersBindingSource1.DataMember = "Members"
+        Me.MembersBindingSource1.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'MembersTableAdapter1
+        '
+        Me.MembersTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.Emergency_ContactTableAdapter = Nothing
+        Me.TableAdapterManager1.InductionsTableAdapter = Nothing
+        Me.TableAdapterManager1.Medical_TableTableAdapter = Nothing
+        Me.TableAdapterManager1.Members_Address_TableTableAdapter = Nothing
+        Me.TableAdapterManager1.Members_ReasonsTableAdapter = Nothing
+        Me.TableAdapterManager1.Membership_TypeTableAdapter = Nothing
+        Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter1
+        Me.TableAdapterManager1.StaffTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'CustomerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -439,6 +506,10 @@ Partial Class CustomerForm
         Me.Text = "Customer Form Menu"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MemPhoto, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KingswayFitnessDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -478,4 +549,12 @@ Partial Class CustomerForm
     Friend WithEvents Lastname As TextBox
     Friend WithEvents MembersID As TextBox
     Friend WithEvents Address5 As TextBox
+    Friend WithEvents KingswayFitnessDataSet As KingswayFitnessDataSet
+    Friend WithEvents MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter As KingswayFitnessDataSetTableAdapters.MembersTableAdapter
+    Friend WithEvents TableAdapterManager As KingswayFitnessDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents KingswayFitnessDataSet1 As KingswayFitnessDataSet1
+    Friend WithEvents MembersBindingSource1 As BindingSource
+    Friend WithEvents MembersTableAdapter1 As KingswayFitnessDataSet1TableAdapters.MembersTableAdapter
+    Friend WithEvents TableAdapterManager1 As KingswayFitnessDataSet1TableAdapters.TableAdapterManager
 End Class
