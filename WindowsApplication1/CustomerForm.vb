@@ -20,18 +20,29 @@
     Private Sub MembersID_TextChanged(sender As Object, e As EventArgs) Handles MembersID.TextChanged
         Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
         Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
-        'rows 2 not working at min'
-        Firstname.Text = rows(0).Item("Forename")
-        Lastname.Text = rows(0).Item("Surname")
-        Address1.Text = rows2(0).Item("House Number/Name")
-        Address2.Text = rows2(0).Item("Road")
-        Address3.Text = rows2(0).Item("Town")
-        Address4.Text = rows2(0).Item("County")
-        Address5.Text = rows2(0).Item("Post Code")
+        If rows.Length = 0 Or rows2.Length = 0 Then
+            MsgBox("NO file found")
+        Else
+            Firstname.Text = rows(0).Item("Forename")
+            Lastname.Text = rows(0).Item("Surname")
+            Address1.Text = rows2(0).Item("House Number/Name")
+            Address2.Text = rows2(0).Item("Road")
+            Address3.Text = rows2(0).Item("Town")
+            Address4.Text = rows2(0).Item("County")
+            Address5.Text = rows2(0).Item("Post Code")
+            MemGender.Text = rows(0).Item("Gender")
+            MemDOB.Text = rows(0).Item("DOB")
+            MemMobile.Text = rows(0).Item("Mobile Number")
+            MemHome.Text = rows(0).Item("House Phone Number")
+            'jiggery to make it show true/false for status, maybe an if statement to change to Active/ Non active?
+            Dim MemStatus1 As Boolean = rows(0).Item("Membership Status")
+            MemStatus.Text = Convert.ToString(MemStatus1)
+            MemEmail.Text = rows(0).Item("Email")
+            MemRenewal.Text = rows(0).Item("Renewal Date")
+            MemDateJoin.Text = rows(0).Item("Join Date")
+            MemType.Text = rows(0).Item("Payment Method")
+        End If
 
     End Sub
 
-    Private Sub Address1_TextChanged(sender As Object, e As EventArgs) Handles Address1.TextChanged
-
-    End Sub
 End Class
