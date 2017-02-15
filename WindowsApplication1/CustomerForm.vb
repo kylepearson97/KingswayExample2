@@ -1,7 +1,5 @@
 ﻿Public Class CustomerForm
-    Private Sub Forename_Click(sender As Object, e As EventArgs) Handles Forename.Click
 
-    End Sub
 
     Private Sub CustomerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'KingswayFitnessDataSet1.Members' table. You can move, or remove it, as needed.
