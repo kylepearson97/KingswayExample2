@@ -89,10 +89,10 @@
       <DependentUpon>MainMenu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FileManagment.Designer.vb">
-      <DependentUpon>FileManagment.vb</DependentUpon>
+    <Compile Include="FileManagement.Designer.vb">
+      <DependentUpon>FileManagement.vb</DependentUpon>
     </Compile>
-    <Compile Include="FileManagment.vb">
+    <Compile Include="FileManagement.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerForm.Designer.vb">
@@ -126,8 +126,8 @@
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FileManagment.resx">
-      <DependentUpon>FileManagment.vb</DependentUpon>
+    <EmbeddedResource Include="FileManagement.resx">
+      <DependentUpon>FileManagement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.vb</DependentUpon>
