@@ -7913,7 +7913,7 @@ Namespace KingswayFitnessDataSet1TableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class Members_Address_TableTableAdapter
+    Partial Public Class Members_Address_TableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.OleDb.OleDbDataAdapter
@@ -9824,7 +9824,7 @@ Namespace KingswayFitnessDataSet1TableAdapters
         
         Private _membersTableAdapter As MembersTableAdapter
         
-        Private _members_Address_TableTableAdapter As Members_Address_TableTableAdapter
+        Private _members_Address_TableAdapter As Members_Address_TableAdapter
         
         Private _members_ReasonsTableAdapter As Members_ReasonsTableAdapter
         
@@ -9908,12 +9908,12 @@ Namespace KingswayFitnessDataSet1TableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property Members_Address_TableTableAdapter() As Members_Address_TableTableAdapter
+        Public Property Members_Address_TableAdapter() As Members_Address_TableAdapter
             Get
-                Return Me._members_Address_TableTableAdapter
+                Return Me._members_Address_TableAdapter
             End Get
             Set
-                Me._members_Address_TableTableAdapter = value
+                Me._members_Address_TableAdapter = value
             End Set
         End Property
         
@@ -9994,9 +9994,9 @@ Namespace KingswayFitnessDataSet1TableAdapters
                             AndAlso (Not (Me._membersTableAdapter.Connection) Is Nothing)) Then
                     Return Me._membersTableAdapter.Connection
                 End If
-                If ((Not (Me._members_Address_TableTableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._members_Address_TableTableAdapter.Connection) Is Nothing)) Then
-                    Return Me._members_Address_TableTableAdapter.Connection
+                If ((Not (Me._members_Address_TableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._members_Address_TableAdapter.Connection) Is Nothing)) Then
+                    Return Me._members_Address_TableAdapter.Connection
                 End If
                 If ((Not (Me._members_ReasonsTableAdapter) Is Nothing)  _
                             AndAlso (Not (Me._members_ReasonsTableAdapter.Connection) Is Nothing)) Then
@@ -10035,7 +10035,7 @@ Namespace KingswayFitnessDataSet1TableAdapters
                 If (Not (Me._membersTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
-                If (Not (Me._members_Address_TableTableAdapter) Is Nothing) Then
+                If (Not (Me._members_Address_TableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 If (Not (Me._members_ReasonsTableAdapter) Is Nothing) Then
@@ -10103,12 +10103,12 @@ Namespace KingswayFitnessDataSet1TableAdapters
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
-            If (Not (Me._members_Address_TableTableAdapter) Is Nothing) Then
+            If (Not (Me._members_Address_TableAdapter) Is Nothing) Then
                 Dim updatedRows() As Global.System.Data.DataRow = dataSet.Members_Address_Table.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._members_Address_TableTableAdapter.Update(updatedRows))
+                    result = (result + Me._members_Address_TableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -10180,11 +10180,11 @@ Namespace KingswayFitnessDataSet1TableAdapters
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
-            If (Not (Me._members_Address_TableTableAdapter) Is Nothing) Then
+            If (Not (Me._members_Address_TableAdapter) Is Nothing) Then
                 Dim addedRows() As Global.System.Data.DataRow = dataSet.Members_Address_Table.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._members_Address_TableTableAdapter.Update(addedRows))
+                    result = (result + Me._members_Address_TableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -10230,11 +10230,11 @@ Namespace KingswayFitnessDataSet1TableAdapters
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
-            If (Not (Me._members_Address_TableTableAdapter) Is Nothing) Then
+            If (Not (Me._members_Address_TableAdapter) Is Nothing) Then
                 Dim deletedRows() As Global.System.Data.DataRow = dataSet.Members_Address_Table.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._members_Address_TableTableAdapter.Update(deletedRows))
+                    result = (result + Me._members_Address_TableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -10339,8 +10339,8 @@ Namespace KingswayFitnessDataSet1TableAdapters
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
-            If ((Not (Me._members_Address_TableTableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._members_Address_TableTableAdapter.Connection) = false)) Then
+            If ((Not (Me._members_Address_TableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._members_Address_TableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
                         "tring.")
             End If
@@ -10427,13 +10427,13 @@ Namespace KingswayFitnessDataSet1TableAdapters
                         adaptersWithAcceptChangesDuringUpdate.Add(Me._membersTableAdapter.Adapter)
                     End If
                 End If
-                If (Not (Me._members_Address_TableTableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._members_Address_TableTableAdapter, Me._members_Address_TableTableAdapter.Connection)
-                    Me._members_Address_TableTableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
-                    Me._members_Address_TableTableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
-                    If Me._members_Address_TableTableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._members_Address_TableTableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._members_Address_TableTableAdapter.Adapter)
+                If (Not (Me._members_Address_TableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._members_Address_TableAdapter, Me._members_Address_TableAdapter.Connection)
+                    Me._members_Address_TableAdapter.Connection = CType(workConnection,Global.System.Data.OleDb.OleDbConnection)
+                    Me._members_Address_TableAdapter.Transaction = CType(workTransaction,Global.System.Data.OleDb.OleDbTransaction)
+                    If Me._members_Address_TableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._members_Address_TableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._members_Address_TableAdapter.Adapter)
                     End If
                 End If
                 If (Not (Me._members_ReasonsTableAdapter) Is Nothing) Then
@@ -10539,9 +10539,9 @@ Namespace KingswayFitnessDataSet1TableAdapters
                     Me._membersTableAdapter.Connection = CType(revertConnections(Me._membersTableAdapter),Global.System.Data.OleDb.OleDbConnection)
                     Me._membersTableAdapter.Transaction = Nothing
                 End If
-                If (Not (Me._members_Address_TableTableAdapter) Is Nothing) Then
-                    Me._members_Address_TableTableAdapter.Connection = CType(revertConnections(Me._members_Address_TableTableAdapter),Global.System.Data.OleDb.OleDbConnection)
-                    Me._members_Address_TableTableAdapter.Transaction = Nothing
+                If (Not (Me._members_Address_TableAdapter) Is Nothing) Then
+                    Me._members_Address_TableAdapter.Connection = CType(revertConnections(Me._members_Address_TableAdapter),Global.System.Data.OleDb.OleDbConnection)
+                    Me._members_Address_TableAdapter.Transaction = Nothing
                 End If
                 If (Not (Me._members_ReasonsTableAdapter) Is Nothing) Then
                     Me._members_ReasonsTableAdapter.Connection = CType(revertConnections(Me._members_ReasonsTableAdapter),Global.System.Data.OleDb.OleDbConnection)

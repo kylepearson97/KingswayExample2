@@ -65,6 +65,7 @@ Partial Class CustomerForm
         Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
         Me.TableAdapterManager1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager()
+        Me.Members_Address_TableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_Address_TableAdapter()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MemPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -453,12 +454,16 @@ Partial Class CustomerForm
         Me.TableAdapterManager1.Emergency_ContactTableAdapter = Nothing
         Me.TableAdapterManager1.InductionsTableAdapter = Nothing
         Me.TableAdapterManager1.Medical_TableTableAdapter = Nothing
-        Me.TableAdapterManager1.Members_Address_TableTableAdapter = Nothing
+        Me.TableAdapterManager1.Members_Address_TableAdapter = Nothing
         Me.TableAdapterManager1.Members_ReasonsTableAdapter = Nothing
         Me.TableAdapterManager1.Membership_TypeTableAdapter = Nothing
         Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter1
         Me.TableAdapterManager1.StaffTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Members_Address_TableAdapter1
+        '
+        Me.Members_Address_TableAdapter1.ClearBeforeFill = True
         '
         'CustomerForm
         '
@@ -557,4 +562,5 @@ Partial Class CustomerForm
     Friend WithEvents MembersBindingSource1 As BindingSource
     Friend WithEvents MembersTableAdapter1 As KingswayFitnessDataSet1TableAdapters.MembersTableAdapter
     Friend WithEvents TableAdapterManager1 As KingswayFitnessDataSet1TableAdapters.TableAdapterManager
+    Friend WithEvents Members_Address_TableAdapter1 As KingswayFitnessDataSet1TableAdapters.Members_Address_TableAdapter
 End Class

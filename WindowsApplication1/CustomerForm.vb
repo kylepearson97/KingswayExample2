@@ -6,6 +6,7 @@
     Private Sub CustomerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'KingswayFitnessDataSet1.Members' table. You can move, or remove it, as needed.
         Me.MembersTableAdapter1.Fill(Me.KingswayFitnessDataSet1.Members)
+        Me.Members_Address_TableAdapter1.Fill(Me.KingswayFitnessDataSet1.Members_Address_Table)
 
     End Sub
 
@@ -22,8 +23,11 @@
         'rows 2 not working at min'
         Firstname.Text = rows(0).Item("Forename")
         Lastname.Text = rows(0).Item("Surname")
-
-
+        Address1.Text = rows2(0).Item("House Number/Name")
+        Address2.Text = rows2(0).Item("Road")
+        Address3.Text = rows2(0).Item("Town")
+        Address4.Text = rows2(0).Item("County")
+        Address5.Text = rows2(0).Item("Post Code")
 
     End Sub
 
