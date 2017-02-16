@@ -43,4 +43,10 @@
 
     End Sub
 
+    Private Sub formclose(sender As Object, e As EventArgs) Handles Me.FormClosed
+
+        MainMenu.Show()
+
+    End Sub
+
 End Class
