@@ -85,4 +85,9 @@
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub Reactive_Click(sender As Object, e As EventArgs) Handles Reactive.Click
+        Me.Hide()
+        Form1.Show()
+    End Sub
 End Class
