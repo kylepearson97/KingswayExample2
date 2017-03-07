@@ -10,4 +10,8 @@
         My.Settings.NumberofCustomers = Me.NumberofCustomers.Text
         MainMenu.Show()
     End Sub
+
+    Private Sub LogoutBut_Click(sender As Object, e As EventArgs) Handles LogoutBut.Click
+        NumberofCustomers.Text = NumberofCustomers.Text - 1
+    End Sub
 End Class
