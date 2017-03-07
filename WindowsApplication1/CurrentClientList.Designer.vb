@@ -200,7 +200,7 @@ Partial Class CurrentClientList
         Me.AutoScroll = True
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(701, 738)
+        Me.ClientSize = New System.Drawing.Size(735, 738)
         Me.Controls.Add(Me.LogoutBut)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.NumberofCustomers)
