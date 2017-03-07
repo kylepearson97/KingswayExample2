@@ -78,11 +78,6 @@
     <Compile Include="CurrentClientList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Database1DataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="relasped member.Designer.vb">
       <DependentUpon>relasped member.vb</DependentUpon>
     </Compile>
@@ -112,11 +107,6 @@
     </Compile>
     <Compile Include="CustomerForm.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KingswayFitnessDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KingswayFitnessDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -155,28 +145,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Database1DataSet.xsc">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Database1DataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database1DataSet.xss">
-      <DependentUpon>Database1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="KingswayFitnessDataSet.xsc">
-      <DependentUpon>KingswayFitnessDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="KingswayFitnessDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>KingswayFitnessDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="KingswayFitnessDataSet.xss">
-      <DependentUpon>KingswayFitnessDataSet.xsd</DependentUpon>
-    </None>
     <None Include="KingswayFitnessDataSet1.xsc">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
     </None>
@@ -200,9 +168,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="KingswayFitness.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

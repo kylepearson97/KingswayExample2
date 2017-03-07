@@ -14,7 +14,7 @@
     Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.MembersBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.KingswayFitnessDataSet)
+
 
     End Sub
 
