@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrentClientList.Designer.vb">
+      <DependentUpon>CurrentClientList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentClientList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Database1DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,6 +135,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CurrentClientList.resx">
+      <DependentUpon>CurrentClientList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>
     </EmbeddedResource>
