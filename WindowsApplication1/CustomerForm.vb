@@ -15,7 +15,7 @@
 
     End Sub
 
-    Private Sub MembersID_TextChanged(sender As Object, e As EventArgs) 
+    Private Sub MembersID_TextChanged(sender As Object, e As EventArgs)
         Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
         Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
         If rows.Length = 0 Or rows2.Length = 0 Then
@@ -40,7 +40,6 @@
             MemDateJoin.Text = rows(0).Item("Join Date")
             MemType.Text = rows(0).Item("Payment Method")
         End If
-
     End Sub
 
     Private Sub formclose(sender As Object, e As EventArgs) Handles Me.FormClosed
