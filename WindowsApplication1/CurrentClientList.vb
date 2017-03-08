@@ -12,6 +12,9 @@
     End Sub
 
     Private Sub LogoutBut_Click(sender As Object, e As EventArgs) Handles LogoutBut.Click
-        NumberofCustomers.Text = NumberofCustomers.Text - 1
+        If NumberofCustomers.Text = 0 Then
+        Else
+            NumberofCustomers.Text = NumberofCustomers.Text - 1
+        End If
     End Sub
 End Class
