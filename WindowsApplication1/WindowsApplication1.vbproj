@@ -96,6 +96,12 @@
     <Compile Include="CurrentClientList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="PriceList.Designer.vb">
+      <DependentUpon>PriceList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PriceList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="relasped member.Designer.vb">
       <DependentUpon>relasped member.vb</DependentUpon>
     </Compile>
@@ -161,6 +167,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceList.resx">
+      <DependentUpon>PriceList.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
