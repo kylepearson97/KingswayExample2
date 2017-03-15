@@ -1,5 +1,11 @@
 ﻿Public Class CurrentClientList
     Private Sub formload(sender As Object, e As EventArgs) Handles Me.Load
+        'TODO: This line of code loads data into the 'KingswayFitnessDataSet1.Activity_Log' table. You can move, or remove it, as needed.
+        Me.Activity_LogTableAdapter.Fill(Me.KingswayFitnessDataSet1.Activity_Log)
+        'TODO: This line of code loads data into the 'KingswayFitnessDataSet1.Member_Activity_Log' table. You can move, or remove it, as needed.
+        Me.Member_Activity_LogTableAdapter.Fill(Me.KingswayFitnessDataSet1.Member_Activity_Log)
+        'TODO: This line of code loads data into the 'KingswayFitnessDataSet1.Staff' table. You can move, or remove it, as needed.
+        Me.StaffTableAdapter.Fill(Me.KingswayFitnessDataSet1.Staff)
         NumberofCustomers.Text = My.Settings.NumberofCustomers
     End Sub
     Private Sub NumberofCustomers_Click(sender As Object, e As EventArgs) Handles NumberofCustomers.Click
@@ -29,4 +35,5 @@
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
+
 End Class
