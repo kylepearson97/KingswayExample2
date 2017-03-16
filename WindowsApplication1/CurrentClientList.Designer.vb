@@ -85,7 +85,7 @@ Partial Class CurrentClientList
         Me.NumberofCustomers.AutoSize = True
         Me.NumberofCustomers.BackColor = System.Drawing.Color.Transparent
         Me.NumberofCustomers.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumberofCustomers.Location = New System.Drawing.Point(292, 48)
+        Me.NumberofCustomers.Location = New System.Drawing.Point(280, 48)
         Me.NumberofCustomers.Name = "NumberofCustomers"
         Me.NumberofCustomers.Size = New System.Drawing.Size(57, 63)
         Me.NumberofCustomers.TabIndex = 7
@@ -94,7 +94,7 @@ Partial Class CurrentClientList
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(507, 41)
+        Me.Button1.Location = New System.Drawing.Point(507, 59)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(108, 40)
         Me.Button1.TabIndex = 14
