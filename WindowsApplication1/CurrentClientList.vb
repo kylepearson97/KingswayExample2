@@ -3,9 +3,9 @@
         'TODO: This line of code loads data into the 'KingswayFitnessDataSet1.Activity_Log' table. You can move, or remove it, as needed.
         Me.Activity_LogTableAdapter.Fill(Me.KingswayFitnessDataSet1.Activity_Log)
         'TODO: This line of code loads data into the 'KingswayFitnessDataSet1.Member_Activity_Log' table. You can move, or remove it, as needed.
-        Me.Member_Activity_LogTableAdapter.Fill(Me.KingswayFitnessDataSet1.Member_Activity_Log)
+        Me.Member_Activity_LogTableAdapter1.Fill(Me.KingswayFitnessDataSet1.Member_Activity_Log)
         'TODO: This line of code loads data into the 'KingswayFitnessDataSet1.Staff' table. You can move, or remove it, as needed.
-        Me.StaffTableAdapter.Fill(Me.KingswayFitnessDataSet1.Staff)
+        Me.StaffTableAdapter1.Fill(Me.KingswayFitnessDataSet1.Staff)
         NumberofCustomers.Text = My.Settings.NumberofCustomers
     End Sub
     Private Sub NumberofCustomers_Click(sender As Object, e As EventArgs) Handles NumberofCustomers.Click
@@ -36,4 +36,7 @@
 
     End Sub
 
+    Private Sub CurrentClient_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+
+    End Sub
 End Class
