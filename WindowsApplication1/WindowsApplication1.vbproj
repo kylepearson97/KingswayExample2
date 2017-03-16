@@ -201,7 +201,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="KingswayFitness.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Logo.png" />
     <None Include="Resources\YellowUnclick.jpg" />
