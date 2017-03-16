@@ -33,17 +33,18 @@ Partial Class CurrentClientList
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CurrentClient = New System.Windows.Forms.DataGridView()
+        Me.MembersID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Forename = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Surname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeLoggedIn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Logout = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ActivityLogBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.KingswayFitnessDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Activity_LogTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Activity_LogTableAdapter()
         Me.StaffTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.StaffTableAdapter()
         Me.Member_Activity_LogTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter()
-        Me.MembersID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Forename = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Surname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeLoggedIn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Logout = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CurrentClient, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivityLogBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -153,33 +154,6 @@ Partial Class CurrentClientList
         Me.CurrentClient.Size = New System.Drawing.Size(674, 514)
         Me.CurrentClient.TabIndex = 17
         '
-        'ActivityLogBindingSource
-        '
-        Me.ActivityLogBindingSource.DataMember = "Activity Log"
-        Me.ActivityLogBindingSource.DataSource = Me.KingswayFitnessDataSet1
-        '
-        'KingswayFitnessDataSet1
-        '
-        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
-        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'KingswayFitnessDataSet1BindingSource
-        '
-        Me.KingswayFitnessDataSet1BindingSource.DataSource = Me.KingswayFitnessDataSet1
-        Me.KingswayFitnessDataSet1BindingSource.Position = 0
-        '
-        'Activity_LogTableAdapter
-        '
-        Me.Activity_LogTableAdapter.ClearBeforeFill = True
-        '
-        'StaffTableAdapter1
-        '
-        Me.StaffTableAdapter1.ClearBeforeFill = True
-        '
-        'Member_Activity_LogTableAdapter1
-        '
-        Me.Member_Activity_LogTableAdapter1.ClearBeforeFill = True
-        '
         'MembersID
         '
         Me.MembersID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
@@ -210,6 +184,37 @@ Partial Class CurrentClientList
         Me.Logout.HeaderText = "Logout"
         Me.Logout.Name = "Logout"
         Me.Logout.UseColumnTextForButtonValue = True
+        '
+        'ActivityLogBindingSource
+        '
+        Me.ActivityLogBindingSource.DataMember = "Activity Log"
+        Me.ActivityLogBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'KingswayFitnessDataSet1
+        '
+        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
+        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'KingswayFitnessDataSet1BindingSource
+        '
+        Me.KingswayFitnessDataSet1BindingSource.DataSource = Me.KingswayFitnessDataSet1
+        Me.KingswayFitnessDataSet1BindingSource.Position = 0
+        '
+        'Activity_LogTableAdapter
+        '
+        Me.Activity_LogTableAdapter.ClearBeforeFill = True
+        '
+        'StaffTableAdapter1
+        '
+        Me.StaffTableAdapter1.ClearBeforeFill = True
+        '
+        'Member_Activity_LogTableAdapter1
+        '
+        Me.Member_Activity_LogTableAdapter1.ClearBeforeFill = True
+        '
+        'MembersTableAdapter1
+        '
+        Me.MembersTableAdapter1.ClearBeforeFill = True
         '
         'CurrentClientList
         '
@@ -259,4 +264,5 @@ Partial Class CurrentClientList
     Friend WithEvents Surname As DataGridViewTextBoxColumn
     Friend WithEvents TimeLoggedIn As DataGridViewTextBoxColumn
     Friend WithEvents Logout As DataGridViewButtonColumn
+    Friend WithEvents MembersTableAdapter1 As KingswayFitnessDataSet1TableAdapters.MembersTableAdapter
 End Class
