@@ -34,16 +34,16 @@
 
     Private Sub CurrentClient_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles CurrentClient.CellContentClick
 
-        ' Dim connstring As String = My.Settings.KingswayFitnessConnectionString1
-        'Dim conn As New OleDb.OleDbConnection
-        'Dim cmd As New OleDb.OleDbCommand
-        'conn.ConnectionString = My.Settings.KingswayFitnessConnectionString1
-        'conn.Open()
-        'Dim Sql As String
-        'Sql = "INSERT INTO [Member Activity Log](MemberID , [Time Logged out] , [Time Logged in])  VALUES('" & CurrentClient.CurrentRow.Cells.Item(0).Value & "','" & CurrentClient.CurrentRow.Cells.Item(3).Value & "','" & DateTime.Now.ToString("yyyy/MM/dd HH:mm") & "')"
-        'cmd = New OleDb.OleDbCommand(Sql, conn)
-        'MsgBox(cmd.ExecuteNonQuery())
-        'conn.Close()
+        Dim connstring As String = My.Settings.KingswayFitnessConnectionString1
+        Dim conn As New OleDb.OleDbConnection
+        Dim cmd As New OleDb.OleDbCommand
+        conn.ConnectionString = My.Settings.KingswayFitnessConnectionString1
+        conn.Open()
+        Dim Sql As String
+        Sql = "INSERT INTO [Member Activity Log](MemberID , [Time Logged out] , [Time Logged in])  VALUES('" & CurrentClient.CurrentRow.Cells.Item(0).Value & "','" & CurrentClient.CurrentRow.Cells.Item(3).Value & "','" & DateTime.Now.ToString("yyyy/MM/dd HH:mm") & "')"
+        cmd = New OleDb.OleDbCommand(Sql, conn)
+        MsgBox(cmd.ExecuteNonQuery())
+        conn.Close()
         MsgBox("User Logged Out")
         CurrentClient.Rows.Remove(CurrentClient.CurrentRow)
         NumberofCustomers.Text = (CurrentClient.RowCount.ToString - 1)
