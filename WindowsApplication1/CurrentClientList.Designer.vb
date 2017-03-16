@@ -23,8 +23,8 @@ Partial Class CurrentClientList
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.WelcomeMessage = New System.Windows.Forms.Label()
         Me.NumberofCustomers = New System.Windows.Forms.Label()
@@ -37,13 +37,13 @@ Partial Class CurrentClientList
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.KingswayFitnessDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Activity_LogTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Activity_LogTableAdapter()
-        Me.TimeLoggedInDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeLoggedOutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SurnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ForenameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MemberIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StaffTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.StaffTableAdapter()
         Me.Member_Activity_LogTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter()
+        Me.MembersID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Forename = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Surname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeLoggedIn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Logout = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CurrentClient, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivityLogBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,28 +127,26 @@ Partial Class CurrentClientList
         '
         'CurrentClient
         '
-        Me.CurrentClient.AutoGenerateColumns = False
         Me.CurrentClient.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.CurrentClient.BorderStyle = System.Windows.Forms.BorderStyle.None
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.CurrentClient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.CurrentClient.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.CurrentClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.CurrentClient.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MemberIDDataGridViewTextBoxColumn, Me.ForenameDataGridViewTextBoxColumn, Me.SurnameDataGridViewTextBoxColumn, Me.TimeLoggedOutDataGridViewTextBoxColumn, Me.TimeLoggedInDataGridViewTextBoxColumn})
-        Me.CurrentClient.DataSource = Me.ActivityLogBindingSource
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.CurrentClient.DefaultCellStyle = DataGridViewCellStyle4
+        Me.CurrentClient.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MembersID, Me.Forename, Me.Surname, Me.TimeLoggedIn, Me.Logout})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.CurrentClient.DefaultCellStyle = DataGridViewCellStyle2
         Me.CurrentClient.GridColor = System.Drawing.SystemColors.ButtonShadow
         Me.CurrentClient.Location = New System.Drawing.Point(2, 150)
         Me.CurrentClient.Name = "CurrentClient"
@@ -174,42 +172,6 @@ Partial Class CurrentClientList
         '
         Me.Activity_LogTableAdapter.ClearBeforeFill = True
         '
-        'TimeLoggedInDataGridViewTextBoxColumn
-        '
-        Me.TimeLoggedInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TimeLoggedInDataGridViewTextBoxColumn.DataPropertyName = "Time Logged in"
-        Me.TimeLoggedInDataGridViewTextBoxColumn.HeaderText = "Time Logged in"
-        Me.TimeLoggedInDataGridViewTextBoxColumn.Name = "TimeLoggedInDataGridViewTextBoxColumn"
-        '
-        'TimeLoggedOutDataGridViewTextBoxColumn
-        '
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.DataPropertyName = "Time Logged out"
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.HeaderText = "Time Logged out"
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.Name = "TimeLoggedOutDataGridViewTextBoxColumn"
-        '
-        'SurnameDataGridViewTextBoxColumn
-        '
-        Me.SurnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.SurnameDataGridViewTextBoxColumn.DataPropertyName = "Surname"
-        Me.SurnameDataGridViewTextBoxColumn.HeaderText = "Surname"
-        Me.SurnameDataGridViewTextBoxColumn.Name = "SurnameDataGridViewTextBoxColumn"
-        '
-        'ForenameDataGridViewTextBoxColumn
-        '
-        Me.ForenameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ForenameDataGridViewTextBoxColumn.DataPropertyName = "Forename"
-        Me.ForenameDataGridViewTextBoxColumn.HeaderText = "Forename"
-        Me.ForenameDataGridViewTextBoxColumn.Name = "ForenameDataGridViewTextBoxColumn"
-        '
-        'MemberIDDataGridViewTextBoxColumn
-        '
-        Me.MemberIDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.MemberIDDataGridViewTextBoxColumn.DataPropertyName = "MemberID"
-        Me.MemberIDDataGridViewTextBoxColumn.HeaderText = "MemberID"
-        Me.MemberIDDataGridViewTextBoxColumn.Name = "MemberIDDataGridViewTextBoxColumn"
-        Me.MemberIDDataGridViewTextBoxColumn.Width = 96
-        '
         'StaffTableAdapter1
         '
         Me.StaffTableAdapter1.ClearBeforeFill = True
@@ -217,6 +179,37 @@ Partial Class CurrentClientList
         'Member_Activity_LogTableAdapter1
         '
         Me.Member_Activity_LogTableAdapter1.ClearBeforeFill = True
+        '
+        'MembersID
+        '
+        Me.MembersID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.MembersID.HeaderText = "Members ID"
+        Me.MembersID.Name = "MembersID"
+        '
+        'Forename
+        '
+        Me.Forename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Forename.HeaderText = "Forename"
+        Me.Forename.Name = "Forename"
+        '
+        'Surname
+        '
+        Me.Surname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Surname.HeaderText = "Surname"
+        Me.Surname.Name = "Surname"
+        '
+        'TimeLoggedIn
+        '
+        Me.TimeLoggedIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TimeLoggedIn.HeaderText = "Time Logged In"
+        Me.TimeLoggedIn.Name = "TimeLoggedIn"
+        '
+        'Logout
+        '
+        Me.Logout.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Logout.HeaderText = "Logout"
+        Me.Logout.Name = "Logout"
+        Me.Logout.UseColumnTextForButtonValue = True
         '
         'CurrentClientList
         '
@@ -259,11 +252,11 @@ Partial Class CurrentClientList
     Friend WithEvents KingswayFitnessDataSet1 As KingswayFitnessDataSet1
     Friend WithEvents ActivityLogBindingSource As BindingSource
     Friend WithEvents Activity_LogTableAdapter As KingswayFitnessDataSet1TableAdapters.Activity_LogTableAdapter
-    Friend WithEvents MemberIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ForenameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SurnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TimeLoggedOutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TimeLoggedInDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StaffTableAdapter1 As KingswayFitnessDataSet1TableAdapters.StaffTableAdapter
     Friend WithEvents Member_Activity_LogTableAdapter1 As KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter
+    Friend WithEvents MembersID As DataGridViewTextBoxColumn
+    Friend WithEvents Forename As DataGridViewTextBoxColumn
+    Friend WithEvents Surname As DataGridViewTextBoxColumn
+    Friend WithEvents TimeLoggedIn As DataGridViewTextBoxColumn
+    Friend WithEvents Logout As DataGridViewButtonColumn
 End Class
