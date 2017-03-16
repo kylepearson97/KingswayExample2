@@ -29,8 +29,6 @@
     End Sub
 
     Private Sub TextBox1_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
-        Dim table As Hashtable = New Hashtable
-
         CurrentClient.Rows.Add("1", "Sam")
 
     End Sub
