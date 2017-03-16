@@ -1,6 +1,6 @@
 ﻿Public Class CurrentClientList
     Private Sub formload(sender As Object, e As EventArgs) Handles Me.Load
-        NumberofCustomers.Text = My.Settings.NumberofCustomers
+        NumberofCustomers.Text = (CurrentClient.RowCount.ToString - 1)
         Me.MembersTableAdapter1.Fill(Me.KingswayFitnessDataSet1.Members)
     End Sub
     Private Sub NumberofCustomers_Click(sender As Object, e As EventArgs) Handles NumberofCustomers.Click
@@ -12,16 +12,7 @@
         MainMenu.Show()
     End Sub
 
-    Private Sub LogoutBut_Click(sender As Object, e As EventArgs) Handles LogoutBut.Click
-        If NumberofCustomers.Text = 0 Then
-        Else
-            NumberofCustomers.Text = NumberofCustomers.Text - 1
-        End If
-    End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-    End Sub
 
     Private Sub TextBox1_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then

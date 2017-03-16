@@ -4,6 +4,8 @@
 End Class
 
 Namespace KingswayFitnessDataSet1TableAdapters
+    Partial Public Class tempdataTableAdapter
+    End Class
 
     Partial Public Class MembersTableAdapter
     End Class

@@ -96,6 +96,9 @@
     <Compile Include="CurrentClientList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="KingswayFitnessDataSet1.vb">
+      <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PriceList.Designer.vb">
       <DependentUpon>PriceList.vb</DependentUpon>
     </Compile>

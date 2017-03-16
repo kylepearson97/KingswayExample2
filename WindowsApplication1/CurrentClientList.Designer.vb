@@ -28,7 +28,6 @@ Partial Class CurrentClientList
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.WelcomeMessage = New System.Windows.Forms.Label()
         Me.NumberofCustomers = New System.Windows.Forms.Label()
-        Me.LogoutBut = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -45,11 +44,15 @@ Partial Class CurrentClientList
         Me.StaffTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.StaffTableAdapter()
         Me.Member_Activity_LogTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter()
         Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
+        Me.TempdataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TempdataTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.tempdataTableAdapter()
+        Me.TempdataTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.tempdataTableAdapter()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CurrentClient, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ActivityLogBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KingswayFitnessDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TempdataBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -87,16 +90,6 @@ Partial Class CurrentClientList
         Me.NumberofCustomers.Size = New System.Drawing.Size(57, 63)
         Me.NumberofCustomers.TabIndex = 7
         Me.NumberofCustomers.Text = "0"
-        '
-        'LogoutBut
-        '
-        Me.LogoutBut.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LogoutBut.Location = New System.Drawing.Point(507, 84)
-        Me.LogoutBut.Name = "LogoutBut"
-        Me.LogoutBut.Size = New System.Drawing.Size(108, 40)
-        Me.LogoutBut.TabIndex = 13
-        Me.LogoutBut.Text = "Logout"
-        Me.LogoutBut.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -216,6 +209,19 @@ Partial Class CurrentClientList
         '
         Me.MembersTableAdapter1.ClearBeforeFill = True
         '
+        'TempdataBindingSource
+        '
+        Me.TempdataBindingSource.DataMember = "tempdata"
+        Me.TempdataBindingSource.DataSource = Me.KingswayFitnessDataSet1BindingSource
+        '
+        'TempdataTableAdapter
+        '
+        Me.TempdataTableAdapter.ClearBeforeFill = True
+        '
+        'TempdataTableAdapter1
+        '
+        Me.TempdataTableAdapter1.ClearBeforeFill = True
+        '
         'CurrentClientList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -228,7 +234,6 @@ Partial Class CurrentClientList
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.LogoutBut)
         Me.Controls.Add(Me.NumberofCustomers)
         Me.Controls.Add(Me.WelcomeMessage)
         Me.Controls.Add(Me.PictureBox1)
@@ -240,6 +245,7 @@ Partial Class CurrentClientList
         CType(Me.ActivityLogBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KingswayFitnessDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TempdataBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -248,7 +254,6 @@ Partial Class CurrentClientList
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents WelcomeMessage As Label
     Friend WithEvents NumberofCustomers As Label
-    Friend WithEvents LogoutBut As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
@@ -265,4 +270,7 @@ Partial Class CurrentClientList
     Friend WithEvents TimeLoggedIn As DataGridViewTextBoxColumn
     Friend WithEvents Logout As DataGridViewButtonColumn
     Friend WithEvents MembersTableAdapter1 As KingswayFitnessDataSet1TableAdapters.MembersTableAdapter
+    Friend WithEvents TempdataBindingSource As BindingSource
+    Friend WithEvents TempdataTableAdapter As KingswayFitnessDataSet1TableAdapters.tempdataTableAdapter
+    Friend WithEvents TempdataTableAdapter1 As KingswayFitnessDataSet1TableAdapters.tempdataTableAdapter
 End Class
