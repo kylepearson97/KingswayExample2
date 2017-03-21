@@ -10,6 +10,11 @@
         Me.Members_Address_TableAdapter1.Fill(Me.KingswayFitnessDataSet1.Members_Address_Table)
 
     End Sub
+    Private Sub formclose(sender As Object, e As EventArgs) Handles Me.FormClosed
+
+        MainMenu.Show()
+
+    End Sub
 
     Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
