@@ -27,7 +27,7 @@ Partial Class MainMenu
         Me.Reactive = New System.Windows.Forms.PictureBox()
         Me.Renewal = New System.Windows.Forms.PictureBox()
         Me.Lapsed = New System.Windows.Forms.PictureBox()
-        Me.Price = New System.Windows.Forms.PictureBox()
+        Me.Membership = New System.Windows.Forms.PictureBox()
         Me.Reports = New System.Windows.Forms.PictureBox()
         Me.Routine = New System.Windows.Forms.PictureBox()
         Me.Logo = New System.Windows.Forms.PictureBox()
@@ -37,7 +37,7 @@ Partial Class MainMenu
         CType(Me.Reactive, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Renewal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Lapsed, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Price, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Membership, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Reports, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Routine, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,16 +98,16 @@ Partial Class MainMenu
         Me.Lapsed.TabIndex = 0
         Me.Lapsed.TabStop = False
         '
-        'Price
+        'Membership
         '
-        Me.Price.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Price.Image = Global.WindowsApplication1.My.Resources.Resources.RedUnclick
-        Me.Price.Location = New System.Drawing.Point(218, 369)
-        Me.Price.Name = "Price"
-        Me.Price.Size = New System.Drawing.Size(200, 120)
-        Me.Price.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.Price.TabIndex = 0
-        Me.Price.TabStop = False
+        Me.Membership.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Membership.Image = Global.WindowsApplication1.My.Resources.Resources.RedUnclick
+        Me.Membership.Location = New System.Drawing.Point(218, 369)
+        Me.Membership.Name = "Membership"
+        Me.Membership.Size = New System.Drawing.Size(200, 120)
+        Me.Membership.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.Membership.TabIndex = 0
+        Me.Membership.TabStop = False
         '
         'Reports
         '
@@ -151,9 +151,9 @@ Partial Class MainMenu
         Me.WelcomeMessage.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WelcomeMessage.Location = New System.Drawing.Point(151, 160)
         Me.WelcomeMessage.Name = "WelcomeMessage"
-        Me.WelcomeMessage.Size = New System.Drawing.Size(574, 31)
+        Me.WelcomeMessage.Size = New System.Drawing.Size(508, 31)
         Me.WelcomeMessage.TabIndex = 3
-        Me.WelcomeMessage.Text = "Welcome to Kingsway Fitness New System"
+        Me.WelcomeMessage.Text = "Welcome to Kingsway Fitness System"
         '
         'MainMenu
         '
@@ -168,7 +168,7 @@ Partial Class MainMenu
         Me.Controls.Add(Me.Renewal)
         Me.Controls.Add(Me.Reports)
         Me.Controls.Add(Me.Reactive)
-        Me.Controls.Add(Me.Price)
+        Me.Controls.Add(Me.Membership)
         Me.Controls.Add(Me.Customer)
         Me.Controls.Add(Me.Lapsed)
         Me.Controls.Add(Me.FileM)
@@ -181,7 +181,7 @@ Partial Class MainMenu
         CType(Me.Reactive, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Renewal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Lapsed, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Price, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Membership, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Reports, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Routine, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
@@ -195,7 +195,7 @@ Partial Class MainMenu
     Friend WithEvents Reactive As PictureBox
     Friend WithEvents Renewal As PictureBox
     Friend WithEvents Lapsed As PictureBox
-    Friend WithEvents Price As PictureBox
+    Friend WithEvents Membership As PictureBox
     Friend WithEvents Reports As PictureBox
     Friend WithEvents Routine As PictureBox
     Friend WithEvents Logo As PictureBox

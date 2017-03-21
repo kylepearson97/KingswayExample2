@@ -55,13 +55,13 @@
         Lapsed.Image = My.Resources.YellowUnclick
     End Sub
 
-    Private Sub Price_MouseHover(sender As Object, e As EventArgs) Handles Price.MouseHover
-        Price.Image = My.Resources.RedClick
+    Private Sub Price_MouseHover(sender As Object, e As EventArgs) Handles Membership.MouseHover
+        Membership.Image = My.Resources.RedClick
 
     End Sub
 
-    Private Sub Price_MouseLeave(sender As Object, e As EventArgs) Handles Price.MouseLeave
-        Price.Image = My.Resources.RedUnclick
+    Private Sub Price_MouseLeave(sender As Object, e As EventArgs) Handles Membership.MouseLeave
+        Membership.Image = My.Resources.RedUnclick
     End Sub
 
     Private Sub Reports_MouseHover(sender As Object, e As EventArgs) Handles Reports.MouseHover
@@ -88,6 +88,12 @@
 
     Private Sub Reactive_Click(sender As Object, e As EventArgs) Handles Reactive.Click
         Me.Hide()
-        Form1.Show()
+        ActivityLogForm.Show()
+    End Sub
+
+    Private Sub Membership_Click(sender As Object, e As EventArgs) Handles Membership.Click
+        Dim oForm As New MembershipType
+        Hide()
+        oForm.Show()
     End Sub
 End Class

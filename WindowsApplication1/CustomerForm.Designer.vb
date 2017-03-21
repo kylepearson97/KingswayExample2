@@ -22,16 +22,17 @@ Partial Class CustomerForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Logo = New System.Windows.Forms.PictureBox()
-        Me.MembersBindingSource = New System.Windows.Forms.BindingSource()
-
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
-        Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource()
+        Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
         Me.TableAdapterManager1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager()
         Me.Members_Address_TableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_Address_TableAdapter()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.CustomerShow = New System.Windows.Forms.TabControl()
         Me.Personal = New System.Windows.Forms.TabPage()
+        Me.ActivityLogBut = New System.Windows.Forms.Button()
         Me.MemberID = New System.Windows.Forms.Label()
         Me.MemPhoto = New System.Windows.Forms.PictureBox()
         Me.MemType = New System.Windows.Forms.TextBox()
@@ -64,65 +65,64 @@ Partial Class CustomerForm
         Me.Gender = New System.Windows.Forms.Label()
         Me.DOB = New System.Windows.Forms.Label()
         Me.Medical = New System.Windows.Forms.TabPage()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.OtherGMCB = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.DocNoteReq = New System.Windows.Forms.Label()
+        Me.DocNotePres = New System.Windows.Forms.Label()
         Me.OperCB = New System.Windows.Forms.CheckBox()
         Me.PregCB = New System.Windows.Forms.CheckBox()
         Me.BackCB = New System.Windows.Forms.CheckBox()
         Me.JointCB = New System.Windows.Forms.CheckBox()
         Me.SmokeCB = New System.Windows.Forms.CheckBox()
-        Me.InjuryACB = New System.Windows.Forms.CheckBox()
         Me.BloodPCB = New System.Windows.Forms.CheckBox()
         Me.DiaCB = New System.Windows.Forms.CheckBox()
-        Me.OtherGFACB = New System.Windows.Forms.CheckBox()
         Me.EpiCB = New System.Windows.Forms.CheckBox()
         Me.AstCB = New System.Windows.Forms.CheckBox()
-        Me.FitterCB = New System.Windows.Forms.CheckBox()
         Me.ChestCB = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.WeightRCB = New System.Windows.Forms.CheckBox()
         Me.FaintCB = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.BodyBCB = New System.Windows.Forms.CheckBox()
         Me.HeartCB = New System.Windows.Forms.CheckBox()
-        Me.OtherDescGFA = New System.Windows.Forms.TextBox()
         Me.OtherDescGM = New System.Windows.Forms.TextBox()
         Me.OtherGM = New System.Windows.Forms.Label()
         Me.Dia = New System.Windows.Forms.Label()
         Me.Oper = New System.Windows.Forms.Label()
         Me.Back = New System.Windows.Forms.Label()
         Me.Ast = New System.Windows.Forms.Label()
-        Me.DocNotePres = New System.Windows.Forms.Label()
-        Me.InjuryA = New System.Windows.Forms.Label()
         Me.BloodP = New System.Windows.Forms.Label()
         Me.Preg = New System.Windows.Forms.Label()
-        Me.DocNoteReq = New System.Windows.Forms.Label()
         Me.Joint = New System.Windows.Forms.Label()
-        Me.Fitter = New System.Windows.Forms.Label()
         Me.Chest = New System.Windows.Forms.Label()
         Me.Smoke = New System.Windows.Forms.Label()
+        Me.Epi = New System.Windows.Forms.Label()
+        Me.Faint = New System.Windows.Forms.Label()
+        Me.GM = New System.Windows.Forms.Label()
+        Me.Heart = New System.Windows.Forms.Label()
+        Me.Induction = New System.Windows.Forms.TabPage()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.GFP = New System.Windows.Forms.Label()
+        Me.InjuryACB = New System.Windows.Forms.CheckBox()
+        Me.FitterCB = New System.Windows.Forms.CheckBox()
+        Me.WeightRCB = New System.Windows.Forms.CheckBox()
+        Me.BodyBCB = New System.Windows.Forms.CheckBox()
+        Me.OtherDescGFA = New System.Windows.Forms.TextBox()
+        Me.InjuryA = New System.Windows.Forms.Label()
+        Me.Fitter = New System.Windows.Forms.Label()
         Me.OtherGFA = New System.Windows.Forms.Label()
         Me.InducterName = New System.Windows.Forms.Label()
-        Me.Epi = New System.Windows.Forms.Label()
         Me.WeightR = New System.Windows.Forms.Label()
-        Me.Faint = New System.Windows.Forms.Label()
         Me.GFA = New System.Windows.Forms.Label()
         Me.Induct = New System.Windows.Forms.Label()
-        Me.GM = New System.Windows.Forms.Label()
         Me.BodyB = New System.Windows.Forms.Label()
-        Me.Heart = New System.Windows.Forms.Label()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.CustomerFormLab = New System.Windows.Forms.Label()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl1.SuspendLayout()
+        Me.CustomerShow.SuspendLayout()
         Me.Personal.SuspendLayout()
         CType(Me.MemPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Medical.SuspendLayout()
+        Me.Induction.SuspendLayout()
         Me.SuspendLayout()
         '
         'Logo
@@ -139,9 +139,6 @@ Partial Class CustomerForm
         'MembersBindingSource
         '
         Me.MembersBindingSource.DataMember = "Members"
-
-        '
-
         '
         'KingswayFitnessDataSet1
         '
@@ -163,32 +160,35 @@ Partial Class CustomerForm
         Me.TableAdapterManager1.Emergency_ContactTableAdapter = Nothing
         Me.TableAdapterManager1.InductionsTableAdapter = Nothing
         Me.TableAdapterManager1.Medical_TableTableAdapter = Nothing
+        Me.TableAdapterManager1.Member_Activity_LogTableAdapter = Nothing
         Me.TableAdapterManager1.Members_Address_TableAdapter = Nothing
         Me.TableAdapterManager1.Members_ReasonsTableAdapter = Nothing
         Me.TableAdapterManager1.Membership_TypeTableAdapter = Nothing
         Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter1
         Me.TableAdapterManager1.StaffTableAdapter = Nothing
+        Me.TableAdapterManager1.tempdataTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Members_Address_TableAdapter1
         '
         Me.Members_Address_TableAdapter1.ClearBeforeFill = True
         '
-        'TabControl1
+        'CustomerShow
         '
-        Me.TabControl1.Controls.Add(Me.Personal)
-        Me.TabControl1.Controls.Add(Me.Medical)
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(2, 126)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(718, 442)
-        Me.TabControl1.TabIndex = 5
+        Me.CustomerShow.Controls.Add(Me.Personal)
+        Me.CustomerShow.Controls.Add(Me.Medical)
+        Me.CustomerShow.Controls.Add(Me.Induction)
+        Me.CustomerShow.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomerShow.Location = New System.Drawing.Point(2, 126)
+        Me.CustomerShow.Name = "CustomerShow"
+        Me.CustomerShow.SelectedIndex = 0
+        Me.CustomerShow.Size = New System.Drawing.Size(718, 442)
+        Me.CustomerShow.TabIndex = 5
         '
         'Personal
         '
         Me.Personal.BackColor = System.Drawing.Color.Transparent
+        Me.Personal.Controls.Add(Me.ActivityLogBut)
         Me.Personal.Controls.Add(Me.MemberID)
         Me.Personal.Controls.Add(Me.MemPhoto)
         Me.Personal.Controls.Add(Me.MemType)
@@ -226,6 +226,15 @@ Partial Class CustomerForm
         Me.Personal.Size = New System.Drawing.Size(710, 409)
         Me.Personal.TabIndex = 0
         Me.Personal.Text = "Personal Details"
+        '
+        'ActivityLogBut
+        '
+        Me.ActivityLogBut.Location = New System.Drawing.Point(359, 352)
+        Me.ActivityLogBut.Name = "ActivityLogBut"
+        Me.ActivityLogBut.Size = New System.Drawing.Size(158, 49)
+        Me.ActivityLogBut.TabIndex = 4
+        Me.ActivityLogBut.Text = "View Activity Log"
+        Me.ActivityLogBut.UseVisualStyleBackColor = True
         '
         'MemberID
         '
@@ -533,54 +542,36 @@ Partial Class CustomerForm
         'Medical
         '
         Me.Medical.BackColor = System.Drawing.Color.Transparent
-        Me.Medical.Controls.Add(Me.TextBox2)
-        Me.Medical.Controls.Add(Me.TextBox1)
-        Me.Medical.Controls.Add(Me.Label1)
-        Me.Medical.Controls.Add(Me.OtherGMCB)
+        Me.Medical.Controls.Add(Me.CheckBox2)
+        Me.Medical.Controls.Add(Me.CheckBox1)
+        Me.Medical.Controls.Add(Me.DocNoteReq)
+        Me.Medical.Controls.Add(Me.DocNotePres)
         Me.Medical.Controls.Add(Me.OperCB)
         Me.Medical.Controls.Add(Me.PregCB)
         Me.Medical.Controls.Add(Me.BackCB)
         Me.Medical.Controls.Add(Me.JointCB)
         Me.Medical.Controls.Add(Me.SmokeCB)
-        Me.Medical.Controls.Add(Me.InjuryACB)
         Me.Medical.Controls.Add(Me.BloodPCB)
         Me.Medical.Controls.Add(Me.DiaCB)
-        Me.Medical.Controls.Add(Me.OtherGFACB)
         Me.Medical.Controls.Add(Me.EpiCB)
         Me.Medical.Controls.Add(Me.AstCB)
-        Me.Medical.Controls.Add(Me.FitterCB)
         Me.Medical.Controls.Add(Me.ChestCB)
-        Me.Medical.Controls.Add(Me.CheckBox2)
-        Me.Medical.Controls.Add(Me.WeightRCB)
         Me.Medical.Controls.Add(Me.FaintCB)
-        Me.Medical.Controls.Add(Me.CheckBox1)
-        Me.Medical.Controls.Add(Me.BodyBCB)
         Me.Medical.Controls.Add(Me.HeartCB)
-        Me.Medical.Controls.Add(Me.OtherDescGFA)
         Me.Medical.Controls.Add(Me.OtherDescGM)
         Me.Medical.Controls.Add(Me.OtherGM)
         Me.Medical.Controls.Add(Me.Dia)
         Me.Medical.Controls.Add(Me.Oper)
         Me.Medical.Controls.Add(Me.Back)
         Me.Medical.Controls.Add(Me.Ast)
-        Me.Medical.Controls.Add(Me.DocNotePres)
-        Me.Medical.Controls.Add(Me.InjuryA)
         Me.Medical.Controls.Add(Me.BloodP)
         Me.Medical.Controls.Add(Me.Preg)
-        Me.Medical.Controls.Add(Me.DocNoteReq)
         Me.Medical.Controls.Add(Me.Joint)
-        Me.Medical.Controls.Add(Me.Fitter)
         Me.Medical.Controls.Add(Me.Chest)
         Me.Medical.Controls.Add(Me.Smoke)
-        Me.Medical.Controls.Add(Me.OtherGFA)
-        Me.Medical.Controls.Add(Me.InducterName)
         Me.Medical.Controls.Add(Me.Epi)
-        Me.Medical.Controls.Add(Me.WeightR)
         Me.Medical.Controls.Add(Me.Faint)
-        Me.Medical.Controls.Add(Me.GFA)
-        Me.Medical.Controls.Add(Me.Induct)
         Me.Medical.Controls.Add(Me.GM)
-        Me.Medical.Controls.Add(Me.BodyB)
         Me.Medical.Controls.Add(Me.Heart)
         Me.Medical.Location = New System.Drawing.Point(4, 29)
         Me.Medical.Name = "Medical"
@@ -589,40 +580,47 @@ Partial Class CustomerForm
         Me.Medical.TabIndex = 1
         Me.Medical.Text = "Medical History"
         '
-        'TextBox2
+        'CheckBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(565, 68)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(122, 26)
-        Me.TextBox2.TabIndex = 6
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(440, 286)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox2.TabIndex = 24
+        Me.CheckBox2.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'CheckBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(565, 39)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(122, 26)
-        Me.TextBox1.TabIndex = 6
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(440, 255)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.TabIndex = 23
+        Me.CheckBox1.UseVisualStyleBackColor = True
         '
-        'Label1
+        'DocNoteReq
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(476, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(181, 20)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "General Fitness Aims"
+        Me.DocNoteReq.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DocNoteReq.AutoSize = True
+        Me.DocNoteReq.BackColor = System.Drawing.Color.Transparent
+        Me.DocNoteReq.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DocNoteReq.Location = New System.Drawing.Point(243, 251)
+        Me.DocNoteReq.Name = "DocNoteReq"
+        Me.DocNoteReq.Size = New System.Drawing.Size(172, 20)
+        Me.DocNoteReq.TabIndex = 21
+        Me.DocNoteReq.Text = "Doctors Note Required"
         '
-        'OtherGMCB
+        'DocNotePres
         '
-        Me.OtherGMCB.AutoSize = True
-        Me.OtherGMCB.Location = New System.Drawing.Point(307, 15)
-        Me.OtherGMCB.Name = "OtherGMCB"
-        Me.OtherGMCB.Size = New System.Drawing.Size(15, 14)
-        Me.OtherGMCB.TabIndex = 4
-        Me.OtherGMCB.UseVisualStyleBackColor = True
+        Me.DocNotePres.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DocNotePres.AutoSize = True
+        Me.DocNotePres.BackColor = System.Drawing.Color.Transparent
+        Me.DocNotePres.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DocNotePres.Location = New System.Drawing.Point(243, 282)
+        Me.DocNotePres.Name = "DocNotePres"
+        Me.DocNotePres.Size = New System.Drawing.Size(180, 20)
+        Me.DocNotePres.TabIndex = 22
+        Me.DocNotePres.Text = "Doctors Note Presented"
         '
         'OperCB
         '
@@ -669,15 +667,6 @@ Partial Class CustomerForm
         Me.SmokeCB.TabIndex = 4
         Me.SmokeCB.UseVisualStyleBackColor = True
         '
-        'InjuryACB
-        '
-        Me.InjuryACB.AutoSize = True
-        Me.InjuryACB.Location = New System.Drawing.Point(390, 236)
-        Me.InjuryACB.Name = "InjuryACB"
-        Me.InjuryACB.Size = New System.Drawing.Size(15, 14)
-        Me.InjuryACB.TabIndex = 4
-        Me.InjuryACB.UseVisualStyleBackColor = True
-        '
         'BloodPCB
         '
         Me.BloodPCB.AutoSize = True
@@ -695,15 +684,6 @@ Partial Class CustomerForm
         Me.DiaCB.Size = New System.Drawing.Size(15, 14)
         Me.DiaCB.TabIndex = 4
         Me.DiaCB.UseVisualStyleBackColor = True
-        '
-        'OtherGFACB
-        '
-        Me.OtherGFACB.AutoSize = True
-        Me.OtherGFACB.Location = New System.Drawing.Point(390, 267)
-        Me.OtherGFACB.Name = "OtherGFACB"
-        Me.OtherGFACB.Size = New System.Drawing.Size(15, 14)
-        Me.OtherGFACB.TabIndex = 4
-        Me.OtherGFACB.UseVisualStyleBackColor = True
         '
         'EpiCB
         '
@@ -723,15 +703,6 @@ Partial Class CustomerForm
         Me.AstCB.TabIndex = 4
         Me.AstCB.UseVisualStyleBackColor = True
         '
-        'FitterCB
-        '
-        Me.FitterCB.AutoSize = True
-        Me.FitterCB.Location = New System.Drawing.Point(390, 205)
-        Me.FitterCB.Name = "FitterCB"
-        Me.FitterCB.Size = New System.Drawing.Size(15, 14)
-        Me.FitterCB.TabIndex = 4
-        Me.FitterCB.UseVisualStyleBackColor = True
-        '
         'ChestCB
         '
         Me.ChestCB.AutoSize = True
@@ -740,24 +711,6 @@ Partial Class CustomerForm
         Me.ChestCB.Size = New System.Drawing.Size(15, 14)
         Me.ChestCB.TabIndex = 4
         Me.ChestCB.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(673, 137)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 4
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'WeightRCB
-        '
-        Me.WeightRCB.AutoSize = True
-        Me.WeightRCB.Location = New System.Drawing.Point(390, 174)
-        Me.WeightRCB.Name = "WeightRCB"
-        Me.WeightRCB.Size = New System.Drawing.Size(15, 14)
-        Me.WeightRCB.TabIndex = 4
-        Me.WeightRCB.UseVisualStyleBackColor = True
         '
         'FaintCB
         '
@@ -768,24 +721,6 @@ Partial Class CustomerForm
         Me.FaintCB.TabIndex = 4
         Me.FaintCB.UseVisualStyleBackColor = True
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(673, 106)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 4
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'BodyBCB
-        '
-        Me.BodyBCB.AutoSize = True
-        Me.BodyBCB.Location = New System.Drawing.Point(390, 143)
-        Me.BodyBCB.Name = "BodyBCB"
-        Me.BodyBCB.Size = New System.Drawing.Size(15, 14)
-        Me.BodyBCB.TabIndex = 4
-        Me.BodyBCB.UseVisualStyleBackColor = True
-        '
         'HeartCB
         '
         Me.HeartCB.AutoSize = True
@@ -795,22 +730,13 @@ Partial Class CustomerForm
         Me.HeartCB.TabIndex = 4
         Me.HeartCB.UseVisualStyleBackColor = True
         '
-        'OtherDescGFA
-        '
-        Me.OtherDescGFA.Location = New System.Drawing.Point(247, 293)
-        Me.OtherDescGFA.Multiline = True
-        Me.OtherDescGFA.Name = "OtherDescGFA"
-        Me.OtherDescGFA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.OtherDescGFA.Size = New System.Drawing.Size(195, 56)
-        Me.OtherDescGFA.TabIndex = 3
-        '
         'OtherDescGM
         '
         Me.OtherDescGM.Location = New System.Drawing.Point(247, 41)
         Me.OtherDescGM.Multiline = True
         Me.OtherDescGM.Name = "OtherDescGM"
         Me.OtherDescGM.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.OtherDescGM.Size = New System.Drawing.Size(195, 56)
+        Me.OtherDescGM.Size = New System.Drawing.Size(455, 199)
         Me.OtherDescGM.TabIndex = 3
         '
         'OtherGM
@@ -873,30 +799,6 @@ Partial Class CustomerForm
         Me.Ast.TabIndex = 2
         Me.Ast.Text = "Asthma"
         '
-        'DocNotePres
-        '
-        Me.DocNotePres.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DocNotePres.AutoSize = True
-        Me.DocNotePres.BackColor = System.Drawing.Color.Transparent
-        Me.DocNotePres.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DocNotePres.Location = New System.Drawing.Point(476, 133)
-        Me.DocNotePres.Name = "DocNotePres"
-        Me.DocNotePres.Size = New System.Drawing.Size(180, 20)
-        Me.DocNotePres.TabIndex = 2
-        Me.DocNotePres.Text = "Doctors Note Presented"
-        '
-        'InjuryA
-        '
-        Me.InjuryA.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.InjuryA.AutoSize = True
-        Me.InjuryA.BackColor = System.Drawing.Color.Transparent
-        Me.InjuryA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InjuryA.Location = New System.Drawing.Point(243, 232)
-        Me.InjuryA.Name = "InjuryA"
-        Me.InjuryA.Size = New System.Drawing.Size(125, 20)
-        Me.InjuryA.TabIndex = 2
-        Me.InjuryA.Text = "Injury Avoidance"
-        '
         'BloodP
         '
         Me.BloodP.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -921,18 +823,6 @@ Partial Class CustomerForm
         Me.Preg.TabIndex = 2
         Me.Preg.Text = "Pregnacy"
         '
-        'DocNoteReq
-        '
-        Me.DocNoteReq.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DocNoteReq.AutoSize = True
-        Me.DocNoteReq.BackColor = System.Drawing.Color.Transparent
-        Me.DocNoteReq.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DocNoteReq.Location = New System.Drawing.Point(476, 102)
-        Me.DocNoteReq.Name = "DocNoteReq"
-        Me.DocNoteReq.Size = New System.Drawing.Size(172, 20)
-        Me.DocNoteReq.TabIndex = 2
-        Me.DocNoteReq.Text = "Doctors Note Required"
-        '
         'Joint
         '
         Me.Joint.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -944,18 +834,6 @@ Partial Class CustomerForm
         Me.Joint.Size = New System.Drawing.Size(113, 20)
         Me.Joint.TabIndex = 2
         Me.Joint.Text = "Joint Problems"
-        '
-        'Fitter
-        '
-        Me.Fitter.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Fitter.AutoSize = True
-        Me.Fitter.BackColor = System.Drawing.Color.Transparent
-        Me.Fitter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Fitter.Location = New System.Drawing.Point(243, 201)
-        Me.Fitter.Name = "Fitter"
-        Me.Fitter.Size = New System.Drawing.Size(77, 20)
-        Me.Fitter.TabIndex = 2
-        Me.Fitter.Text = "Get Fitter"
         '
         'Chest
         '
@@ -981,30 +859,6 @@ Partial Class CustomerForm
         Me.Smoke.TabIndex = 2
         Me.Smoke.Text = "Smoker"
         '
-        'OtherGFA
-        '
-        Me.OtherGFA.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.OtherGFA.AutoSize = True
-        Me.OtherGFA.BackColor = System.Drawing.Color.Transparent
-        Me.OtherGFA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.OtherGFA.Location = New System.Drawing.Point(243, 263)
-        Me.OtherGFA.Name = "OtherGFA"
-        Me.OtherGFA.Size = New System.Drawing.Size(49, 20)
-        Me.OtherGFA.TabIndex = 2
-        Me.OtherGFA.Text = "Other"
-        '
-        'InducterName
-        '
-        Me.InducterName.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.InducterName.AutoSize = True
-        Me.InducterName.BackColor = System.Drawing.Color.Transparent
-        Me.InducterName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.InducterName.Location = New System.Drawing.Point(476, 71)
-        Me.InducterName.Name = "InducterName"
-        Me.InducterName.Size = New System.Drawing.Size(68, 20)
-        Me.InducterName.TabIndex = 2
-        Me.InducterName.Text = "Inducter"
-        '
         'Epi
         '
         Me.Epi.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -1016,18 +870,6 @@ Partial Class CustomerForm
         Me.Epi.Size = New System.Drawing.Size(68, 20)
         Me.Epi.TabIndex = 2
         Me.Epi.Text = "Epilepsy"
-        '
-        'WeightR
-        '
-        Me.WeightR.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.WeightR.AutoSize = True
-        Me.WeightR.BackColor = System.Drawing.Color.Transparent
-        Me.WeightR.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.WeightR.Location = New System.Drawing.Point(243, 170)
-        Me.WeightR.Name = "WeightR"
-        Me.WeightR.Size = New System.Drawing.Size(136, 20)
-        Me.WeightR.TabIndex = 2
-        Me.WeightR.Text = "Weight Reduction"
         '
         'Faint
         '
@@ -1041,30 +883,6 @@ Partial Class CustomerForm
         Me.Faint.TabIndex = 2
         Me.Faint.Text = "Fainting"
         '
-        'GFA
-        '
-        Me.GFA.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.GFA.AutoSize = True
-        Me.GFA.BackColor = System.Drawing.Color.Transparent
-        Me.GFA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GFA.Location = New System.Drawing.Point(243, 108)
-        Me.GFA.Name = "GFA"
-        Me.GFA.Size = New System.Drawing.Size(181, 20)
-        Me.GFA.TabIndex = 2
-        Me.GFA.Text = "General Fitness Aims"
-        '
-        'Induct
-        '
-        Me.Induct.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Induct.AutoSize = True
-        Me.Induct.BackColor = System.Drawing.Color.Transparent
-        Me.Induct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Induct.Location = New System.Drawing.Point(476, 40)
-        Me.Induct.Name = "Induct"
-        Me.Induct.Size = New System.Drawing.Size(75, 20)
-        Me.Induct.TabIndex = 2
-        Me.Induct.Text = "Induction"
-        '
         'GM
         '
         Me.GM.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -1076,18 +894,6 @@ Partial Class CustomerForm
         Me.GM.Size = New System.Drawing.Size(139, 20)
         Me.GM.TabIndex = 2
         Me.GM.Text = "General Medical"
-        '
-        'BodyB
-        '
-        Me.BodyB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BodyB.AutoSize = True
-        Me.BodyB.BackColor = System.Drawing.Color.Transparent
-        Me.BodyB.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BodyB.Location = New System.Drawing.Point(243, 139)
-        Me.BodyB.Name = "BodyB"
-        Me.BodyB.Size = New System.Drawing.Size(105, 20)
-        Me.BodyB.TabIndex = 2
-        Me.BodyB.Text = "Body Building"
         '
         'Heart
         '
@@ -1101,14 +907,208 @@ Partial Class CustomerForm
         Me.Heart.TabIndex = 2
         Me.Heart.Text = "Heart Problems"
         '
-        'TabPage1
+        'Induction
         '
-        Me.TabPage1.BackColor = System.Drawing.Color.Transparent
-        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Size = New System.Drawing.Size(710, 409)
-        Me.TabPage1.TabIndex = 2
-        Me.TabPage1.Text = "TabPage1"
+        Me.Induction.BackColor = System.Drawing.Color.Transparent
+        Me.Induction.Controls.Add(Me.TextBox2)
+        Me.Induction.Controls.Add(Me.TextBox1)
+        Me.Induction.Controls.Add(Me.GFP)
+        Me.Induction.Controls.Add(Me.InjuryACB)
+        Me.Induction.Controls.Add(Me.FitterCB)
+        Me.Induction.Controls.Add(Me.WeightRCB)
+        Me.Induction.Controls.Add(Me.BodyBCB)
+        Me.Induction.Controls.Add(Me.OtherDescGFA)
+        Me.Induction.Controls.Add(Me.InjuryA)
+        Me.Induction.Controls.Add(Me.Fitter)
+        Me.Induction.Controls.Add(Me.OtherGFA)
+        Me.Induction.Controls.Add(Me.InducterName)
+        Me.Induction.Controls.Add(Me.WeightR)
+        Me.Induction.Controls.Add(Me.GFA)
+        Me.Induction.Controls.Add(Me.Induct)
+        Me.Induction.Controls.Add(Me.BodyB)
+        Me.Induction.Location = New System.Drawing.Point(4, 29)
+        Me.Induction.Name = "Induction"
+        Me.Induction.Size = New System.Drawing.Size(710, 409)
+        Me.Induction.TabIndex = 2
+        Me.Induction.Text = "Induction"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(549, 69)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(122, 26)
+        Me.TextBox2.TabIndex = 26
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(549, 40)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(122, 26)
+        Me.TextBox1.TabIndex = 25
+        '
+        'GFP
+        '
+        Me.GFP.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.GFP.AutoSize = True
+        Me.GFP.BackColor = System.Drawing.Color.Transparent
+        Me.GFP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GFP.Location = New System.Drawing.Point(425, 6)
+        Me.GFP.Name = "GFP"
+        Me.GFP.Size = New System.Drawing.Size(233, 20)
+        Me.GFP.TabIndex = 24
+        Me.GFP.Text = "General Fitness Programme"
+        '
+        'InjuryACB
+        '
+        Me.InjuryACB.AutoSize = True
+        Me.InjuryACB.Location = New System.Drawing.Point(149, 134)
+        Me.InjuryACB.Name = "InjuryACB"
+        Me.InjuryACB.Size = New System.Drawing.Size(15, 14)
+        Me.InjuryACB.TabIndex = 22
+        Me.InjuryACB.UseVisualStyleBackColor = True
+        '
+        'FitterCB
+        '
+        Me.FitterCB.AutoSize = True
+        Me.FitterCB.Location = New System.Drawing.Point(149, 103)
+        Me.FitterCB.Name = "FitterCB"
+        Me.FitterCB.Size = New System.Drawing.Size(15, 14)
+        Me.FitterCB.TabIndex = 21
+        Me.FitterCB.UseVisualStyleBackColor = True
+        '
+        'WeightRCB
+        '
+        Me.WeightRCB.AutoSize = True
+        Me.WeightRCB.Location = New System.Drawing.Point(149, 72)
+        Me.WeightRCB.Name = "WeightRCB"
+        Me.WeightRCB.Size = New System.Drawing.Size(15, 14)
+        Me.WeightRCB.TabIndex = 19
+        Me.WeightRCB.UseVisualStyleBackColor = True
+        '
+        'BodyBCB
+        '
+        Me.BodyBCB.AutoSize = True
+        Me.BodyBCB.Location = New System.Drawing.Point(149, 41)
+        Me.BodyBCB.Name = "BodyBCB"
+        Me.BodyBCB.Size = New System.Drawing.Size(15, 14)
+        Me.BodyBCB.TabIndex = 23
+        Me.BodyBCB.UseVisualStyleBackColor = True
+        '
+        'OtherDescGFA
+        '
+        Me.OtherDescGFA.Location = New System.Drawing.Point(6, 191)
+        Me.OtherDescGFA.Multiline = True
+        Me.OtherDescGFA.Name = "OtherDescGFA"
+        Me.OtherDescGFA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.OtherDescGFA.Size = New System.Drawing.Size(235, 209)
+        Me.OtherDescGFA.TabIndex = 17
+        '
+        'InjuryA
+        '
+        Me.InjuryA.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.InjuryA.AutoSize = True
+        Me.InjuryA.BackColor = System.Drawing.Color.Transparent
+        Me.InjuryA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InjuryA.Location = New System.Drawing.Point(2, 130)
+        Me.InjuryA.Name = "InjuryA"
+        Me.InjuryA.Size = New System.Drawing.Size(125, 20)
+        Me.InjuryA.TabIndex = 14
+        Me.InjuryA.Text = "Injury Avoidance"
+        '
+        'Fitter
+        '
+        Me.Fitter.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Fitter.AutoSize = True
+        Me.Fitter.BackColor = System.Drawing.Color.Transparent
+        Me.Fitter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Fitter.Location = New System.Drawing.Point(2, 99)
+        Me.Fitter.Name = "Fitter"
+        Me.Fitter.Size = New System.Drawing.Size(77, 20)
+        Me.Fitter.TabIndex = 12
+        Me.Fitter.Text = "Get Fitter"
+        '
+        'OtherGFA
+        '
+        Me.OtherGFA.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.OtherGFA.AutoSize = True
+        Me.OtherGFA.BackColor = System.Drawing.Color.Transparent
+        Me.OtherGFA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.OtherGFA.Location = New System.Drawing.Point(2, 161)
+        Me.OtherGFA.Name = "OtherGFA"
+        Me.OtherGFA.Size = New System.Drawing.Size(49, 20)
+        Me.OtherGFA.TabIndex = 11
+        Me.OtherGFA.Text = "Other"
+        '
+        'InducterName
+        '
+        Me.InducterName.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.InducterName.AutoSize = True
+        Me.InducterName.BackColor = System.Drawing.Color.Transparent
+        Me.InducterName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.InducterName.Location = New System.Drawing.Point(425, 72)
+        Me.InducterName.Name = "InducterName"
+        Me.InducterName.Size = New System.Drawing.Size(114, 20)
+        Me.InducterName.TabIndex = 10
+        Me.InducterName.Text = "Inducter Name"
+        '
+        'WeightR
+        '
+        Me.WeightR.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.WeightR.AutoSize = True
+        Me.WeightR.BackColor = System.Drawing.Color.Transparent
+        Me.WeightR.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.WeightR.Location = New System.Drawing.Point(2, 68)
+        Me.WeightR.Name = "WeightR"
+        Me.WeightR.Size = New System.Drawing.Size(136, 20)
+        Me.WeightR.TabIndex = 9
+        Me.WeightR.Text = "Weight Reduction"
+        '
+        'GFA
+        '
+        Me.GFA.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.GFA.AutoSize = True
+        Me.GFA.BackColor = System.Drawing.Color.Transparent
+        Me.GFA.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GFA.Location = New System.Drawing.Point(2, 6)
+        Me.GFA.Name = "GFA"
+        Me.GFA.Size = New System.Drawing.Size(181, 20)
+        Me.GFA.TabIndex = 8
+        Me.GFA.Text = "General Fitness Aims"
+        '
+        'Induct
+        '
+        Me.Induct.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Induct.AutoSize = True
+        Me.Induct.BackColor = System.Drawing.Color.Transparent
+        Me.Induct.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Induct.Location = New System.Drawing.Point(425, 43)
+        Me.Induct.Name = "Induct"
+        Me.Induct.Size = New System.Drawing.Size(114, 20)
+        Me.Induct.TabIndex = 16
+        Me.Induct.Text = "Induction Date"
+        '
+        'BodyB
+        '
+        Me.BodyB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BodyB.AutoSize = True
+        Me.BodyB.BackColor = System.Drawing.Color.Transparent
+        Me.BodyB.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BodyB.Location = New System.Drawing.Point(2, 37)
+        Me.BodyB.Name = "BodyB"
+        Me.BodyB.Size = New System.Drawing.Size(105, 20)
+        Me.BodyB.TabIndex = 7
+        Me.BodyB.Text = "Body Building"
+        '
+        'CustomerFormLab
+        '
+        Me.CustomerFormLab.AutoSize = True
+        Me.CustomerFormLab.BackColor = System.Drawing.Color.Transparent
+        Me.CustomerFormLab.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CustomerFormLab.Location = New System.Drawing.Point(253, 9)
+        Me.CustomerFormLab.Name = "CustomerFormLab"
+        Me.CustomerFormLab.Size = New System.Drawing.Size(246, 29)
+        Me.CustomerFormLab.TabIndex = 6
+        Me.CustomerFormLab.Text = "Customer Edit Form"
         '
         'CustomerForm
         '
@@ -1117,23 +1117,26 @@ Partial Class CustomerForm
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(720, 567)
-        Me.Controls.Add(Me.TabControl1)
+        Me.Controls.Add(Me.CustomerFormLab)
+        Me.Controls.Add(Me.CustomerShow)
         Me.Controls.Add(Me.Logo)
         Me.DoubleBuffered = True
         Me.Name = "CustomerForm"
         Me.Text = "Customer Form Menu"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl1.ResumeLayout(False)
+        Me.CustomerShow.ResumeLayout(False)
         Me.Personal.ResumeLayout(False)
         Me.Personal.PerformLayout()
         CType(Me.MemPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Medical.ResumeLayout(False)
         Me.Medical.PerformLayout()
+        Me.Induction.ResumeLayout(False)
+        Me.Induction.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -1146,7 +1149,7 @@ Partial Class CustomerForm
     Friend WithEvents MembersTableAdapter1 As KingswayFitnessDataSet1TableAdapters.MembersTableAdapter
     Friend WithEvents TableAdapterManager1 As KingswayFitnessDataSet1TableAdapters.TableAdapterManager
     Friend WithEvents Members_Address_TableAdapter1 As KingswayFitnessDataSet1TableAdapters.Members_Address_TableAdapter
-    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents CustomerShow As TabControl
     Friend WithEvents Personal As TabPage
     Friend WithEvents MemberID As Label
     Friend WithEvents MemPhoto As PictureBox
@@ -1180,54 +1183,54 @@ Partial Class CustomerForm
     Friend WithEvents Gender As Label
     Friend WithEvents DOB As Label
     Friend WithEvents Medical As TabPage
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents OtherGMCB As CheckBox
     Friend WithEvents OperCB As CheckBox
     Friend WithEvents PregCB As CheckBox
     Friend WithEvents BackCB As CheckBox
     Friend WithEvents JointCB As CheckBox
     Friend WithEvents SmokeCB As CheckBox
-    Friend WithEvents InjuryACB As CheckBox
     Friend WithEvents BloodPCB As CheckBox
     Friend WithEvents DiaCB As CheckBox
-    Friend WithEvents OtherGFACB As CheckBox
     Friend WithEvents EpiCB As CheckBox
     Friend WithEvents AstCB As CheckBox
-    Friend WithEvents FitterCB As CheckBox
     Friend WithEvents ChestCB As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents WeightRCB As CheckBox
     Friend WithEvents FaintCB As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents BodyBCB As CheckBox
     Friend WithEvents HeartCB As CheckBox
-    Friend WithEvents OtherDescGFA As TextBox
     Friend WithEvents OtherDescGM As TextBox
     Friend WithEvents OtherGM As Label
     Friend WithEvents Dia As Label
     Friend WithEvents Oper As Label
     Friend WithEvents Back As Label
     Friend WithEvents Ast As Label
-    Friend WithEvents DocNotePres As Label
-    Friend WithEvents InjuryA As Label
     Friend WithEvents BloodP As Label
     Friend WithEvents Preg As Label
-    Friend WithEvents DocNoteReq As Label
     Friend WithEvents Joint As Label
-    Friend WithEvents Fitter As Label
     Friend WithEvents Chest As Label
     Friend WithEvents Smoke As Label
+    Friend WithEvents Epi As Label
+    Friend WithEvents Faint As Label
+    Friend WithEvents GM As Label
+    Friend WithEvents Heart As Label
+    Friend WithEvents Induction As TabPage
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents GFP As Label
+    Friend WithEvents InjuryACB As CheckBox
+    Friend WithEvents FitterCB As CheckBox
+    Friend WithEvents WeightRCB As CheckBox
+    Friend WithEvents BodyBCB As CheckBox
+    Friend WithEvents OtherDescGFA As TextBox
+    Friend WithEvents InjuryA As Label
+    Friend WithEvents Fitter As Label
     Friend WithEvents OtherGFA As Label
     Friend WithEvents InducterName As Label
-    Friend WithEvents Epi As Label
     Friend WithEvents WeightR As Label
-    Friend WithEvents Faint As Label
     Friend WithEvents GFA As Label
     Friend WithEvents Induct As Label
-    Friend WithEvents GM As Label
     Friend WithEvents BodyB As Label
-    Friend WithEvents Heart As Label
-    Friend WithEvents TabPage1 As TabPage
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents DocNoteReq As Label
+    Friend WithEvents DocNotePres As Label
+    Friend WithEvents CustomerFormLab As Label
+    Friend WithEvents ActivityLogBut As Button
 End Class

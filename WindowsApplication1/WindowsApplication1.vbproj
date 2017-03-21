@@ -109,19 +109,25 @@
     <Compile Include="CurrentClientList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomerFormView.Designer.vb">
+      <DependentUpon>CustomerFormView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerFormView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="KingswayFitnessDataSet1.vb">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PriceList.Designer.vb">
-      <DependentUpon>PriceList.vb</DependentUpon>
+    <Compile Include="MembershipType.Designer.vb">
+      <DependentUpon>MembershipType.vb</DependentUpon>
     </Compile>
-    <Compile Include="PriceList.vb">
+    <Compile Include="MembershipType.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="relasped member.Designer.vb">
-      <DependentUpon>relasped member.vb</DependentUpon>
+    <Compile Include="ActivityLog.Designer.vb">
+      <DependentUpon>ActivityLog.vb</DependentUpon>
     </Compile>
-    <Compile Include="relasped member.vb">
+    <Compile Include="ActivityLog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KingswayFitnessDataSet1.Designer.vb">
@@ -166,8 +172,14 @@
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ActivityLog.resx">
+      <DependentUpon>ActivityLog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CurrentClientList.resx">
       <DependentUpon>CurrentClientList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerFormView.resx">
+      <DependentUpon>CustomerFormView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>
@@ -184,8 +196,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PriceList.resx">
-      <DependentUpon>PriceList.vb</DependentUpon>
+    <EmbeddedResource Include="MembershipType.resx">
+      <DependentUpon>MembershipType.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
