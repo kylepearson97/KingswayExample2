@@ -1,11 +1,11 @@
 ﻿Public Class CurrentClientList
     Private Sub formload(sender As Object, e As EventArgs) Handles Me.Load
-        NumberofCustomers.Text = (CurrentClient.RowCount.ToString - 1)
+        NumberofCustomers.Text = (CurrentClient.RowCount.ToString)
         Me.MembersTableAdapter1.Fill(Me.KingswayFitnessDataSet1.Members)
     End Sub
     Private Sub formclose(sender As Object, e As EventArgs) Handles Me.Closing
 
-        NumberofCustomers.Text = (CurrentClient.RowCount.ToString - 1)
+        NumberofCustomers.Text = (CurrentClient.RowCount.ToString)
         MainMenu.Show()
     End Sub
 
@@ -13,7 +13,7 @@
 
     Private Sub TextBox1_KeyPress(sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
         If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
-            If CurrentClient.RowCount.ToString - 1 < 45 Then
+            If CurrentClient.RowCount.ToString < 45 Then
 
                 Dim MemID = TextBox1.Text
                 Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MemID)
@@ -22,7 +22,7 @@
                 Else
                     CurrentClient.Rows.Add(rows(0).Item("MemberID"), rows(0).Item("Forename"), rows(0).Item("Surname"), DateTime.Now.ToString("yyyy/MM/dd HH:mm"))
                 End If
-                NumberofCustomers.Text = (CurrentClient.RowCount.ToString - 1)
+                NumberofCustomers.Text = (CurrentClient.RowCount.ToString)
             Else
                 MsgBox("Gym Full")
             End If
@@ -46,6 +46,6 @@
         conn.Close()
         MsgBox("User Logged Out")
         CurrentClient.Rows.Remove(CurrentClient.CurrentRow)
-        NumberofCustomers.Text = (CurrentClient.RowCount.ToString - 1)
+        NumberofCustomers.Text = (CurrentClient.RowCount.ToString)
     End Sub
 End Class

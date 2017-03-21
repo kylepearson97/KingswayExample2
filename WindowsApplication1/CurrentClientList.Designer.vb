@@ -41,7 +41,6 @@ Partial Class CurrentClientList
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.KingswayFitnessDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Activity_LogTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Activity_LogTableAdapter()
-        Me.StaffTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.StaffTableAdapter()
         Me.Member_Activity_LogTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter()
         Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
         Me.TempdataBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -121,6 +120,8 @@ Partial Class CurrentClientList
         '
         'CurrentClient
         '
+        Me.CurrentClient.AllowUserToAddRows = False
+        Me.CurrentClient.AllowUserToDeleteRows = False
         Me.CurrentClient.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.CurrentClient.BorderStyle = System.Windows.Forms.BorderStyle.None
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
@@ -144,6 +145,7 @@ Partial Class CurrentClientList
         Me.CurrentClient.GridColor = System.Drawing.SystemColors.ButtonShadow
         Me.CurrentClient.Location = New System.Drawing.Point(2, 150)
         Me.CurrentClient.Name = "CurrentClient"
+        Me.CurrentClient.ReadOnly = True
         Me.CurrentClient.Size = New System.Drawing.Size(674, 514)
         Me.CurrentClient.TabIndex = 17
         '
@@ -152,30 +154,35 @@ Partial Class CurrentClientList
         Me.MembersID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.MembersID.HeaderText = "Members ID"
         Me.MembersID.Name = "MembersID"
+        Me.MembersID.ReadOnly = True
         '
         'Forename
         '
         Me.Forename.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Forename.HeaderText = "Forename"
         Me.Forename.Name = "Forename"
+        Me.Forename.ReadOnly = True
         '
         'Surname
         '
         Me.Surname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Surname.HeaderText = "Surname"
         Me.Surname.Name = "Surname"
+        Me.Surname.ReadOnly = True
         '
         'TimeLoggedIn
         '
         Me.TimeLoggedIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.TimeLoggedIn.HeaderText = "Time Logged In"
         Me.TimeLoggedIn.Name = "TimeLoggedIn"
+        Me.TimeLoggedIn.ReadOnly = True
         '
         'Logout
         '
         Me.Logout.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
         Me.Logout.HeaderText = "Logout"
         Me.Logout.Name = "Logout"
+        Me.Logout.ReadOnly = True
         Me.Logout.UseColumnTextForButtonValue = True
         '
         'ActivityLogBindingSource
@@ -196,10 +203,6 @@ Partial Class CurrentClientList
         'Activity_LogTableAdapter
         '
         Me.Activity_LogTableAdapter.ClearBeforeFill = True
-        '
-        'StaffTableAdapter1
-        '
-        Me.StaffTableAdapter1.ClearBeforeFill = True
         '
         'Member_Activity_LogTableAdapter1
         '
@@ -262,7 +265,6 @@ Partial Class CurrentClientList
     Friend WithEvents KingswayFitnessDataSet1 As KingswayFitnessDataSet1
     Friend WithEvents ActivityLogBindingSource As BindingSource
     Friend WithEvents Activity_LogTableAdapter As KingswayFitnessDataSet1TableAdapters.Activity_LogTableAdapter
-    Friend WithEvents StaffTableAdapter1 As KingswayFitnessDataSet1TableAdapters.StaffTableAdapter
     Friend WithEvents Member_Activity_LogTableAdapter1 As KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter
     Friend WithEvents MembersID As DataGridViewTextBoxColumn
     Friend WithEvents Forename As DataGridViewTextBoxColumn

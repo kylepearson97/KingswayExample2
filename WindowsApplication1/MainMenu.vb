@@ -11,7 +11,7 @@
 
     Private Sub FileM_Click(sender As Object, e As EventArgs) Handles FileM.Click
         Dim oForm As New CurrentClientList
-        Hide()
+
         oForm.Show()
     End Sub
     Private Sub Customer_MouseHover(sender As Object, e As EventArgs) Handles Customer.MouseHover
