@@ -49,7 +49,7 @@
 
     End Sub
 
-    Private Sub ActivityLogBut_Click(sender As Object, e As EventArgs) Handles ActivityLogBut.Click
+    Private Sub ActivityLogBut_Click(sender As Object, e As EventArgs)
         Dim oForm As New ActivityLogForm
         ActivityLogForm.Show()
     End Sub

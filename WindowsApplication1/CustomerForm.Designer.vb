@@ -32,7 +32,6 @@ Partial Class CustomerForm
         Me.Members_Address_TableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_Address_TableAdapter()
         Me.CustomerShow = New System.Windows.Forms.TabControl()
         Me.Personal = New System.Windows.Forms.TabPage()
-        Me.ActivityLogBut = New System.Windows.Forms.Button()
         Me.MemberID = New System.Windows.Forms.Label()
         Me.MemPhoto = New System.Windows.Forms.PictureBox()
         Me.MemType = New System.Windows.Forms.TextBox()
@@ -114,6 +113,7 @@ Partial Class CustomerForm
         Me.Induct = New System.Windows.Forms.Label()
         Me.BodyB = New System.Windows.Forms.Label()
         Me.CustomerFormLab = New System.Windows.Forms.Label()
+        Me.ActLog = New System.Windows.Forms.TabPage()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -178,6 +178,7 @@ Partial Class CustomerForm
         Me.CustomerShow.Controls.Add(Me.Personal)
         Me.CustomerShow.Controls.Add(Me.Medical)
         Me.CustomerShow.Controls.Add(Me.Induction)
+        Me.CustomerShow.Controls.Add(Me.ActLog)
         Me.CustomerShow.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustomerShow.Location = New System.Drawing.Point(2, 126)
         Me.CustomerShow.Name = "CustomerShow"
@@ -188,7 +189,6 @@ Partial Class CustomerForm
         'Personal
         '
         Me.Personal.BackColor = System.Drawing.Color.Transparent
-        Me.Personal.Controls.Add(Me.ActivityLogBut)
         Me.Personal.Controls.Add(Me.MemberID)
         Me.Personal.Controls.Add(Me.MemPhoto)
         Me.Personal.Controls.Add(Me.MemType)
@@ -226,15 +226,6 @@ Partial Class CustomerForm
         Me.Personal.Size = New System.Drawing.Size(710, 409)
         Me.Personal.TabIndex = 0
         Me.Personal.Text = "Personal Details"
-        '
-        'ActivityLogBut
-        '
-        Me.ActivityLogBut.Location = New System.Drawing.Point(359, 352)
-        Me.ActivityLogBut.Name = "ActivityLogBut"
-        Me.ActivityLogBut.Size = New System.Drawing.Size(158, 49)
-        Me.ActivityLogBut.TabIndex = 4
-        Me.ActivityLogBut.Text = "View Activity Log"
-        Me.ActivityLogBut.UseVisualStyleBackColor = True
         '
         'MemberID
         '
@@ -1110,6 +1101,15 @@ Partial Class CustomerForm
         Me.CustomerFormLab.TabIndex = 6
         Me.CustomerFormLab.Text = "Customer Edit Form"
         '
+        'ActLog
+        '
+        Me.ActLog.Location = New System.Drawing.Point(4, 29)
+        Me.ActLog.Name = "ActLog"
+        Me.ActLog.Size = New System.Drawing.Size(710, 409)
+        Me.ActLog.TabIndex = 3
+        Me.ActLog.Text = "Activity Log"
+        Me.ActLog.UseVisualStyleBackColor = True
+        '
         'CustomerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1232,5 +1232,5 @@ Partial Class CustomerForm
     Friend WithEvents DocNoteReq As Label
     Friend WithEvents DocNotePres As Label
     Friend WithEvents CustomerFormLab As Label
-    Friend WithEvents ActivityLogBut As Button
+    Friend WithEvents ActLog As TabPage
 End Class
