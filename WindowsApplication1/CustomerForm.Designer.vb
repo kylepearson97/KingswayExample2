@@ -22,11 +22,11 @@ Partial Class CustomerForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.Logo = New System.Windows.Forms.PictureBox()
-        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource()
+
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
-        Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource()
         Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
         Me.TableAdapterManager1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager()
         Me.Members_Address_TableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_Address_TableAdapter()
@@ -113,9 +113,10 @@ Partial Class CustomerForm
         Me.GM = New System.Windows.Forms.Label()
         Me.BodyB = New System.Windows.Forms.Label()
         Me.Heart = New System.Windows.Forms.Label()
-        Me.ActLog = New System.Windows.Forms.TabPage()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -138,6 +139,9 @@ Partial Class CustomerForm
         'MembersBindingSource
         '
         Me.MembersBindingSource.DataMember = "Members"
+
+        '
+
         '
         'KingswayFitnessDataSet1
         '
@@ -159,13 +163,11 @@ Partial Class CustomerForm
         Me.TableAdapterManager1.Emergency_ContactTableAdapter = Nothing
         Me.TableAdapterManager1.InductionsTableAdapter = Nothing
         Me.TableAdapterManager1.Medical_TableTableAdapter = Nothing
-        Me.TableAdapterManager1.Member_Activity_LogTableAdapter = Nothing
         Me.TableAdapterManager1.Members_Address_TableAdapter = Nothing
         Me.TableAdapterManager1.Members_ReasonsTableAdapter = Nothing
         Me.TableAdapterManager1.Membership_TypeTableAdapter = Nothing
         Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter1
         Me.TableAdapterManager1.StaffTableAdapter = Nothing
-        Me.TableAdapterManager1.tempdataTableAdapter = Nothing
         Me.TableAdapterManager1.UpdateOrder = WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Members_Address_TableAdapter1
@@ -176,7 +178,7 @@ Partial Class CustomerForm
         '
         Me.TabControl1.Controls.Add(Me.Personal)
         Me.TabControl1.Controls.Add(Me.Medical)
-        Me.TabControl1.Controls.Add(Me.ActLog)
+        Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.Location = New System.Drawing.Point(2, 126)
         Me.TabControl1.Name = "TabControl1"
@@ -1099,14 +1101,14 @@ Partial Class CustomerForm
         Me.Heart.TabIndex = 2
         Me.Heart.Text = "Heart Problems"
         '
-        'ActLog
+        'TabPage1
         '
-        Me.ActLog.BackColor = System.Drawing.Color.Transparent
-        Me.ActLog.Location = New System.Drawing.Point(4, 29)
-        Me.ActLog.Name = "ActLog"
-        Me.ActLog.Size = New System.Drawing.Size(710, 409)
-        Me.ActLog.TabIndex = 2
-        Me.ActLog.Text = "Activity Log"
+        Me.TabPage1.BackColor = System.Drawing.Color.Transparent
+        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Size = New System.Drawing.Size(710, 409)
+        Me.TabPage1.TabIndex = 2
+        Me.TabPage1.Text = "TabPage1"
         '
         'CustomerForm
         '
@@ -1122,6 +1124,7 @@ Partial Class CustomerForm
         Me.Text = "Customer Form Menu"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
@@ -1226,5 +1229,5 @@ Partial Class CustomerForm
     Friend WithEvents GM As Label
     Friend WithEvents BodyB As Label
     Friend WithEvents Heart As Label
-    Friend WithEvents ActLog As TabPage
+    Friend WithEvents TabPage1 As TabPage
 End Class
