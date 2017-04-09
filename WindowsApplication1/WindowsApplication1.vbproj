@@ -13,6 +13,7 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,10 +24,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -64,6 +65,18 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FAF4859B25FD7D3916D2D460B8972C8209083959</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WindowsApplication1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -96,19 +109,25 @@
     <Compile Include="CurrentClientList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CustomerFormView.Designer.vb">
+      <DependentUpon>CustomerFormView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerFormView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="KingswayFitnessDataSet1.vb">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PriceList.Designer.vb">
-      <DependentUpon>PriceList.vb</DependentUpon>
+    <Compile Include="MembershipType.Designer.vb">
+      <DependentUpon>MembershipType.vb</DependentUpon>
     </Compile>
-    <Compile Include="PriceList.vb">
+    <Compile Include="MembershipType.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="relasped member.Designer.vb">
-      <DependentUpon>relasped member.vb</DependentUpon>
+    <Compile Include="ActivityLog.Designer.vb">
+      <DependentUpon>ActivityLog.vb</DependentUpon>
     </Compile>
-    <Compile Include="relasped member.vb">
+    <Compile Include="ActivityLog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KingswayFitnessDataSet1.Designer.vb">
@@ -153,8 +172,14 @@
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ActivityLog.resx">
+      <DependentUpon>ActivityLog.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CurrentClientList.resx">
       <DependentUpon>CurrentClientList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerFormView.resx">
+      <DependentUpon>CustomerFormView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>
@@ -171,8 +196,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="PriceList.resx">
-      <DependentUpon>PriceList.vb</DependentUpon>
+    <EmbeddedResource Include="MembershipType.resx">
+      <DependentUpon>MembershipType.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -198,10 +223,11 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="WindowsApplication1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="KingswayFitness.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Logo.png" />
     <None Include="Resources\YellowUnclick.jpg" />
