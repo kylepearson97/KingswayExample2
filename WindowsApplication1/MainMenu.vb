@@ -25,7 +25,6 @@
 
     Private Sub Customer_Click(sender As Object, e As EventArgs) Handles Customer.Click
         Dim oForm As New CustomerForm
-        Hide()
         oForm.Show()
     End Sub
     Private Sub Reactive_MouseHover(sender As Object, e As EventArgs) Handles Reactive.MouseHover
@@ -87,13 +86,11 @@
     End Sub
 
     Private Sub Reactive_Click(sender As Object, e As EventArgs) Handles Reactive.Click
-        Me.Hide()
         ActivityLogForm.Show()
     End Sub
 
     Private Sub Membership_Click(sender As Object, e As EventArgs) Handles Membership.Click
         Dim oForm As New MembershipType
-        Hide()
         oForm.Show()
     End Sub
 End Class

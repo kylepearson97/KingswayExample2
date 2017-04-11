@@ -112,8 +112,9 @@ Partial Class CustomerForm
         Me.GFA = New System.Windows.Forms.Label()
         Me.Induct = New System.Windows.Forms.Label()
         Me.BodyB = New System.Windows.Forms.Label()
-        Me.CustomerFormLab = New System.Windows.Forms.Label()
         Me.ActLog = New System.Windows.Forms.TabPage()
+        Me.CustomerFormLab = New System.Windows.Forms.Label()
+        Me.LoadBut = New System.Windows.Forms.Button()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -189,6 +190,7 @@ Partial Class CustomerForm
         'Personal
         '
         Me.Personal.BackColor = System.Drawing.Color.Transparent
+        Me.Personal.Controls.Add(Me.LoadBut)
         Me.Personal.Controls.Add(Me.MemberID)
         Me.Personal.Controls.Add(Me.MemPhoto)
         Me.Personal.Controls.Add(Me.MemType)
@@ -1090,6 +1092,15 @@ Partial Class CustomerForm
         Me.BodyB.TabIndex = 7
         Me.BodyB.Text = "Body Building"
         '
+        'ActLog
+        '
+        Me.ActLog.Location = New System.Drawing.Point(4, 29)
+        Me.ActLog.Name = "ActLog"
+        Me.ActLog.Size = New System.Drawing.Size(710, 409)
+        Me.ActLog.TabIndex = 3
+        Me.ActLog.Text = "Activity Log"
+        Me.ActLog.UseVisualStyleBackColor = True
+        '
         'CustomerFormLab
         '
         Me.CustomerFormLab.AutoSize = True
@@ -1101,14 +1112,14 @@ Partial Class CustomerForm
         Me.CustomerFormLab.TabIndex = 6
         Me.CustomerFormLab.Text = "Customer Edit Form"
         '
-        'ActLog
+        'LoadBut
         '
-        Me.ActLog.Location = New System.Drawing.Point(4, 29)
-        Me.ActLog.Name = "ActLog"
-        Me.ActLog.Size = New System.Drawing.Size(710, 409)
-        Me.ActLog.TabIndex = 3
-        Me.ActLog.Text = "Activity Log"
-        Me.ActLog.UseVisualStyleBackColor = True
+        Me.LoadBut.Location = New System.Drawing.Point(340, 9)
+        Me.LoadBut.Name = "LoadBut"
+        Me.LoadBut.Size = New System.Drawing.Size(125, 31)
+        Me.LoadBut.TabIndex = 4
+        Me.LoadBut.Text = "Load Member"
+        Me.LoadBut.UseVisualStyleBackColor = True
         '
         'CustomerForm
         '
@@ -1233,4 +1244,5 @@ Partial Class CustomerForm
     Friend WithEvents DocNotePres As Label
     Friend WithEvents CustomerFormLab As Label
     Friend WithEvents ActLog As TabPage
+    Friend WithEvents LoadBut As Button
 End Class
