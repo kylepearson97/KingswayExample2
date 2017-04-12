@@ -70,7 +70,6 @@
                 PregCB.Checked = rows3(0).Item("Pregnant")
             OperCB.Checked = rows3(0).Item("Recent Operation")
             If rows3(0).IsNull("Other") = True Then
-                MsgBox("Null")
             Else
                 OtherDescGM.Text = rows3(0).Item("Other")
             End If
@@ -82,7 +81,6 @@
                 FitterCB.Checked = rows4(0).Item("Get Fitter")
                 InjuryACB.Checked = rows4(0).Item("Injury Avoidance")
             If rows4(0).IsNull("Other") = True Then
-                MsgBox("Its Null")
             Else
                 OtherDescGFA.Text = rows4(0).Item("Other")
             End If
