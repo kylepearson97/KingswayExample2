@@ -26,11 +26,6 @@
 
     End Sub
 
-    Private Sub ActivityLogBut_Click(sender As Object, e As EventArgs)
-        Dim oForm As New ActivityLogForm
-        ActivityLogForm.Show()
-    End Sub
-
     Private Sub LoadBut_Click(sender As Object, e As EventArgs) Handles LoadBut.Click
         Try
             Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
