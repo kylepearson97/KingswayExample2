@@ -103,16 +103,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCustomer.Designer.vb">
+      <DependentUpon>AddCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CurrentClientList.Designer.vb">
       <DependentUpon>CurrentClientList.vb</DependentUpon>
     </Compile>
     <Compile Include="CurrentClientList.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerFormView.Designer.vb">
-      <DependentUpon>CustomerFormView.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerFormView.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KingswayFitnessDataSet1.vb">
@@ -122,12 +122,6 @@
       <DependentUpon>MembershipType.vb</DependentUpon>
     </Compile>
     <Compile Include="MembershipType.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ActivityLog.Designer.vb">
-      <DependentUpon>ActivityLog.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ActivityLog.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KingswayFitnessDataSet1.Designer.vb">
@@ -172,14 +166,8 @@
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ActivityLog.resx">
-      <DependentUpon>ActivityLog.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CurrentClientList.resx">
       <DependentUpon>CurrentClientList.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerFormView.resx">
-      <DependentUpon>CustomerFormView.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>
@@ -229,28 +217,21 @@
     <Content Include="KingswayFitness.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\Logo.png" />
-    <None Include="Resources\YellowUnclick.jpg" />
-    <None Include="Resources\YellowClick.jpg" />
-    <None Include="Resources\RedUnclick.jpg" />
-    <None Include="Resources\RedClick.jpg" />
-    <None Include="Resources\PurpleUnclick.jpg" />
-    <None Include="Resources\PurpleClick.jpg" />
-    <None Include="Resources\Purple2Unclick.jpg" />
-    <None Include="Resources\Purple2Click.jpg" />
-    <None Include="Resources\OrangeUnclick.jpg" />
-    <None Include="Resources\OrangeClick.jpg" />
-    <None Include="Resources\GreenUnclick.jpg" />
-    <None Include="Resources\GreenClick.jpg" />
-    <None Include="Resources\CloseUnclick.jpg" />
-    <None Include="Resources\CloseClick.jpg" />
-    <None Include="Resources\BlueUnclick.jpg" />
-    <None Include="Resources\BlueClick.jpg" />
-    <None Include="Resources\Blue2Unclick.jpg" />
-    <None Include="Resources\Blue2Click.jpg" />
+    <Content Include="Resources\AddCustomerClick.png" />
+    <Content Include="Resources\AddCustomerNoClick.png" />
+    <Content Include="Resources\AdminClick.png" />
+    <Content Include="Resources\AdminNoClick.png" />
     <None Include="Resources\background.png" />
-    <None Include="Resources\NonclickBlue.png" />
-    <None Include="Resources\ClickBlue.png" />
+    <Content Include="Resources\CurrentClientClick.png" />
+    <Content Include="Resources\CurrentClientNoclick.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\Logo.png" />
+    <Content Include="Resources\PriceListClick.png" />
+    <Content Include="Resources\PriceListNoClick.png" />
+    <Content Include="Resources\ReportsClick.png" />
+    <Content Include="Resources\ReportsNoClick.png" />
+    <Content Include="Resources\ViewEditClick.png" />
+    <Content Include="Resources\ViewEditNoClick.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

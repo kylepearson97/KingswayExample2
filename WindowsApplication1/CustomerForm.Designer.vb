@@ -25,13 +25,9 @@ Partial Class CustomerForm
         Me.components = New System.ComponentModel.Container()
         Me.Logo = New System.Windows.Forms.PictureBox()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
-        Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
-        Me.TableAdapterManager1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager()
-        Me.Members_Address_TableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_Address_TableAdapter()
         Me.CustomerShow = New System.Windows.Forms.TabControl()
         Me.Personal = New System.Windows.Forms.TabPage()
+        Me.LoadBut = New System.Windows.Forms.Button()
         Me.MemberID = New System.Windows.Forms.Label()
         Me.MemPhoto = New System.Windows.Forms.PictureBox()
         Me.MemType = New System.Windows.Forms.TextBox()
@@ -64,8 +60,8 @@ Partial Class CustomerForm
         Me.Gender = New System.Windows.Forms.Label()
         Me.DOB = New System.Windows.Forms.Label()
         Me.Medical = New System.Windows.Forms.TabPage()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.DocPreCB = New System.Windows.Forms.CheckBox()
+        Me.DocReqCB = New System.Windows.Forms.CheckBox()
         Me.DocNoteReq = New System.Windows.Forms.Label()
         Me.DocNotePres = New System.Windows.Forms.Label()
         Me.OperCB = New System.Windows.Forms.CheckBox()
@@ -96,8 +92,8 @@ Partial Class CustomerForm
         Me.GM = New System.Windows.Forms.Label()
         Me.Heart = New System.Windows.Forms.Label()
         Me.Induction = New System.Windows.Forms.TabPage()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.InductCB = New System.Windows.Forms.CheckBox()
+        Me.InductName = New System.Windows.Forms.TextBox()
         Me.GFP = New System.Windows.Forms.Label()
         Me.InjuryACB = New System.Windows.Forms.CheckBox()
         Me.FitterCB = New System.Windows.Forms.CheckBox()
@@ -113,17 +109,38 @@ Partial Class CustomerForm
         Me.Induct = New System.Windows.Forms.Label()
         Me.BodyB = New System.Windows.Forms.Label()
         Me.ActLog = New System.Windows.Forms.TabPage()
+        Me.ActivityLog = New System.Windows.Forms.DataGridView()
+        Me.Member_Activity_LogBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.CustomerFormLab = New System.Windows.Forms.Label()
-        Me.LoadBut = New System.Windows.Forms.Button()
+        Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
+        Me.TableAdapterManager1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager()
+        Me.Members_Address_TableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_Address_TableAdapter()
+        Me.Medical_TableBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Medical_TableTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Medical_TableTableAdapter()
+        Me.InductionsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InductionsTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.InductionsTableAdapter()
+        Me.Members_ReasonsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Members_ReasonsTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_ReasonsTableAdapter()
+        Me.Member_Activity_LogTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter()
+        Me.TimeLoggedOutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeLoggedInDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerShow.SuspendLayout()
         Me.Personal.SuspendLayout()
         CType(Me.MemPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Medical.SuspendLayout()
         Me.Induction.SuspendLayout()
+        Me.ActLog.SuspendLayout()
+        CType(Me.ActivityLog, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Member_Activity_LogBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Medical_TableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InductionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Members_ReasonsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Logo
@@ -141,39 +158,6 @@ Partial Class CustomerForm
         '
         Me.MembersBindingSource.DataMember = "Members"
         '
-        'KingswayFitnessDataSet1
-        '
-        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
-        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MembersBindingSource1
-        '
-        Me.MembersBindingSource1.DataMember = "Members"
-        Me.MembersBindingSource1.DataSource = Me.KingswayFitnessDataSet1
-        '
-        'MembersTableAdapter1
-        '
-        Me.MembersTableAdapter1.ClearBeforeFill = True
-        '
-        'TableAdapterManager1
-        '
-        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager1.Emergency_ContactTableAdapter = Nothing
-        Me.TableAdapterManager1.InductionsTableAdapter = Nothing
-        Me.TableAdapterManager1.Medical_TableTableAdapter = Nothing
-        Me.TableAdapterManager1.Member_Activity_LogTableAdapter = Nothing
-        Me.TableAdapterManager1.Members_Address_TableAdapter = Nothing
-        Me.TableAdapterManager1.Members_ReasonsTableAdapter = Nothing
-        Me.TableAdapterManager1.Membership_TypeTableAdapter = Nothing
-        Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter1
-        Me.TableAdapterManager1.StaffTableAdapter = Nothing
-        Me.TableAdapterManager1.tempdataTableAdapter = Nothing
-        Me.TableAdapterManager1.UpdateOrder = WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Members_Address_TableAdapter1
-        '
-        Me.Members_Address_TableAdapter1.ClearBeforeFill = True
-        '
         'CustomerShow
         '
         Me.CustomerShow.Controls.Add(Me.Personal)
@@ -189,6 +173,7 @@ Partial Class CustomerForm
         '
         'Personal
         '
+        Me.Personal.AutoScroll = True
         Me.Personal.BackColor = System.Drawing.Color.Transparent
         Me.Personal.Controls.Add(Me.LoadBut)
         Me.Personal.Controls.Add(Me.MemberID)
@@ -228,6 +213,15 @@ Partial Class CustomerForm
         Me.Personal.Size = New System.Drawing.Size(710, 409)
         Me.Personal.TabIndex = 0
         Me.Personal.Text = "Personal Details"
+        '
+        'LoadBut
+        '
+        Me.LoadBut.Location = New System.Drawing.Point(340, 9)
+        Me.LoadBut.Name = "LoadBut"
+        Me.LoadBut.Size = New System.Drawing.Size(125, 31)
+        Me.LoadBut.TabIndex = 4
+        Me.LoadBut.Text = "Load Member"
+        Me.LoadBut.UseVisualStyleBackColor = True
         '
         'MemberID
         '
@@ -535,8 +529,8 @@ Partial Class CustomerForm
         'Medical
         '
         Me.Medical.BackColor = System.Drawing.Color.Transparent
-        Me.Medical.Controls.Add(Me.CheckBox2)
-        Me.Medical.Controls.Add(Me.CheckBox1)
+        Me.Medical.Controls.Add(Me.DocPreCB)
+        Me.Medical.Controls.Add(Me.DocReqCB)
         Me.Medical.Controls.Add(Me.DocNoteReq)
         Me.Medical.Controls.Add(Me.DocNotePres)
         Me.Medical.Controls.Add(Me.OperCB)
@@ -573,23 +567,23 @@ Partial Class CustomerForm
         Me.Medical.TabIndex = 1
         Me.Medical.Text = "Medical History"
         '
-        'CheckBox2
+        'DocPreCB
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(440, 286)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox2.TabIndex = 24
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.DocPreCB.AutoSize = True
+        Me.DocPreCB.Location = New System.Drawing.Point(440, 286)
+        Me.DocPreCB.Name = "DocPreCB"
+        Me.DocPreCB.Size = New System.Drawing.Size(15, 14)
+        Me.DocPreCB.TabIndex = 24
+        Me.DocPreCB.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'DocReqCB
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(440, 255)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
-        Me.CheckBox1.TabIndex = 23
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.DocReqCB.AutoSize = True
+        Me.DocReqCB.Location = New System.Drawing.Point(440, 255)
+        Me.DocReqCB.Name = "DocReqCB"
+        Me.DocReqCB.Size = New System.Drawing.Size(15, 14)
+        Me.DocReqCB.TabIndex = 23
+        Me.DocReqCB.UseVisualStyleBackColor = True
         '
         'DocNoteReq
         '
@@ -902,9 +896,10 @@ Partial Class CustomerForm
         '
         'Induction
         '
+        Me.Induction.AutoScroll = True
         Me.Induction.BackColor = System.Drawing.Color.Transparent
-        Me.Induction.Controls.Add(Me.TextBox2)
-        Me.Induction.Controls.Add(Me.TextBox1)
+        Me.Induction.Controls.Add(Me.InductCB)
+        Me.Induction.Controls.Add(Me.InductName)
         Me.Induction.Controls.Add(Me.GFP)
         Me.Induction.Controls.Add(Me.InjuryACB)
         Me.Induction.Controls.Add(Me.FitterCB)
@@ -925,19 +920,21 @@ Partial Class CustomerForm
         Me.Induction.TabIndex = 2
         Me.Induction.Text = "Induction"
         '
-        'TextBox2
+        'InductCB
         '
-        Me.TextBox2.Location = New System.Drawing.Point(549, 69)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(122, 26)
-        Me.TextBox2.TabIndex = 26
+        Me.InductCB.AutoSize = True
+        Me.InductCB.Location = New System.Drawing.Point(549, 47)
+        Me.InductCB.Name = "InductCB"
+        Me.InductCB.Size = New System.Drawing.Size(15, 14)
+        Me.InductCB.TabIndex = 27
+        Me.InductCB.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'InductName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(549, 40)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(122, 26)
-        Me.TextBox1.TabIndex = 25
+        Me.InductName.Location = New System.Drawing.Point(549, 69)
+        Me.InductName.Name = "InductName"
+        Me.InductName.Size = New System.Drawing.Size(122, 26)
+        Me.InductName.TabIndex = 26
         '
         'GFP
         '
@@ -1094,12 +1091,38 @@ Partial Class CustomerForm
         '
         'ActLog
         '
+        Me.ActLog.Controls.Add(Me.ActivityLog)
         Me.ActLog.Location = New System.Drawing.Point(4, 29)
         Me.ActLog.Name = "ActLog"
         Me.ActLog.Size = New System.Drawing.Size(710, 409)
         Me.ActLog.TabIndex = 3
         Me.ActLog.Text = "Activity Log"
         Me.ActLog.UseVisualStyleBackColor = True
+        '
+        'ActivityLog
+        '
+        Me.ActivityLog.AllowUserToAddRows = False
+        Me.ActivityLog.AllowUserToDeleteRows = False
+        Me.ActivityLog.AutoGenerateColumns = False
+        Me.ActivityLog.BackgroundColor = System.Drawing.SystemColors.ButtonFace
+        Me.ActivityLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ActivityLog.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TimeLoggedOutDataGridViewTextBoxColumn, Me.TimeLoggedInDataGridViewTextBoxColumn})
+        Me.ActivityLog.DataSource = Me.Member_Activity_LogBindingSource
+        Me.ActivityLog.Location = New System.Drawing.Point(0, 3)
+        Me.ActivityLog.Name = "ActivityLog"
+        Me.ActivityLog.ReadOnly = True
+        Me.ActivityLog.Size = New System.Drawing.Size(710, 398)
+        Me.ActivityLog.TabIndex = 0
+        '
+        'Member_Activity_LogBindingSource
+        '
+        Me.Member_Activity_LogBindingSource.DataMember = "Member Activity Log"
+        Me.Member_Activity_LogBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'KingswayFitnessDataSet1
+        '
+        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
+        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'CustomerFormLab
         '
@@ -1112,14 +1135,80 @@ Partial Class CustomerForm
         Me.CustomerFormLab.TabIndex = 6
         Me.CustomerFormLab.Text = "Customer Edit Form"
         '
-        'LoadBut
+        'MembersBindingSource1
         '
-        Me.LoadBut.Location = New System.Drawing.Point(340, 9)
-        Me.LoadBut.Name = "LoadBut"
-        Me.LoadBut.Size = New System.Drawing.Size(125, 31)
-        Me.LoadBut.TabIndex = 4
-        Me.LoadBut.Text = "Load Member"
-        Me.LoadBut.UseVisualStyleBackColor = True
+        Me.MembersBindingSource1.DataMember = "Members"
+        Me.MembersBindingSource1.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'MembersTableAdapter1
+        '
+        Me.MembersTableAdapter1.ClearBeforeFill = True
+        '
+        'TableAdapterManager1
+        '
+        Me.TableAdapterManager1.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager1.Emergency_ContactTableAdapter = Nothing
+        Me.TableAdapterManager1.InductionsTableAdapter = Nothing
+        Me.TableAdapterManager1.Medical_TableTableAdapter = Nothing
+        Me.TableAdapterManager1.Member_Activity_LogTableAdapter = Nothing
+        Me.TableAdapterManager1.Members_Address_TableAdapter = Nothing
+        Me.TableAdapterManager1.Members_ReasonsTableAdapter = Nothing
+        Me.TableAdapterManager1.Membership_TypeTableAdapter = Nothing
+        Me.TableAdapterManager1.MembersTableAdapter = Me.MembersTableAdapter1
+        Me.TableAdapterManager1.StaffTableAdapter = Nothing
+        Me.TableAdapterManager1.tempdataTableAdapter = Nothing
+        Me.TableAdapterManager1.UpdateOrder = WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Members_Address_TableAdapter1
+        '
+        Me.Members_Address_TableAdapter1.ClearBeforeFill = True
+        '
+        'Medical_TableBindingSource
+        '
+        Me.Medical_TableBindingSource.DataMember = "Medical Table"
+        Me.Medical_TableBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'Medical_TableTableAdapter
+        '
+        Me.Medical_TableTableAdapter.ClearBeforeFill = True
+        '
+        'InductionsBindingSource
+        '
+        Me.InductionsBindingSource.DataMember = "Inductions"
+        Me.InductionsBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'InductionsTableAdapter
+        '
+        Me.InductionsTableAdapter.ClearBeforeFill = True
+        '
+        'Members_ReasonsBindingSource
+        '
+        Me.Members_ReasonsBindingSource.DataMember = "Members Reasons"
+        Me.Members_ReasonsBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'Members_ReasonsTableAdapter
+        '
+        Me.Members_ReasonsTableAdapter.ClearBeforeFill = True
+        '
+        'Member_Activity_LogTableAdapter
+        '
+        Me.Member_Activity_LogTableAdapter.ClearBeforeFill = True
+        '
+        'TimeLoggedOutDataGridViewTextBoxColumn
+        '
+        Me.TimeLoggedOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TimeLoggedOutDataGridViewTextBoxColumn.DataPropertyName = "Time Logged out"
+        Me.TimeLoggedOutDataGridViewTextBoxColumn.HeaderText = "Time Logged out"
+        Me.TimeLoggedOutDataGridViewTextBoxColumn.Name = "TimeLoggedOutDataGridViewTextBoxColumn"
+        Me.TimeLoggedOutDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TimeLoggedInDataGridViewTextBoxColumn
+        '
+        Me.TimeLoggedInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TimeLoggedInDataGridViewTextBoxColumn.DataPropertyName = "Time Logged in"
+        Me.TimeLoggedInDataGridViewTextBoxColumn.HeaderText = "Time Logged in"
+        Me.TimeLoggedInDataGridViewTextBoxColumn.Name = "TimeLoggedInDataGridViewTextBoxColumn"
+        Me.TimeLoggedInDataGridViewTextBoxColumn.ReadOnly = True
         '
         'CustomerForm
         '
@@ -1127,7 +1216,7 @@ Partial Class CustomerForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(720, 567)
+        Me.ClientSize = New System.Drawing.Size(720, 568)
         Me.Controls.Add(Me.CustomerFormLab)
         Me.Controls.Add(Me.CustomerShow)
         Me.Controls.Add(Me.Logo)
@@ -1136,8 +1225,6 @@ Partial Class CustomerForm
         Me.Text = "Customer Form Menu"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustomerShow.ResumeLayout(False)
         Me.Personal.ResumeLayout(False)
         Me.Personal.PerformLayout()
@@ -1146,6 +1233,14 @@ Partial Class CustomerForm
         Me.Medical.PerformLayout()
         Me.Induction.ResumeLayout(False)
         Me.Induction.PerformLayout()
+        Me.ActLog.ResumeLayout(False)
+        CType(Me.ActivityLog, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Member_Activity_LogBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Medical_TableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InductionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Members_ReasonsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1222,8 +1317,7 @@ Partial Class CustomerForm
     Friend WithEvents GM As Label
     Friend WithEvents Heart As Label
     Friend WithEvents Induction As TabPage
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents InductName As TextBox
     Friend WithEvents GFP As Label
     Friend WithEvents InjuryACB As CheckBox
     Friend WithEvents FitterCB As CheckBox
@@ -1238,11 +1332,23 @@ Partial Class CustomerForm
     Friend WithEvents GFA As Label
     Friend WithEvents Induct As Label
     Friend WithEvents BodyB As Label
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents DocPreCB As CheckBox
+    Friend WithEvents DocReqCB As CheckBox
     Friend WithEvents DocNoteReq As Label
     Friend WithEvents DocNotePres As Label
     Friend WithEvents CustomerFormLab As Label
     Friend WithEvents ActLog As TabPage
     Friend WithEvents LoadBut As Button
+    Friend WithEvents Medical_TableBindingSource As BindingSource
+    Friend WithEvents Medical_TableTableAdapter As KingswayFitnessDataSet1TableAdapters.Medical_TableTableAdapter
+    Friend WithEvents InductionsBindingSource As BindingSource
+    Friend WithEvents InductionsTableAdapter As KingswayFitnessDataSet1TableAdapters.InductionsTableAdapter
+    Friend WithEvents Members_ReasonsBindingSource As BindingSource
+    Friend WithEvents Members_ReasonsTableAdapter As KingswayFitnessDataSet1TableAdapters.Members_ReasonsTableAdapter
+    Friend WithEvents Member_Activity_LogBindingSource As BindingSource
+    Friend WithEvents Member_Activity_LogTableAdapter As KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter
+    Friend WithEvents InductCB As CheckBox
+    Friend WithEvents ActivityLog As DataGridView
+    Friend WithEvents TimeLoggedOutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TimeLoggedInDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

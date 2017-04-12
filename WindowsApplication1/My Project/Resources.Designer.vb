@@ -63,6 +63,46 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property AddCustomerClick() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AddCustomerClick", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AddCustomerNoClick() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AddCustomerNoClick", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AdminClick() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AdminClick", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property AdminNoClick() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("AdminNoClick", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property background() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("background", resourceCulture)
@@ -73,9 +113,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Blue2Click() As System.Drawing.Bitmap
+        Friend ReadOnly Property CurrentClientClick() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Blue2Click", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("CurrentClientClick", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -83,69 +123,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Blue2Unclick() As System.Drawing.Bitmap
+        Friend ReadOnly Property CurrentClientNoclick() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Blue2Unclick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property BlueClick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BlueClick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property BlueUnclick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("BlueUnclick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property CloseClick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("CloseClick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property CloseUnclick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("CloseUnclick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property GreenClick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("GreenClick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property GreenUnclick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("GreenUnclick", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("CurrentClientNoclick", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -163,9 +143,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property OrangeClick() As System.Drawing.Bitmap
+        Friend ReadOnly Property PriceListClick() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("OrangeClick", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("PriceListClick", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -173,9 +153,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property OrangeUnclick() As System.Drawing.Bitmap
+        Friend ReadOnly Property PriceListNoClick() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("OrangeUnclick", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("PriceListNoClick", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -183,9 +163,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Purple2Click() As System.Drawing.Bitmap
+        Friend ReadOnly Property ReportsClick() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Purple2Click", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ReportsClick", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -193,9 +173,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Purple2Unclick() As System.Drawing.Bitmap
+        Friend ReadOnly Property ReportsNoClick() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("Purple2Unclick", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ReportsNoClick", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -203,9 +183,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property PurpleClick() As System.Drawing.Bitmap
+        Friend ReadOnly Property ViewEditClick() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("PurpleClick", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ViewEditClick", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -213,49 +193,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property PurpleUnclick() As System.Drawing.Bitmap
+        Friend ReadOnly Property ViewEditNoClick() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("PurpleUnclick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property RedClick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("RedClick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property RedUnclick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("RedUnclick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property YellowClick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("YellowClick", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property YellowUnclick() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("YellowUnclick", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("ViewEditNoClick", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

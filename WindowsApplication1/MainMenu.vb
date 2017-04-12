@@ -1,95 +1,77 @@
 ﻿Public Class MainMenu
 
-    Private Sub FileM_MouseHover(sender As Object, e As EventArgs) Handles FileM.MouseHover
-        FileM.Image = My.Resources.Blue2Click
+    Private Sub AddCustomer_MouseHover(sender As Object, e As EventArgs) Handles AddCustomer.MouseHover
+        AddCustomer.Image = My.Resources.AddCustomerClick
 
     End Sub
 
-    Private Sub FileM_MouseLeave(sender As Object, e As EventArgs) Handles FileM.MouseLeave
-        FileM.Image = My.Resources.Blue2Unclick
+    Private Sub AddCustomer_MouseLeave(sender As Object, e As EventArgs) Handles AddCustomer.MouseLeave
+        AddCustomer.Image = My.Resources.AddCustomerNoClick
     End Sub
 
-    Private Sub FileM_Click(sender As Object, e As EventArgs) Handles FileM.Click
-        Dim oForm As New CurrentClientList
+    Private Sub AddCustomer_Click(sender As Object, e As EventArgs) Handles AddCustomer.Click
+        Dim oForm As New AddCustomer
 
         oForm.Show()
     End Sub
-    Private Sub Customer_MouseHover(sender As Object, e As EventArgs) Handles Customer.MouseHover
-        Customer.Image = My.Resources.BlueClick
+    Private Sub ViewEditCustomer_MouseHover(sender As Object, e As EventArgs) Handles ViewEditCustomer.MouseHover
+        ViewEditCustomer.Image = My.Resources.ViewEditClick
 
     End Sub
 
-    Private Sub Customer_MouseLeave(sender As Object, e As EventArgs) Handles Customer.MouseLeave
-        Customer.Image = My.Resources.BlueUnclick
+    Private Sub ViewEditCustomer_MouseLeave(sender As Object, e As EventArgs) Handles ViewEditCustomer.MouseLeave
+        ViewEditCustomer.Image = My.Resources.ViewEditNoClick
     End Sub
 
-    Private Sub Customer_Click(sender As Object, e As EventArgs) Handles Customer.Click
+    Private Sub ViewEditCustomer_Click(sender As Object, e As EventArgs) Handles ViewEditCustomer.Click
         Dim oForm As New CustomerForm
         oForm.Show()
     End Sub
-    Private Sub Reactive_MouseHover(sender As Object, e As EventArgs) Handles Reactive.MouseHover
-        Reactive.Image = My.Resources.GreenClick
+    Private Sub CurrentClient_MouseHover(sender As Object, e As EventArgs) Handles CurrentClient.MouseHover
+        CurrentClient.Image = My.Resources.CurrentClientClick
 
     End Sub
 
-    Private Sub Reactive_MouseLeave(sender As Object, e As EventArgs) Handles Reactive.MouseLeave
-        Reactive.Image = My.Resources.GreenUnclick
+    Private Sub CurentClient_MouseLeave(sender As Object, e As EventArgs) Handles CurrentClient.MouseLeave
+        CurrentClient.Image = My.Resources.CurrentClientNoclick
     End Sub
 
-    Private Sub Renewal_MouseHover(sender As Object, e As EventArgs) Handles Renewal.MouseHover
-        Renewal.Image = My.Resources.OrangeClick
-
-    End Sub
-
-    Private Sub Renewal_MouseLeave(sender As Object, e As EventArgs) Handles Renewal.MouseLeave
-        Renewal.Image = My.Resources.OrangeUnclick
-    End Sub
-
-    Private Sub Lapsed_MouseHover(sender As Object, e As EventArgs) Handles Lapsed.MouseHover
-        Lapsed.Image = My.Resources.YellowClick
+    Private Sub Price_MouseHover(sender As Object, e As EventArgs) Handles PriceList.MouseHover
+        PriceList.Image = My.Resources.PriceListClick
 
     End Sub
 
-    Private Sub Lapsed_MouseLeave(sender As Object, e As EventArgs) Handles Lapsed.MouseLeave
-        Lapsed.Image = My.Resources.YellowUnclick
+    Private Sub PriceList_MouseLeave(sender As Object, e As EventArgs) Handles PriceList.MouseLeave
+        PriceList.Image = My.Resources.PriceListNoClick
     End Sub
 
-    Private Sub Price_MouseHover(sender As Object, e As EventArgs) Handles Membership.MouseHover
-        Membership.Image = My.Resources.RedClick
-
-    End Sub
-
-    Private Sub Price_MouseLeave(sender As Object, e As EventArgs) Handles Membership.MouseLeave
-        Membership.Image = My.Resources.RedUnclick
-    End Sub
-
-    Private Sub Reports_MouseHover(sender As Object, e As EventArgs) Handles Reports.MouseHover
-        Reports.Image = My.Resources.PurpleClick
+    Private Sub Report_MouseHover(sender As Object, e As EventArgs) Handles Report.MouseHover
+        Report.Image = My.Resources.ReportsClick
 
     End Sub
 
-    Private Sub Reports_MouseLeave(sender As Object, e As EventArgs) Handles Reports.MouseLeave
-        Reports.Image = My.Resources.PurpleUnclick
+    Private Sub Report_MouseLeave(sender As Object, e As EventArgs) Handles Report.MouseLeave
+        Report.Image = My.Resources.ReportsNoClick
     End Sub
 
-    Private Sub Routine_MouseHover(sender As Object, e As EventArgs) Handles Routine.MouseHover
-        Routine.Image = My.Resources.Purple2Click
+    Private Sub Admin_MouseHover(sender As Object, e As EventArgs) Handles Admin.MouseHover
+        Admin.Image = My.Resources.AdminClick
 
     End Sub
 
-    Private Sub Routine_MouseLeave(sender As Object, e As EventArgs) Handles Routine.MouseLeave
-        Routine.Image = My.Resources.Purple2Unclick
+    Private Sub Admin_MouseLeave(sender As Object, e As EventArgs) Handles Admin.MouseLeave
+        Admin.Image = My.Resources.AdminNoClick
     End Sub
 
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub Reactive_Click(sender As Object, e As EventArgs) Handles Reactive.Click
-        ActivityLogForm.Show()
+    Private Sub CurrentClient_Click(sender As Object, e As EventArgs) Handles CurrentClient.Click
+        CurrentClientList.Show()
     End Sub
 
-    Private Sub Membership_Click(sender As Object, e As EventArgs) Handles Membership.Click
+    Private Sub Membership_Click(sender As Object, e As EventArgs) Handles PriceList.Click
         Dim oForm As New MembershipType
         oForm.Show()
     End Sub
