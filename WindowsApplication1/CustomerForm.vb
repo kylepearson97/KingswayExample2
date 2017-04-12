@@ -27,8 +27,8 @@
     End Sub
 
     Private Sub LoadBut_Click(sender As Object, e As EventArgs) Handles LoadBut.Click
-        Try
-            Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
+
+        Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
             Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
             Dim rows3() As DataRow = KingswayFitnessDataSet1.Medical_Table.Select("MemberID =" + MembersID.Text)
             Dim rows4() As DataRow = KingswayFitnessDataSet1.Members_Reasons.Select("MemberID =" + MembersID.Text)
@@ -68,22 +68,28 @@
                 AstCB.Checked = rows3(0).Item("Astma")
                 SmokeCB.Checked = rows3(0).Item("Smoker")
                 PregCB.Checked = rows3(0).Item("Pregnant")
-                OperCB.Checked = rows3(0).Item("Recent Operation")
+            OperCB.Checked = rows3(0).Item("Recent Operation")
+            If rows3(0).IsNull("Other") = True Then
+                MsgBox("Null")
+            Else
                 OtherDescGM.Text = rows3(0).Item("Other")
-                '^^^^ if nothing in database then the try catches the error but pops up with the msgbox, this needs to be addressed!!!
-                DocReqCB.Checked = rows3(0).Item("Doctors Note Required")
+            End If
+            DocReqCB.Checked = rows3(0).Item("Doctors Note Required")
                 DocPreCB.Checked = rows3(0).Item("Doctors Note Present")
                 'Induction
                 BodyBCB.Checked = rows4(0).Item("Body Builder")
                 WeightRCB.Checked = rows4(0).Item("Weight Reduction")
                 FitterCB.Checked = rows4(0).Item("Get Fitter")
                 InjuryACB.Checked = rows4(0).Item("Injury Avoidance")
+            If rows4(0).IsNull("Other") = True Then
+                MsgBox("Its Null")
+            Else
                 OtherDescGFA.Text = rows4(0).Item("Other")
-                '^^^^ if nothing in database then the try catches the error but pops up with the msgbox, this needs to be addressed!!!
-                InductCB.Checked = rows5(0).Item("Inducted")
-                InducterName.Text = rows5(0).Item("Inducted By")
+            End If
+            InductCB.Checked = rows5(0).Item("Inducted")
+                InducterName.Text = rows5(0).Item("Inducted By ID")
                 'Activity Log
-                If rows.Length = 0 Or rows.Length > 1 Then
+                If rows6.Length = 0 Or rows6.Length > 1 Then
                     MsgBox("No Activity Log Found")
                 Else
                     ActivityLog.Rows.Add(rows6(0).Item("Time Logged In"), rows6(0).Item("Time Logged Out"))
@@ -91,12 +97,8 @@
                 End If
                 '^^^ Had a stab at this
             End If
-        Catch ex As SystemException
-            MsgBox("Membership Id Needed")
 
 
-
-        End Try
 
 
     End Sub
