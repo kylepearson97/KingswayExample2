@@ -143,6 +143,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property OldCustClick() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("OldCustClick", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property OldCustNoClick() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("OldCustNoClick", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property PriceListClick() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("PriceListClick", resourceCulture)

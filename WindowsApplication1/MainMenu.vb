@@ -75,4 +75,9 @@
         Dim oForm As New MembershipType
         oForm.Show()
     End Sub
+
+    Private Sub Report_Click(sender As Object, e As EventArgs) Handles Report.Click
+        Dim oForm As New Reports
+        oForm.Show()
+    End Sub
 End Class

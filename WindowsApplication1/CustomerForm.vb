@@ -74,7 +74,7 @@
                 OtherDescGM.Text = rows3(0).Item("Other")
             End If
             DocReqCB.Checked = rows3(0).Item("Doctors Note Required")
-                DocPreCB.Checked = rows3(0).Item("Doctors Note Present")
+            DocPreCB.Checked = rows3(0).Item("Doctors Note Present")
                 'Induction
                 BodyBCB.Checked = rows4(0).Item("Body Builder")
                 WeightRCB.Checked = rows4(0).Item("Weight Reduction")
@@ -85,16 +85,16 @@
                 OtherDescGFA.Text = rows4(0).Item("Other")
             End If
             InductCB.Checked = rows5(0).Item("Inducted")
-                InducterName.Text = rows5(0).Item("Inducted By ID")
-                'Activity Log
-                If rows6.Length = 0 Or rows6.Length > 1 Then
-                    MsgBox("No Activity Log Found")
-                Else
-                    ActivityLog.Rows.Add(rows6(0).Item("Time Logged In"), rows6(0).Item("Time Logged Out"))
+            InducterName.Text = rows5(0).Item("Inducted By ID")
+            'Activity Log
+            If rows6.Length = 0 Or rows6.Length > 1 Then
+                MsgBox("No Activity Log Found")
+            Else
+                ActivityLog.Rows.Add(rows6(0).Item("Time Logged In"), rows6(0).Item("Time Logged Out"))
 
-                End If
-                '^^^ Had a stab at this
             End If
+            '^^^ Had a stab at this
+        End If
 
 
 

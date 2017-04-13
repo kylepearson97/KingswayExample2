@@ -118,10 +118,16 @@
     <Compile Include="KingswayFitnessDataSet1.vb">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MembershipType.Designer.vb">
-      <DependentUpon>MembershipType.vb</DependentUpon>
+    <Compile Include="OldCustomer.Designer.vb">
+      <DependentUpon>OldCustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="MembershipType.vb">
+    <Compile Include="OldCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Price List.Designer.vb">
+      <DependentUpon>Price List.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Price List.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KingswayFitnessDataSet1.Designer.vb">
@@ -134,12 +140,6 @@
     </Compile>
     <Compile Include="MainMenu.Designer.vb">
       <DependentUpon>MainMenu.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FileManagement.Designer.vb">
-      <DependentUpon>FileManagement.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FileManagement.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomerForm.Designer.vb">
@@ -163,17 +163,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reports.Designer.vb">
+      <DependentUpon>Reports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CurrentClientList.resx">
       <DependentUpon>CurrentClientList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FileManagement.resx">
-      <DependentUpon>FileManagement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerForm.resx">
       <DependentUpon>CustomerForm.vb</DependentUpon>
@@ -184,8 +190,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="MembershipType.resx">
-      <DependentUpon>MembershipType.vb</DependentUpon>
+    <EmbeddedResource Include="OldCustomer.resx">
+      <DependentUpon>OldCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Price List.resx">
+      <DependentUpon>Price List.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +238,8 @@
     <Content Include="Resources\CurrentClientNoclick.png" />
     <None Include="Resources\Image1.bmp" />
     <None Include="Resources\Logo.png" />
+    <None Include="Resources\OldCustNoClick.png" />
+    <None Include="Resources\OldCustClick.png" />
     <Content Include="Resources\PriceListClick.png" />
     <Content Include="Resources\PriceListNoClick.png" />
     <Content Include="Resources\ReportsClick.png" />
