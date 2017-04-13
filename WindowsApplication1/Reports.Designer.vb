@@ -25,8 +25,10 @@ Partial Class Reports
         Me.CustomerFormLab = New System.Windows.Forms.Label()
         Me.Logo = New System.Windows.Forms.PictureBox()
         Me.OldCustomer = New System.Windows.Forms.PictureBox()
+        Me.TodayAct = New System.Windows.Forms.PictureBox()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OldCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TodayAct, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CustomerFormLab
@@ -61,6 +63,16 @@ Partial Class Reports
         Me.OldCustomer.TabIndex = 0
         Me.OldCustomer.TabStop = False
         '
+        'TodayAct
+        '
+        Me.TodayAct.Image = Global.WindowsApplication1.My.Resources.Resources.TodayNoClick
+        Me.TodayAct.Location = New System.Drawing.Point(38, 169)
+        Me.TodayAct.Name = "TodayAct"
+        Me.TodayAct.Size = New System.Drawing.Size(250, 50)
+        Me.TodayAct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.TodayAct.TabIndex = 9
+        Me.TodayAct.TabStop = False
+        '
         'Reports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -68,6 +80,7 @@ Partial Class Reports
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(318, 405)
+        Me.Controls.Add(Me.TodayAct)
         Me.Controls.Add(Me.CustomerFormLab)
         Me.Controls.Add(Me.Logo)
         Me.Controls.Add(Me.OldCustomer)
@@ -76,6 +89,7 @@ Partial Class Reports
         Me.Text = "Reports"
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OldCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TodayAct, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -84,4 +98,5 @@ Partial Class Reports
     Friend WithEvents OldCustomer As PictureBox
     Friend WithEvents Logo As PictureBox
     Friend WithEvents CustomerFormLab As Label
+    Friend WithEvents TodayAct As PictureBox
 End Class

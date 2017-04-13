@@ -170,6 +170,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
+    <Compile Include="TodayActivity.Designer.vb">
+      <DependentUpon>TodayActivity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TodayActivity.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddCustomer.resx">
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TodayActivity.resx">
+      <DependentUpon>TodayActivity.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +253,8 @@
     <Content Include="Resources\PriceListNoClick.png" />
     <Content Include="Resources\ReportsClick.png" />
     <Content Include="Resources\ReportsNoClick.png" />
+    <None Include="Resources\TodayNoClick.png" />
+    <None Include="Resources\TodayClick.png" />
     <Content Include="Resources\ViewEditClick.png" />
     <Content Include="Resources\ViewEditNoClick.png" />
   </ItemGroup>
