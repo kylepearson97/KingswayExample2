@@ -110,8 +110,6 @@ Partial Class CustomerForm
         Me.BodyB = New System.Windows.Forms.Label()
         Me.ActLog = New System.Windows.Forms.TabPage()
         Me.ActivityLog = New System.Windows.Forms.DataGridView()
-        Me.TimeLoggedOutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeLoggedInDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Member_Activity_LogBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.CustomerFormLab = New System.Windows.Forms.Label()
@@ -126,6 +124,8 @@ Partial Class CustomerForm
         Me.Members_ReasonsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Members_ReasonsTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_ReasonsTableAdapter()
         Me.Member_Activity_LogTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter()
+        Me.TimeLoggedIn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeLoggedOut = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerShow.SuspendLayout()
@@ -1103,32 +1103,14 @@ Partial Class CustomerForm
         '
         Me.ActivityLog.AllowUserToAddRows = False
         Me.ActivityLog.AllowUserToDeleteRows = False
-        Me.ActivityLog.AutoGenerateColumns = False
         Me.ActivityLog.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.ActivityLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ActivityLog.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TimeLoggedOutDataGridViewTextBoxColumn, Me.TimeLoggedInDataGridViewTextBoxColumn})
-        Me.ActivityLog.DataSource = Me.Member_Activity_LogBindingSource
+        Me.ActivityLog.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TimeLoggedIn, Me.TimeLoggedOut})
         Me.ActivityLog.Location = New System.Drawing.Point(0, 3)
         Me.ActivityLog.Name = "ActivityLog"
         Me.ActivityLog.ReadOnly = True
         Me.ActivityLog.Size = New System.Drawing.Size(710, 398)
         Me.ActivityLog.TabIndex = 0
-        '
-        'TimeLoggedOutDataGridViewTextBoxColumn
-        '
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.DataPropertyName = "Time Logged out"
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.HeaderText = "Time Logged out"
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.Name = "TimeLoggedOutDataGridViewTextBoxColumn"
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TimeLoggedInDataGridViewTextBoxColumn
-        '
-        Me.TimeLoggedInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TimeLoggedInDataGridViewTextBoxColumn.DataPropertyName = "Time Logged in"
-        Me.TimeLoggedInDataGridViewTextBoxColumn.HeaderText = "Time Logged in"
-        Me.TimeLoggedInDataGridViewTextBoxColumn.Name = "TimeLoggedInDataGridViewTextBoxColumn"
-        Me.TimeLoggedInDataGridViewTextBoxColumn.ReadOnly = True
         '
         'Member_Activity_LogBindingSource
         '
@@ -1209,6 +1191,20 @@ Partial Class CustomerForm
         'Member_Activity_LogTableAdapter
         '
         Me.Member_Activity_LogTableAdapter.ClearBeforeFill = True
+        '
+        'TimeLoggedIn
+        '
+        Me.TimeLoggedIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TimeLoggedIn.HeaderText = "Time Logged In"
+        Me.TimeLoggedIn.Name = "TimeLoggedIn"
+        Me.TimeLoggedIn.ReadOnly = True
+        '
+        'TimeLoggedOut
+        '
+        Me.TimeLoggedOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TimeLoggedOut.HeaderText = "Time Logged Out"
+        Me.TimeLoggedOut.Name = "TimeLoggedOut"
+        Me.TimeLoggedOut.ReadOnly = True
         '
         'CustomerForm
         '
@@ -1349,6 +1345,6 @@ Partial Class CustomerForm
     Friend WithEvents Member_Activity_LogTableAdapter As KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter
     Friend WithEvents InductCB As CheckBox
     Friend WithEvents ActivityLog As DataGridView
-    Friend WithEvents TimeLoggedOutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TimeLoggedInDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents TimeLoggedIn As DataGridViewTextBoxColumn
+    Friend WithEvents TimeLoggedOut As DataGridViewTextBoxColumn
 End Class

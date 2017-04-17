@@ -26,6 +26,7 @@ Partial Class AddCustomer
         Me.CustomerFormLab = New System.Windows.Forms.Label()
         Me.CustomerShow = New System.Windows.Forms.TabControl()
         Me.Personal = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MemberID = New System.Windows.Forms.Label()
         Me.MemPhoto = New System.Windows.Forms.PictureBox()
         Me.MemType = New System.Windows.Forms.TextBox()
@@ -106,17 +107,12 @@ Partial Class AddCustomer
         Me.GFA = New System.Windows.Forms.Label()
         Me.Induct = New System.Windows.Forms.Label()
         Me.BodyB = New System.Windows.Forms.Label()
-        Me.ActLog = New System.Windows.Forms.TabPage()
-        Me.ActivityLog = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerShow.SuspendLayout()
         Me.Personal.SuspendLayout()
         CType(Me.MemPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Medical.SuspendLayout()
         Me.Induction.SuspendLayout()
-        Me.ActLog.SuspendLayout()
-        CType(Me.ActivityLog, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Logo
@@ -146,7 +142,6 @@ Partial Class AddCustomer
         Me.CustomerShow.Controls.Add(Me.Personal)
         Me.CustomerShow.Controls.Add(Me.Medical)
         Me.CustomerShow.Controls.Add(Me.Induction)
-        Me.CustomerShow.Controls.Add(Me.ActLog)
         Me.CustomerShow.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CustomerShow.Location = New System.Drawing.Point(2, 126)
         Me.CustomerShow.Name = "CustomerShow"
@@ -196,6 +191,15 @@ Partial Class AddCustomer
         Me.Personal.Size = New System.Drawing.Size(710, 409)
         Me.Personal.TabIndex = 0
         Me.Personal.Text = "Personal Details"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(340, 9)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(125, 31)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Add Customer"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'MemberID
         '
@@ -1063,37 +1067,6 @@ Partial Class AddCustomer
         Me.BodyB.TabIndex = 7
         Me.BodyB.Text = "Body Building"
         '
-        'ActLog
-        '
-        Me.ActLog.Controls.Add(Me.ActivityLog)
-        Me.ActLog.Location = New System.Drawing.Point(4, 29)
-        Me.ActLog.Name = "ActLog"
-        Me.ActLog.Size = New System.Drawing.Size(710, 409)
-        Me.ActLog.TabIndex = 3
-        Me.ActLog.Text = "Activity Log"
-        Me.ActLog.UseVisualStyleBackColor = True
-        '
-        'ActivityLog
-        '
-        Me.ActivityLog.AllowUserToAddRows = False
-        Me.ActivityLog.AllowUserToDeleteRows = False
-        Me.ActivityLog.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.ActivityLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ActivityLog.Location = New System.Drawing.Point(0, 3)
-        Me.ActivityLog.Name = "ActivityLog"
-        Me.ActivityLog.ReadOnly = True
-        Me.ActivityLog.Size = New System.Drawing.Size(710, 398)
-        Me.ActivityLog.TabIndex = 0
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(340, 9)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 31)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Add Customer"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'AddCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1113,8 +1086,6 @@ Partial Class AddCustomer
         Me.Medical.PerformLayout()
         Me.Induction.ResumeLayout(False)
         Me.Induction.PerformLayout()
-        Me.ActLog.ResumeLayout(False)
-        CType(Me.ActivityLog, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1204,7 +1175,5 @@ Partial Class AddCustomer
     Friend WithEvents GFA As Label
     Friend WithEvents Induct As Label
     Friend WithEvents BodyB As Label
-    Friend WithEvents ActLog As TabPage
-    Friend WithEvents ActivityLog As DataGridView
     Friend WithEvents Button1 As Button
 End Class

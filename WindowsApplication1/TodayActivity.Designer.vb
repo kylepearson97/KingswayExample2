@@ -25,17 +25,17 @@ Partial Class TodayActivity
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
-        Me.TodayActiveBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TodayActiveTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TodayActiveTableAdapter()
         Me.TitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ForenameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SurnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimeLoggedInDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimeLoggedOutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TodayActiveBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
+        Me.TodayActiveTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TodayActiveTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TodayActiveBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -59,20 +59,6 @@ Partial Class TodayActivity
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(532, 399)
         Me.DataGridView1.TabIndex = 0
-        '
-        'KingswayFitnessDataSet1
-        '
-        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
-        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'TodayActiveBindingSource
-        '
-        Me.TodayActiveBindingSource.DataMember = "TodayActive"
-        Me.TodayActiveBindingSource.DataSource = Me.KingswayFitnessDataSet1
-        '
-        'TodayActiveTableAdapter
-        '
-        Me.TodayActiveTableAdapter.ClearBeforeFill = True
         '
         'TitleDataGridViewTextBoxColumn
         '
@@ -115,6 +101,20 @@ Partial Class TodayActivity
         Me.TimeLoggedOutDataGridViewTextBoxColumn.Name = "TimeLoggedOutDataGridViewTextBoxColumn"
         Me.TimeLoggedOutDataGridViewTextBoxColumn.ReadOnly = True
         '
+        'TodayActiveBindingSource
+        '
+        Me.TodayActiveBindingSource.DataMember = "TodayActive"
+        Me.TodayActiveBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'KingswayFitnessDataSet1
+        '
+        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
+        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'TodayActiveTableAdapter
+        '
+        Me.TodayActiveTableAdapter.ClearBeforeFill = True
+        '
         'TodayActivity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -124,8 +124,8 @@ Partial Class TodayActivity
         Me.Name = "TodayActivity"
         Me.Text = "TodayActivity"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TodayActiveBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

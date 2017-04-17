@@ -29,68 +29,76 @@
     Private Sub LoadBut_Click(sender As Object, e As EventArgs) Handles LoadBut.Click
 
         Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
-            Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
-            Dim rows3() As DataRow = KingswayFitnessDataSet1.Medical_Table.Select("MemberID =" + MembersID.Text)
-            Dim rows4() As DataRow = KingswayFitnessDataSet1.Members_Reasons.Select("MemberID =" + MembersID.Text)
-            Dim rows5() As DataRow = KingswayFitnessDataSet1.Inductions.Select("MemberID =" + MembersID.Text)
-            Dim rows6() As DataRow = KingswayFitnessDataSet1.Activity_Log.Select("MemberID =" + MembersID.Text)
+        Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
+        Dim rows3() As DataRow = KingswayFitnessDataSet1.Medical_Table.Select("MemberID =" + MembersID.Text)
+        Dim rows4() As DataRow = KingswayFitnessDataSet1.Members_Reasons.Select("MemberID =" + MembersID.Text)
+        Dim rows5() As DataRow = KingswayFitnessDataSet1.Inductions.Select("MemberID =" + MembersID.Text)
+        Dim rows6() As DataRow = KingswayFitnessDataSet1.Member_Activity_Log.Select("MemberID =" + MembersID.Text)
 
-            If rows.Count = 0 Then
-                MsgBox("No File Found")
-            Else
-                Firstname.Text = rows(0).Item("Forename")
-                Lastname.Text = rows(0).Item("Surname")
-                Address1.Text = rows2(0).Item("House Number/Name")
-                Address2.Text = rows2(0).Item("Road")
-                Address3.Text = rows2(0).Item("Town")
-                Address4.Text = rows2(0).Item("County")
-                Address5.Text = rows2(0).Item("Post Code")
-                MemGender.Text = rows(0).Item("Gender")
-                MemDOB.Text = rows(0).Item("DOB")
-                MemMobile.Text = rows(0).Item("Mobile Number")
-                MemHome.Text = rows(0).Item("House Phone Number")
-                'jiggery to make it show true/false for status, maybe an if statement to change to Active/ Non active?
-                Dim MemStatus1 As Boolean = rows(0).Item("Membership Status")
-                MemStatus.Text = Convert.ToString(MemStatus1)
-                MemEmail.Text = rows(0).Item("Email")
-                MemRenewal.Text = rows(0).Item("Renewal Date")
-                MemDateJoin.Text = rows(0).Item("Join Date")
-                MemType.Text = rows(0).Item("Payment Method")
-                'Medical Table
-                HeartCB.Checked = rows3(0).Item("Heart Condition")
-                FaintCB.Checked = rows3(0).Item("Faint/Dizziness")
-                ChestCB.Checked = rows3(0).Item("Chest Pain")
-                BloodPCB.Checked = rows3(0).Item("High/Low Blood Pressure")
-                EpiCB.Checked = rows3(0).Item("Epilepsy")
-                JointCB.Checked = rows3(0).Item("Joint Problems")
-                BackCB.Checked = rows3(0).Item("Back Problems")
-                DiaCB.Checked = rows3(0).Item("Diabetes")
-                AstCB.Checked = rows3(0).Item("Astma")
-                SmokeCB.Checked = rows3(0).Item("Smoker")
-                PregCB.Checked = rows3(0).Item("Pregnant")
+        If rows.Count = 0 Then
+            MsgBox("No File Found")
+        Else
+            Firstname.Text = rows(0).Item("Forename")
+            Lastname.Text = rows(0).Item("Surname")
+            Address1.Text = rows2(0).Item("House Number/Name")
+            Address2.Text = rows2(0).Item("Road")
+            Address3.Text = rows2(0).Item("Town")
+            Address4.Text = rows2(0).Item("County")
+            Address5.Text = rows2(0).Item("Post Code")
+            MemGender.Text = rows(0).Item("Gender")
+            MemDOB.Text = rows(0).Item("DOB")
+            MemMobile.Text = rows(0).Item("Mobile Number")
+            MemHome.Text = rows(0).Item("House Phone Number")
+            'jiggery to make it show true/false for status, maybe an if statement to change to Active/ Non active?
+            Dim MemStatus1 As Boolean = rows(0).Item("Membership Status")
+            MemStatus.Text = Convert.ToString(MemStatus1)
+            MemEmail.Text = rows(0).Item("Email")
+            MemRenewal.Text = rows(0).Item("Renewal Date")
+            MemDateJoin.Text = rows(0).Item("Join Date")
+            MemType.Text = rows(0).Item("Payment Method")
+            'Medical Table
+            HeartCB.Checked = rows3(0).Item("Heart Condition")
+            FaintCB.Checked = rows3(0).Item("Faint/Dizziness")
+            ChestCB.Checked = rows3(0).Item("Chest Pain")
+            BloodPCB.Checked = rows3(0).Item("High/Low Blood Pressure")
+            EpiCB.Checked = rows3(0).Item("Epilepsy")
+            JointCB.Checked = rows3(0).Item("Joint Problems")
+            BackCB.Checked = rows3(0).Item("Back Problems")
+            DiaCB.Checked = rows3(0).Item("Diabetes")
+            AstCB.Checked = rows3(0).Item("Astma")
+            SmokeCB.Checked = rows3(0).Item("Smoker")
+            PregCB.Checked = rows3(0).Item("Pregnant")
             OperCB.Checked = rows3(0).Item("Recent Operation")
             If rows3(0).IsNull("Other") = True Then
+                OtherDescGM.Text = ""
             Else
                 OtherDescGM.Text = rows3(0).Item("Other")
             End If
             DocReqCB.Checked = rows3(0).Item("Doctors Note Required")
             DocPreCB.Checked = rows3(0).Item("Doctors Note Present")
-                'Induction
-                BodyBCB.Checked = rows4(0).Item("Body Builder")
-                WeightRCB.Checked = rows4(0).Item("Weight Reduction")
-                FitterCB.Checked = rows4(0).Item("Get Fitter")
-                InjuryACB.Checked = rows4(0).Item("Injury Avoidance")
+            'Induction
+            BodyBCB.Checked = rows4(0).Item("Body Builder")
+            WeightRCB.Checked = rows4(0).Item("Weight Reduction")
+            FitterCB.Checked = rows4(0).Item("Get Fitter")
+            InjuryACB.Checked = rows4(0).Item("Injury Avoidance")
             If rows4(0).IsNull("Other") = True Then
+                OtherDescGFA.Text = ""
             Else
                 OtherDescGFA.Text = rows4(0).Item("Other")
             End If
             InductCB.Checked = rows5(0).Item("Inducted")
             InducterName.Text = rows5(0).Item("Inducted By ID")
             'Activity Log
-            If rows6.Length = 0 Or rows6.Length > 1 Then
-                MsgBox("No Activity Log Found")
+            If rows6.Length = 0 Then
+                MsgBox("No Activity Log")
             Else
-                ActivityLog.Rows.Add(rows6(0).Item("Time Logged In"), rows6(0).Item("Time Logged Out"))
+                Dim i = 0
+                For Each rw In rows6
+
+                    ActivityLog.Rows.Add(rows6(i).Item("Time Logged In"), rows6(i).Item("Time Logged Out"))
+                    i = i + 1
+                Next rw
+
 
             End If
             '^^^ Had a stab at this
@@ -100,4 +108,6 @@
 
 
     End Sub
+
+
 End Class
