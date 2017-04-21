@@ -23,83 +23,13 @@ Partial Class TodayActivity
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.TitleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ForenameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SurnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeLoggedInDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeLoggedOutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TodayActiveBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.TodayActiveTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TodayActiveTableAdapter()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         CType(Me.TodayActiveBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AutoGenerateColumns = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.25!)
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.TitleDataGridViewTextBoxColumn, Me.ForenameDataGridViewTextBoxColumn, Me.SurnameDataGridViewTextBoxColumn, Me.TimeLoggedInDataGridViewTextBoxColumn, Me.TimeLoggedOutDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.TodayActiveBindingSource
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(532, 399)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'TitleDataGridViewTextBoxColumn
-        '
-        Me.TitleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
-        Me.TitleDataGridViewTextBoxColumn.DataPropertyName = "Title"
-        Me.TitleDataGridViewTextBoxColumn.HeaderText = "Title"
-        Me.TitleDataGridViewTextBoxColumn.Name = "TitleDataGridViewTextBoxColumn"
-        Me.TitleDataGridViewTextBoxColumn.ReadOnly = True
-        Me.TitleDataGridViewTextBoxColumn.Width = 60
-        '
-        'ForenameDataGridViewTextBoxColumn
-        '
-        Me.ForenameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.ForenameDataGridViewTextBoxColumn.DataPropertyName = "Forename"
-        Me.ForenameDataGridViewTextBoxColumn.HeaderText = "Forename"
-        Me.ForenameDataGridViewTextBoxColumn.Name = "ForenameDataGridViewTextBoxColumn"
-        Me.ForenameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SurnameDataGridViewTextBoxColumn
-        '
-        Me.SurnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.SurnameDataGridViewTextBoxColumn.DataPropertyName = "Surname"
-        Me.SurnameDataGridViewTextBoxColumn.HeaderText = "Surname"
-        Me.SurnameDataGridViewTextBoxColumn.Name = "SurnameDataGridViewTextBoxColumn"
-        Me.SurnameDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TimeLoggedInDataGridViewTextBoxColumn
-        '
-        Me.TimeLoggedInDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TimeLoggedInDataGridViewTextBoxColumn.DataPropertyName = "Time Logged in"
-        Me.TimeLoggedInDataGridViewTextBoxColumn.HeaderText = "Time Logged in"
-        Me.TimeLoggedInDataGridViewTextBoxColumn.Name = "TimeLoggedInDataGridViewTextBoxColumn"
-        Me.TimeLoggedInDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TimeLoggedOutDataGridViewTextBoxColumn
-        '
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.DataPropertyName = "Time Logged out"
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.HeaderText = "Time Logged out"
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.Name = "TimeLoggedOutDataGridViewTextBoxColumn"
-        Me.TimeLoggedOutDataGridViewTextBoxColumn.ReadOnly = True
         '
         'TodayActiveBindingSource
         '
@@ -115,28 +45,33 @@ Partial Class TodayActivity
         '
         Me.TodayActiveTableAdapter.ClearBeforeFill = True
         '
+        'CrystalReportViewer1
+        '
+        Me.CrystalReportViewer1.ActiveViewIndex = 0
+        Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.CrystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
+        Me.CrystalReportViewer1.ReportSource = "C:\Users\pears\Source\Repos\KingswayExample2\WindowsApplication1\TodayActive.rpt"
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(1116, 594)
+        Me.CrystalReportViewer1.TabIndex = 0
+        '
         'TodayActivity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(533, 400)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.ClientSize = New System.Drawing.Size(1116, 594)
+        Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "TodayActivity"
         Me.Text = "TodayActivity"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TodayActiveBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents KingswayFitnessDataSet1 As KingswayFitnessDataSet1
     Friend WithEvents TodayActiveBindingSource As BindingSource
     Friend WithEvents TodayActiveTableAdapter As KingswayFitnessDataSet1TableAdapters.TodayActiveTableAdapter
-    Friend WithEvents TitleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents ForenameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SurnameDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TimeLoggedInDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TimeLoggedOutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
 End Class

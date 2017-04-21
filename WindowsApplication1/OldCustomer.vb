@@ -4,4 +4,5 @@
         Me.Old_MembersTableAdapter.Fill(Me.KingswayFitnessDataSet1.Old_Members)
 
     End Sub
+
 End Class
