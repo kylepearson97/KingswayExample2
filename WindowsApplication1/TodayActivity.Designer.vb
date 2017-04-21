@@ -27,6 +27,7 @@ Partial Class TodayActivity
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.TodayActiveTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.TodayActiveTableAdapter()
         Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.TodayActive1 = New WindowsApplication1.TodayActive()
         CType(Me.TodayActiveBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -53,7 +54,7 @@ Partial Class TodayActivity
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = "C:\Users\pears\Source\Repos\KingswayExample2\WindowsApplication1\TodayActive.rpt"
+        Me.CrystalReportViewer1.ReportSource = Me.TodayActive1
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(1116, 594)
         Me.CrystalReportViewer1.TabIndex = 0
         '
@@ -74,4 +75,5 @@ Partial Class TodayActivity
     Friend WithEvents TodayActiveBindingSource As BindingSource
     Friend WithEvents TodayActiveTableAdapter As KingswayFitnessDataSet1TableAdapters.TodayActiveTableAdapter
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents TodayActive1 As TodayActive
 End Class
