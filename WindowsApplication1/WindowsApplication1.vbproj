@@ -116,18 +116,6 @@
     <Compile Include="AddCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OldCustom.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OldCustom.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TodayActive.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TodayActive.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CurrentClientList.Designer.vb">
       <DependentUpon>CurrentClientList.vb</DependentUpon>
     </Compile>
@@ -136,6 +124,12 @@
     </Compile>
     <Compile Include="KingswayFitnessDataSet1.vb">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OldCustom.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OldCustom.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="OldCustomer.Designer.vb">
       <DependentUpon>OldCustomer.vb</DependentUpon>
@@ -189,6 +183,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.vb" />
+    <Compile Include="TodayActive.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TodayActive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TodayActivity.Designer.vb">
       <DependentUpon>TodayActivity.vb</DependentUpon>
     </Compile>
@@ -199,14 +199,6 @@
   <ItemGroup>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OldCustom.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>OldCustom.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TodayActive.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>TodayActive.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CurrentClientList.resx">
       <DependentUpon>CurrentClientList.vb</DependentUpon>
@@ -223,6 +215,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OldCustom.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OldCustom.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="OldCustomer.resx">
       <DependentUpon>OldCustomer.vb</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +227,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TodayActive.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TodayActive.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TodayActivity.resx">
       <DependentUpon>TodayActivity.vb</DependentUpon>

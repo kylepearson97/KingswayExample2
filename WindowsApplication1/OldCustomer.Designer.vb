@@ -27,8 +27,9 @@ Partial Class OldCustomer
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.Old_MembersTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Old_MembersTableAdapter()
         Me.TodayActive1 = New WindowsApplication1.TodayActive()
-        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.OldCustom1 = New WindowsApplication1.OldCustom()
+        Me.CrystalReportViewer1 = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
+        Me.OldCustom2 = New WindowsApplication1.OldCustom()
         CType(Me.OldMembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,7 +56,7 @@ Partial Class OldCustomer
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
-        Me.CrystalReportViewer1.ReportSource = Me.OldCustom1
+        Me.CrystalReportViewer1.ReportSource = Me.OldCustom2
         Me.CrystalReportViewer1.Size = New System.Drawing.Size(1113, 616)
         Me.CrystalReportViewer1.TabIndex = 0
         '
@@ -76,6 +77,7 @@ Partial Class OldCustomer
     Friend WithEvents OldMembersBindingSource As BindingSource
     Friend WithEvents Old_MembersTableAdapter As KingswayFitnessDataSet1TableAdapters.Old_MembersTableAdapter
     Friend WithEvents TodayActive1 As TodayActive
-    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
     Friend WithEvents OldCustom1 As OldCustom
+    Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer
+    Friend WithEvents OldCustom2 As OldCustom
 End Class
