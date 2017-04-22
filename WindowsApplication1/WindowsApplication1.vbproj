@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="KingswayFitnessDataSet1.vb">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="OldCustom.vb">
       <AutoGen>True</AutoGen>
@@ -147,6 +148,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="MainMenu.vb">
       <SubType>Form</SubType>
@@ -239,14 +241,17 @@
   <ItemGroup>
     <None Include="KingswayFitnessDataSet1.xsc">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="KingswayFitnessDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>KingswayFitnessDataSet1.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="KingswayFitnessDataSet1.xss">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
