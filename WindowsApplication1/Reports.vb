@@ -13,6 +13,7 @@
     End Sub
 
     Private Sub TodayAct_Click(sender As Object, e As EventArgs) Handles TodayAct.Click
+
         Dim oForm As New TodayActivity
         oForm.Show()
     End Sub
