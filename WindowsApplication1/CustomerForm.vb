@@ -28,8 +28,8 @@
     End Sub
 
     Private Sub LoadBut_Click(sender As Object, e As EventArgs) Handles LoadBut.Click
-        'Try
-        Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
+        Try
+            Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
             Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
             Dim rows3() As DataRow = KingswayFitnessDataSet1.Medical_Table.Select("MemberID =" + MembersID.Text)
             Dim rows4() As DataRow = KingswayFitnessDataSet1.Members_Reasons.Select("MemberID =" + MembersID.Text)
@@ -92,18 +92,18 @@
                     OtherDescGFA.Text = rows4(0).Item("Other")
                 End If
                 InductCB.Checked = rows5(0).Item("Inducted")
-            If rows5(0).IsNull("Inducted By ID") = True Then
-                InductName.Text = ""
-            Else
-                Dim rows7() As DataRow = KingswayFitnessDataSet1.Staff.Select("[Staff-ID] =" + rows5(0).Item("Inducted By ID").ToString)
-                InductName.Text = rows7(0).Item("Staff Name")
-            End If
+                If rows5(0).IsNull("Inducted By ID") = True Then
+                    InductName.Text = ""
+                Else
+                    Dim rows7() As DataRow = KingswayFitnessDataSet1.Staff.Select("[Staff-ID] =" + rows5(0).Item("Inducted By ID").ToString)
+                    InductName.Text = rows7(0).Item("Staff Name")
+                End If
 
-            'Activity Log
-            If rows6.Length = 0 Then
+                'Activity Log
+                If rows6.Length = 0 Then
 
                     ActivityLog.Rows.Clear()
-                    MsgBox("No Activity Log")
+
                 Else
                     Dim i = 0
                     For Each rw In rows6
@@ -117,9 +117,9 @@
                 '^^^ Had a stab at this
             End If
 
-        'Catch ex As SyntaxErrorException
-        'MsgBox("Please enter a members id ")
-        'End Try
+        Catch ex As SyntaxErrorException
+            MsgBox("Please enter a members id ")
+        End Try
 
 
 
