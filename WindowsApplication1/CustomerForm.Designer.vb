@@ -110,6 +110,8 @@ Partial Class CustomerForm
         Me.BodyB = New System.Windows.Forms.Label()
         Me.ActLog = New System.Windows.Forms.TabPage()
         Me.ActivityLog = New System.Windows.Forms.DataGridView()
+        Me.TimeLoggedIn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TimeLoggedOut = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Member_Activity_LogBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.CustomerFormLab = New System.Windows.Forms.Label()
@@ -124,8 +126,8 @@ Partial Class CustomerForm
         Me.Members_ReasonsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Members_ReasonsTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Members_ReasonsTableAdapter()
         Me.Member_Activity_LogTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter()
-        Me.TimeLoggedIn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeLoggedOut = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StaffTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.StaffTableAdapter()
+        Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerShow.SuspendLayout()
@@ -141,6 +143,7 @@ Partial Class CustomerForm
         CType(Me.Medical_TableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InductionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Members_ReasonsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Logo
@@ -931,6 +934,7 @@ Partial Class CustomerForm
         '
         'InductName
         '
+        Me.InductName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.InductName.Location = New System.Drawing.Point(549, 69)
         Me.InductName.Name = "InductName"
         Me.InductName.Size = New System.Drawing.Size(122, 26)
@@ -1112,6 +1116,20 @@ Partial Class CustomerForm
         Me.ActivityLog.Size = New System.Drawing.Size(710, 398)
         Me.ActivityLog.TabIndex = 0
         '
+        'TimeLoggedIn
+        '
+        Me.TimeLoggedIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TimeLoggedIn.HeaderText = "Time Logged In"
+        Me.TimeLoggedIn.Name = "TimeLoggedIn"
+        Me.TimeLoggedIn.ReadOnly = True
+        '
+        'TimeLoggedOut
+        '
+        Me.TimeLoggedOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.TimeLoggedOut.HeaderText = "Time Logged Out"
+        Me.TimeLoggedOut.Name = "TimeLoggedOut"
+        Me.TimeLoggedOut.ReadOnly = True
+        '
         'Member_Activity_LogBindingSource
         '
         Me.Member_Activity_LogBindingSource.DataMember = "Member Activity Log"
@@ -1192,19 +1210,14 @@ Partial Class CustomerForm
         '
         Me.Member_Activity_LogTableAdapter.ClearBeforeFill = True
         '
-        'TimeLoggedIn
+        'StaffTableAdapter1
         '
-        Me.TimeLoggedIn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TimeLoggedIn.HeaderText = "Time Logged In"
-        Me.TimeLoggedIn.Name = "TimeLoggedIn"
-        Me.TimeLoggedIn.ReadOnly = True
+        Me.StaffTableAdapter1.ClearBeforeFill = True
         '
-        'TimeLoggedOut
+        'StaffBindingSource
         '
-        Me.TimeLoggedOut.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.TimeLoggedOut.HeaderText = "Time Logged Out"
-        Me.TimeLoggedOut.Name = "TimeLoggedOut"
-        Me.TimeLoggedOut.ReadOnly = True
+        Me.StaffBindingSource.DataMember = "Staff"
+        Me.StaffBindingSource.DataSource = Me.KingswayFitnessDataSet1
         '
         'CustomerForm
         '
@@ -1212,7 +1225,7 @@ Partial Class CustomerForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(720, 568)
+        Me.ClientSize = New System.Drawing.Size(720, 567)
         Me.Controls.Add(Me.CustomerFormLab)
         Me.Controls.Add(Me.CustomerShow)
         Me.Controls.Add(Me.Logo)
@@ -1237,6 +1250,7 @@ Partial Class CustomerForm
         CType(Me.Medical_TableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InductionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Members_ReasonsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1347,4 +1361,6 @@ Partial Class CustomerForm
     Friend WithEvents ActivityLog As DataGridView
     Friend WithEvents TimeLoggedIn As DataGridViewTextBoxColumn
     Friend WithEvents TimeLoggedOut As DataGridViewTextBoxColumn
+    Friend WithEvents StaffTableAdapter1 As KingswayFitnessDataSet1TableAdapters.StaffTableAdapter
+    Friend WithEvents StaffBindingSource As BindingSource
 End Class

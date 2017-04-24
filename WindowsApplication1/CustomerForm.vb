@@ -11,6 +11,7 @@
         Me.Medical_TableTableAdapter.Fill(Me.KingswayFitnessDataSet1.Medical_Table)
         Me.MembersTableAdapter1.Fill(Me.KingswayFitnessDataSet1.Members)
         Me.Members_Address_TableAdapter1.Fill(Me.KingswayFitnessDataSet1.Members_Address_Table)
+        Me.StaffTableAdapter1.Fill(Me.KingswayFitnessDataSet1.Staff)
 
     End Sub
     Private Sub formclose(sender As Object, e As EventArgs) Handles Me.FormClosed
@@ -27,37 +28,36 @@
     End Sub
 
     Private Sub LoadBut_Click(sender As Object, e As EventArgs) Handles LoadBut.Click
-
-        Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
-        Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
-        Dim rows3() As DataRow = KingswayFitnessDataSet1.Medical_Table.Select("MemberID =" + MembersID.Text)
-        Dim rows4() As DataRow = KingswayFitnessDataSet1.Members_Reasons.Select("MemberID =" + MembersID.Text)
-        Dim rows5() As DataRow = KingswayFitnessDataSet1.Inductions.Select("MemberID =" + MembersID.Text)
-        Dim rows6() As DataRow = KingswayFitnessDataSet1.Member_Activity_Log.Select("MemberID =" + MembersID.Text)
-
-        If rows.Count = 0 Then
-            MsgBox("No File Found")
-        Else
-            Firstname.Text = rows(0).Item("Forename")
-            Lastname.Text = rows(0).Item("Surname")
-            Address1.Text = rows2(0).Item("House Number/Name")
-            Address2.Text = rows2(0).Item("Road")
-            Address3.Text = rows2(0).Item("Town")
-            Address4.Text = rows2(0).Item("County")
-            Address5.Text = rows2(0).Item("Post Code")
-            MemGender.Text = rows(0).Item("Gender")
-            MemDOB.Text = rows(0).Item("DOB")
-            MemMobile.Text = rows(0).Item("Mobile Number")
-            MemHome.Text = rows(0).Item("House Phone Number")
-            'jiggery to make it show true/false for status, maybe an if statement to change to Active/ Non active?
-            Dim MemStatus1 As Boolean = rows(0).Item("Membership Status")
-            If MemStatus1 = True Then
-                MemStatus.Text = "Active"
+        Try
+            Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MembersID.Text)
+            Dim rows2() As DataRow = KingswayFitnessDataSet1.Members_Address_Table.Select("MemberID =" + MembersID.Text)
+            Dim rows3() As DataRow = KingswayFitnessDataSet1.Medical_Table.Select("MemberID =" + MembersID.Text)
+            Dim rows4() As DataRow = KingswayFitnessDataSet1.Members_Reasons.Select("MemberID =" + MembersID.Text)
+            Dim rows5() As DataRow = KingswayFitnessDataSet1.Inductions.Select("MemberID =" + MembersID.Text)
+            Dim rows6() As DataRow = KingswayFitnessDataSet1.Member_Activity_Log.Select("MemberID =" + MembersID.Text)
+            If rows.Count = 0 Then
+                MsgBox("No File Found")
             Else
-                MemStatus.Text = "Non-Active"
-            End If
+                Firstname.Text = rows(0).Item("Forename")
+                Lastname.Text = rows(0).Item("Surname")
+                Address1.Text = rows2(0).Item("House Number/Name")
+                Address2.Text = rows2(0).Item("Road")
+                Address3.Text = rows2(0).Item("Town")
+                Address4.Text = rows2(0).Item("County")
+                Address5.Text = rows2(0).Item("Post Code")
+                MemGender.Text = rows(0).Item("Gender")
+                MemDOB.Text = rows(0).Item("DOB")
+                MemMobile.Text = rows(0).Item("Mobile Number")
+                MemHome.Text = rows(0).Item("House Phone Number")
+                'jiggery to make it show true/false for status, maybe an if statement to change to Active/ Non active?
+                Dim MemStatus1 As Boolean = rows(0).Item("Membership Status")
+                If MemStatus1 = True Then
+                    MemStatus.Text = "Active"
+                Else
+                    MemStatus.Text = "Non-Active"
+                End If
 
-            MemEmail.Text = rows(0).Item("Email")
+                MemEmail.Text = rows(0).Item("Email")
                 MemRenewal.Text = rows(0).Item("Renewal Date")
                 MemDateJoin.Text = rows(0).Item("Join Date")
                 MemType.Text = rows(0).Item("Payment Method")
@@ -92,14 +92,16 @@
                     OtherDescGFA.Text = rows4(0).Item("Other")
                 End If
                 InductCB.Checked = rows5(0).Item("Inducted")
-                InducterName.Text = rows5(0).Item("Inducted By ID")
-            'Activity Log
-            If rows6.Length = 0 Then
 
-                ActivityLog.Rows.Clear()
-                MsgBox("No Activity Log")
-            Else
-                Dim i = 0
+                Dim rows7() As DataRow = KingswayFitnessDataSet1.Staff.Select("[Staff-ID] =" + rows5(0).Item("Inducted By ID").ToString)
+                InductName.Text = rows7(0).Item("Staff Name")
+                'Activity Log
+                If rows6.Length = 0 Then
+
+                    ActivityLog.Rows.Clear()
+                    MsgBox("No Activity Log")
+                Else
+                    Dim i = 0
                     For Each rw In rows6
 
                         ActivityLog.Rows.Add(rows6(i).Item("Time Logged In"), rows6(i).Item("Time Logged Out"))
@@ -110,6 +112,11 @@
                 End If
                 '^^^ Had a stab at this
             End If
+
+        Catch ex As SyntaxErrorException
+            MsgBox("Please enter a members id ")
+        End Try
+
 
 
 
