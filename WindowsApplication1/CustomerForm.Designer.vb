@@ -23,6 +23,9 @@ Partial Class CustomerForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Me.SearchBox = New System.Windows.Forms.ComboBox()
+        Me.NameQueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.Logo = New System.Windows.Forms.PictureBox()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CustomerShow = New System.Windows.Forms.TabControl()
@@ -113,7 +116,6 @@ Partial Class CustomerForm
         Me.TimeLoggedIn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TimeLoggedOut = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Member_Activity_LogBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.CustomerFormLab = New System.Windows.Forms.Label()
         Me.MembersBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
@@ -128,6 +130,10 @@ Partial Class CustomerForm
         Me.Member_Activity_LogTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Member_Activity_LogTableAdapter()
         Me.StaffTableAdapter1 = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.StaffTableAdapter()
         Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Name_QueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Name_QueryTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Name_QueryTableAdapter()
+        CType(Me.NameQueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerShow.SuspendLayout()
@@ -138,13 +144,36 @@ Partial Class CustomerForm
         Me.ActLog.SuspendLayout()
         CType(Me.ActivityLog, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Member_Activity_LogBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Medical_TableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InductionsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Members_ReasonsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Name_QueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SearchBox
+        '
+        Me.SearchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.SearchBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.SearchBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.NameQueryBindingSource, "Expr1", True))
+        Me.SearchBox.DataSource = Me.NameQueryBindingSource
+        Me.SearchBox.DisplayMember = "Expr1"
+        Me.SearchBox.Location = New System.Drawing.Point(258, 58)
+        Me.SearchBox.Name = "SearchBox"
+        Me.SearchBox.Size = New System.Drawing.Size(238, 21)
+        Me.SearchBox.TabIndex = 7
+        Me.SearchBox.ValueMember = "MemberID"
+        '
+        'NameQueryBindingSource
+        '
+        Me.NameQueryBindingSource.DataMember = "Name Query"
+        Me.NameQueryBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'KingswayFitnessDataSet1
+        '
+        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
+        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'Logo
         '
@@ -1135,11 +1164,6 @@ Partial Class CustomerForm
         Me.Member_Activity_LogBindingSource.DataMember = "Member Activity Log"
         Me.Member_Activity_LogBindingSource.DataSource = Me.KingswayFitnessDataSet1
         '
-        'KingswayFitnessDataSet1
-        '
-        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
-        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'CustomerFormLab
         '
         Me.CustomerFormLab.AutoSize = True
@@ -1219,19 +1243,31 @@ Partial Class CustomerForm
         Me.StaffBindingSource.DataMember = "Staff"
         Me.StaffBindingSource.DataSource = Me.KingswayFitnessDataSet1
         '
+        'Name_QueryBindingSource
+        '
+        Me.Name_QueryBindingSource.DataMember = "Name Query"
+        Me.Name_QueryBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'Name_QueryTableAdapter
+        '
+        Me.Name_QueryTableAdapter.ClearBeforeFill = True
+        '
         'CustomerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(720, 567)
+        Me.ClientSize = New System.Drawing.Size(779, 588)
+        Me.Controls.Add(Me.SearchBox)
         Me.Controls.Add(Me.CustomerFormLab)
         Me.Controls.Add(Me.CustomerShow)
         Me.Controls.Add(Me.Logo)
         Me.DoubleBuffered = True
         Me.Name = "CustomerForm"
         Me.Text = "Customer Form Menu"
+        CType(Me.NameQueryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.CustomerShow.ResumeLayout(False)
@@ -1245,12 +1281,12 @@ Partial Class CustomerForm
         Me.ActLog.ResumeLayout(False)
         CType(Me.ActivityLog, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Member_Activity_LogBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MembersBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Medical_TableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InductionsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Members_ReasonsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Name_QueryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1363,4 +1399,8 @@ Partial Class CustomerForm
     Friend WithEvents TimeLoggedOut As DataGridViewTextBoxColumn
     Friend WithEvents StaffTableAdapter1 As KingswayFitnessDataSet1TableAdapters.StaffTableAdapter
     Friend WithEvents StaffBindingSource As BindingSource
+    Friend WithEvents Name_QueryBindingSource As BindingSource
+    Friend WithEvents Name_QueryTableAdapter As KingswayFitnessDataSet1TableAdapters.Name_QueryTableAdapter
+    Friend WithEvents NameQueryBindingSource As BindingSource
+    Friend WithEvents SearchBox As ComboBox
 End Class

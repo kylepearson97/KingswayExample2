@@ -239,6 +239,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="KingswayFitnessDataSet1.xsc">
       <DependentUpon>KingswayFitnessDataSet1.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
