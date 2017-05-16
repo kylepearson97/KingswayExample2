@@ -27,6 +27,7 @@ Partial Class AddCustomer
         Me.CustomerShow = New System.Windows.Forms.TabControl()
         Me.Personal = New System.Windows.Forms.TabPage()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.MemberID = New System.Windows.Forms.Label()
         Me.MemPhoto = New System.Windows.Forms.PictureBox()
         Me.MemType = New System.Windows.Forms.TextBox()
         Me.MemDateJoin = New System.Windows.Forms.TextBox()
@@ -35,6 +36,7 @@ Partial Class AddCustomer
         Me.MemEmail = New System.Windows.Forms.TextBox()
         Me.MemMobile = New System.Windows.Forms.TextBox()
         Me.MemHome = New System.Windows.Forms.TextBox()
+        Me.MembersID = New System.Windows.Forms.TextBox()
         Me.Forename = New System.Windows.Forms.Label()
         Me.MemberType = New System.Windows.Forms.Label()
         Me.DateJoin = New System.Windows.Forms.Label()
@@ -152,6 +154,7 @@ Partial Class AddCustomer
         Me.Personal.AutoScroll = True
         Me.Personal.BackColor = System.Drawing.Color.Transparent
         Me.Personal.Controls.Add(Me.Button1)
+        Me.Personal.Controls.Add(Me.MemberID)
         Me.Personal.Controls.Add(Me.MemPhoto)
         Me.Personal.Controls.Add(Me.MemType)
         Me.Personal.Controls.Add(Me.MemDateJoin)
@@ -160,6 +163,7 @@ Partial Class AddCustomer
         Me.Personal.Controls.Add(Me.MemEmail)
         Me.Personal.Controls.Add(Me.MemMobile)
         Me.Personal.Controls.Add(Me.MemHome)
+        Me.Personal.Controls.Add(Me.MembersID)
         Me.Personal.Controls.Add(Me.Forename)
         Me.Personal.Controls.Add(Me.MemberType)
         Me.Personal.Controls.Add(Me.DateJoin)
@@ -196,6 +200,18 @@ Partial Class AddCustomer
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Add Customer"
         Me.Button1.UseVisualStyleBackColor = True
+        '
+        'MemberID
+        '
+        Me.MemberID.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MemberID.AutoSize = True
+        Me.MemberID.BackColor = System.Drawing.Color.Transparent
+        Me.MemberID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MemberID.Location = New System.Drawing.Point(21, 11)
+        Me.MemberID.Name = "MemberID"
+        Me.MemberID.Size = New System.Drawing.Size(88, 20)
+        Me.MemberID.TabIndex = 1
+        Me.MemberID.Text = "Member ID"
         '
         'MemPhoto
         '
@@ -262,6 +278,14 @@ Partial Class AddCustomer
         Me.MemHome.Name = "MemHome"
         Me.MemHome.Size = New System.Drawing.Size(168, 26)
         Me.MemHome.TabIndex = 3
+        '
+        'MembersID
+        '
+        Me.MembersID.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.MembersID.Location = New System.Drawing.Point(157, 11)
+        Me.MembersID.Name = "MembersID"
+        Me.MembersID.Size = New System.Drawing.Size(168, 26)
+        Me.MembersID.TabIndex = 3
         '
         'Forename
         '
@@ -1071,6 +1095,7 @@ Partial Class AddCustomer
     Friend WithEvents CustomerFormLab As Label
     Friend WithEvents CustomerShow As TabControl
     Friend WithEvents Personal As TabPage
+    Friend WithEvents MemberID As Label
     Friend WithEvents MemPhoto As PictureBox
     Friend WithEvents MemType As TextBox
     Friend WithEvents MemDateJoin As TextBox
@@ -1079,6 +1104,7 @@ Partial Class AddCustomer
     Friend WithEvents MemEmail As TextBox
     Friend WithEvents MemMobile As TextBox
     Friend WithEvents MemHome As TextBox
+    Friend WithEvents MembersID As TextBox
     Friend WithEvents Forename As Label
     Friend WithEvents MemberType As Label
     Friend WithEvents DateJoin As Label
