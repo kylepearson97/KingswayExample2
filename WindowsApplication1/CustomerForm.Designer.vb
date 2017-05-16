@@ -156,7 +156,6 @@ Partial Class CustomerForm
         '
         Me.SearchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.SearchBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.SearchBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.NameQueryBindingSource, "Expr1", True))
         Me.SearchBox.DataSource = Me.NameQueryBindingSource
         Me.SearchBox.DisplayMember = "Expr1"
         Me.SearchBox.Location = New System.Drawing.Point(258, 58)
