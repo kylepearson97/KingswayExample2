@@ -22,6 +22,7 @@ Partial Class AddCustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Logo = New System.Windows.Forms.PictureBox()
         Me.CustomerFormLab = New System.Windows.Forms.Label()
         Me.CustomerShow = New System.Windows.Forms.TabControl()
@@ -52,7 +53,6 @@ Partial Class AddCustomer
         Me.HomePhoneNumber = New System.Windows.Forms.Label()
         Me.Address2 = New System.Windows.Forms.TextBox()
         Me.MobileNo = New System.Windows.Forms.Label()
-        Me.MemGender = New System.Windows.Forms.TextBox()
         Me.Address3 = New System.Windows.Forms.TextBox()
         Me.Address5 = New System.Windows.Forms.TextBox()
         Me.Address4 = New System.Windows.Forms.TextBox()
@@ -107,12 +107,20 @@ Partial Class AddCustomer
         Me.GFA = New System.Windows.Forms.Label()
         Me.Induct = New System.Windows.Forms.Label()
         Me.BodyB = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Title = New System.Windows.Forms.ComboBox()
+        Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
+        Me.MemGender = New System.Windows.Forms.ComboBox()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerShow.SuspendLayout()
         Me.Personal.SuspendLayout()
         CType(Me.MemPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Medical.SuspendLayout()
         Me.Induction.SuspendLayout()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Logo
@@ -153,6 +161,9 @@ Partial Class AddCustomer
         '
         Me.Personal.AutoScroll = True
         Me.Personal.BackColor = System.Drawing.Color.Transparent
+        Me.Personal.Controls.Add(Me.MemGender)
+        Me.Personal.Controls.Add(Me.Title)
+        Me.Personal.Controls.Add(Me.Label1)
         Me.Personal.Controls.Add(Me.Button1)
         Me.Personal.Controls.Add(Me.MemberID)
         Me.Personal.Controls.Add(Me.MemPhoto)
@@ -179,7 +190,6 @@ Partial Class AddCustomer
         Me.Personal.Controls.Add(Me.HomePhoneNumber)
         Me.Personal.Controls.Add(Me.Address2)
         Me.Personal.Controls.Add(Me.MobileNo)
-        Me.Personal.Controls.Add(Me.MemGender)
         Me.Personal.Controls.Add(Me.Address3)
         Me.Personal.Controls.Add(Me.Address5)
         Me.Personal.Controls.Add(Me.Address4)
@@ -194,7 +204,7 @@ Partial Class AddCustomer
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(340, 9)
+        Me.Button1.Location = New System.Drawing.Point(340, 41)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(125, 31)
         Me.Button1.TabIndex = 4
@@ -207,7 +217,7 @@ Partial Class AddCustomer
         Me.MemberID.AutoSize = True
         Me.MemberID.BackColor = System.Drawing.Color.Transparent
         Me.MemberID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MemberID.Location = New System.Drawing.Point(21, 11)
+        Me.MemberID.Location = New System.Drawing.Point(30, 76)
         Me.MemberID.Name = "MemberID"
         Me.MemberID.Size = New System.Drawing.Size(88, 20)
         Me.MemberID.TabIndex = 1
@@ -226,7 +236,7 @@ Partial Class AddCustomer
         'MemType
         '
         Me.MemType.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemType.Location = New System.Drawing.Point(535, 292)
+        Me.MemType.Location = New System.Drawing.Point(535, 326)
         Me.MemType.Name = "MemType"
         Me.MemType.Size = New System.Drawing.Size(168, 26)
         Me.MemType.TabIndex = 3
@@ -234,7 +244,7 @@ Partial Class AddCustomer
         'MemDateJoin
         '
         Me.MemDateJoin.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemDateJoin.Location = New System.Drawing.Point(536, 261)
+        Me.MemDateJoin.Location = New System.Drawing.Point(536, 295)
         Me.MemDateJoin.Name = "MemDateJoin"
         Me.MemDateJoin.Size = New System.Drawing.Size(168, 26)
         Me.MemDateJoin.TabIndex = 3
@@ -242,7 +252,7 @@ Partial Class AddCustomer
         'MemRenewal
         '
         Me.MemRenewal.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemRenewal.Location = New System.Drawing.Point(535, 230)
+        Me.MemRenewal.Location = New System.Drawing.Point(535, 264)
         Me.MemRenewal.Name = "MemRenewal"
         Me.MemRenewal.Size = New System.Drawing.Size(168, 26)
         Me.MemRenewal.TabIndex = 3
@@ -250,7 +260,7 @@ Partial Class AddCustomer
         'MemStatus
         '
         Me.MemStatus.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemStatus.Location = New System.Drawing.Point(535, 321)
+        Me.MemStatus.Location = New System.Drawing.Point(535, 355)
         Me.MemStatus.Name = "MemStatus"
         Me.MemStatus.Size = New System.Drawing.Size(168, 26)
         Me.MemStatus.TabIndex = 3
@@ -258,7 +268,7 @@ Partial Class AddCustomer
         'MemEmail
         '
         Me.MemEmail.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemEmail.Location = New System.Drawing.Point(535, 197)
+        Me.MemEmail.Location = New System.Drawing.Point(535, 231)
         Me.MemEmail.Name = "MemEmail"
         Me.MemEmail.Size = New System.Drawing.Size(168, 26)
         Me.MemEmail.TabIndex = 3
@@ -266,7 +276,7 @@ Partial Class AddCustomer
         'MemMobile
         '
         Me.MemMobile.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemMobile.Location = New System.Drawing.Point(157, 321)
+        Me.MemMobile.Location = New System.Drawing.Point(535, 170)
         Me.MemMobile.Name = "MemMobile"
         Me.MemMobile.Size = New System.Drawing.Size(168, 26)
         Me.MemMobile.TabIndex = 3
@@ -274,7 +284,7 @@ Partial Class AddCustomer
         'MemHome
         '
         Me.MemHome.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemHome.Location = New System.Drawing.Point(157, 352)
+        Me.MemHome.Location = New System.Drawing.Point(535, 201)
         Me.MemHome.Name = "MemHome"
         Me.MemHome.Size = New System.Drawing.Size(168, 26)
         Me.MemHome.TabIndex = 3
@@ -282,7 +292,7 @@ Partial Class AddCustomer
         'MembersID
         '
         Me.MembersID.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MembersID.Location = New System.Drawing.Point(157, 11)
+        Me.MembersID.Location = New System.Drawing.Point(166, 76)
         Me.MembersID.Name = "MembersID"
         Me.MembersID.Size = New System.Drawing.Size(168, 26)
         Me.MembersID.TabIndex = 3
@@ -293,7 +303,7 @@ Partial Class AddCustomer
         Me.Forename.AutoSize = True
         Me.Forename.BackColor = System.Drawing.Color.Transparent
         Me.Forename.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Forename.Location = New System.Drawing.Point(21, 42)
+        Me.Forename.Location = New System.Drawing.Point(30, 107)
         Me.Forename.Name = "Forename"
         Me.Forename.Size = New System.Drawing.Size(82, 20)
         Me.Forename.TabIndex = 1
@@ -305,7 +315,7 @@ Partial Class AddCustomer
         Me.MemberType.AutoSize = True
         Me.MemberType.BackColor = System.Drawing.Color.Transparent
         Me.MemberType.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MemberType.Location = New System.Drawing.Point(356, 290)
+        Me.MemberType.Location = New System.Drawing.Point(356, 324)
         Me.MemberType.Name = "MemberType"
         Me.MemberType.Size = New System.Drawing.Size(134, 20)
         Me.MemberType.TabIndex = 1
@@ -317,7 +327,7 @@ Partial Class AddCustomer
         Me.DateJoin.AutoSize = True
         Me.DateJoin.BackColor = System.Drawing.Color.Transparent
         Me.DateJoin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateJoin.Location = New System.Drawing.Point(355, 259)
+        Me.DateJoin.Location = New System.Drawing.Point(355, 293)
         Me.DateJoin.Name = "DateJoin"
         Me.DateJoin.Size = New System.Drawing.Size(95, 20)
         Me.DateJoin.TabIndex = 1
@@ -329,7 +339,7 @@ Partial Class AddCustomer
         Me.Email.AutoSize = True
         Me.Email.BackColor = System.Drawing.Color.Transparent
         Me.Email.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Email.Location = New System.Drawing.Point(355, 197)
+        Me.Email.Location = New System.Drawing.Point(355, 231)
         Me.Email.Name = "Email"
         Me.Email.Size = New System.Drawing.Size(111, 20)
         Me.Email.TabIndex = 1
@@ -338,7 +348,7 @@ Partial Class AddCustomer
         'MemDOB
         '
         Me.MemDOB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemDOB.Location = New System.Drawing.Point(157, 290)
+        Me.MemDOB.Location = New System.Drawing.Point(166, 355)
         Me.MemDOB.Name = "MemDOB"
         Me.MemDOB.Size = New System.Drawing.Size(168, 26)
         Me.MemDOB.TabIndex = 3
@@ -349,7 +359,7 @@ Partial Class AddCustomer
         Me.Renewal.AutoSize = True
         Me.Renewal.BackColor = System.Drawing.Color.Transparent
         Me.Renewal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Renewal.Location = New System.Drawing.Point(355, 228)
+        Me.Renewal.Location = New System.Drawing.Point(355, 262)
         Me.Renewal.Name = "Renewal"
         Me.Renewal.Size = New System.Drawing.Size(110, 20)
         Me.Renewal.TabIndex = 1
@@ -358,7 +368,7 @@ Partial Class AddCustomer
         'Firstname
         '
         Me.Firstname.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Firstname.Location = New System.Drawing.Point(157, 42)
+        Me.Firstname.Location = New System.Drawing.Point(166, 107)
         Me.Firstname.Name = "Firstname"
         Me.Firstname.Size = New System.Drawing.Size(168, 26)
         Me.Firstname.TabIndex = 3
@@ -369,7 +379,7 @@ Partial Class AddCustomer
         Me.Surname.AutoSize = True
         Me.Surname.BackColor = System.Drawing.Color.Transparent
         Me.Surname.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Surname.Location = New System.Drawing.Point(21, 73)
+        Me.Surname.Location = New System.Drawing.Point(30, 138)
         Me.Surname.Name = "Surname"
         Me.Surname.Size = New System.Drawing.Size(74, 20)
         Me.Surname.TabIndex = 1
@@ -378,7 +388,7 @@ Partial Class AddCustomer
         'Lastname
         '
         Me.Lastname.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Lastname.Location = New System.Drawing.Point(157, 73)
+        Me.Lastname.Location = New System.Drawing.Point(166, 138)
         Me.Lastname.Name = "Lastname"
         Me.Lastname.Size = New System.Drawing.Size(168, 26)
         Me.Lastname.TabIndex = 3
@@ -389,7 +399,7 @@ Partial Class AddCustomer
         Me.Address.AutoSize = True
         Me.Address.BackColor = System.Drawing.Color.Transparent
         Me.Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Address.Location = New System.Drawing.Point(21, 104)
+        Me.Address.Location = New System.Drawing.Point(30, 169)
         Me.Address.Name = "Address"
         Me.Address.Size = New System.Drawing.Size(68, 20)
         Me.Address.TabIndex = 1
@@ -401,7 +411,7 @@ Partial Class AddCustomer
         Me.Status.AutoSize = True
         Me.Status.BackColor = System.Drawing.Color.Transparent
         Me.Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Status.Location = New System.Drawing.Point(356, 321)
+        Me.Status.Location = New System.Drawing.Point(356, 355)
         Me.Status.Name = "Status"
         Me.Status.Size = New System.Drawing.Size(56, 20)
         Me.Status.TabIndex = 1
@@ -410,7 +420,7 @@ Partial Class AddCustomer
         'Address1
         '
         Me.Address1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Address1.Location = New System.Drawing.Point(157, 104)
+        Me.Address1.Location = New System.Drawing.Point(166, 169)
         Me.Address1.Name = "Address1"
         Me.Address1.Size = New System.Drawing.Size(168, 26)
         Me.Address1.TabIndex = 3
@@ -421,7 +431,7 @@ Partial Class AddCustomer
         Me.HomePhoneNumber.AutoSize = True
         Me.HomePhoneNumber.BackColor = System.Drawing.Color.Transparent
         Me.HomePhoneNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.HomePhoneNumber.Location = New System.Drawing.Point(21, 352)
+        Me.HomePhoneNumber.Location = New System.Drawing.Point(355, 201)
         Me.HomePhoneNumber.Name = "HomePhoneNumber"
         Me.HomePhoneNumber.Size = New System.Drawing.Size(130, 20)
         Me.HomePhoneNumber.TabIndex = 1
@@ -430,7 +440,7 @@ Partial Class AddCustomer
         'Address2
         '
         Me.Address2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Address2.Location = New System.Drawing.Point(157, 135)
+        Me.Address2.Location = New System.Drawing.Point(166, 200)
         Me.Address2.Name = "Address2"
         Me.Address2.Size = New System.Drawing.Size(168, 26)
         Me.Address2.TabIndex = 3
@@ -441,24 +451,16 @@ Partial Class AddCustomer
         Me.MobileNo.AutoSize = True
         Me.MobileNo.BackColor = System.Drawing.Color.Transparent
         Me.MobileNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MobileNo.Location = New System.Drawing.Point(21, 321)
+        Me.MobileNo.Location = New System.Drawing.Point(355, 170)
         Me.MobileNo.Name = "MobileNo"
         Me.MobileNo.Size = New System.Drawing.Size(83, 20)
         Me.MobileNo.TabIndex = 1
         Me.MobileNo.Text = "Mobile No."
         '
-        'MemGender
-        '
-        Me.MemGender.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemGender.Location = New System.Drawing.Point(157, 259)
-        Me.MemGender.Name = "MemGender"
-        Me.MemGender.Size = New System.Drawing.Size(168, 26)
-        Me.MemGender.TabIndex = 3
-        '
         'Address3
         '
         Me.Address3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Address3.Location = New System.Drawing.Point(157, 166)
+        Me.Address3.Location = New System.Drawing.Point(166, 231)
         Me.Address3.Name = "Address3"
         Me.Address3.Size = New System.Drawing.Size(168, 26)
         Me.Address3.TabIndex = 3
@@ -466,7 +468,7 @@ Partial Class AddCustomer
         'Address5
         '
         Me.Address5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Address5.Location = New System.Drawing.Point(157, 228)
+        Me.Address5.Location = New System.Drawing.Point(166, 293)
         Me.Address5.Name = "Address5"
         Me.Address5.Size = New System.Drawing.Size(168, 26)
         Me.Address5.TabIndex = 3
@@ -474,7 +476,7 @@ Partial Class AddCustomer
         'Address4
         '
         Me.Address4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Address4.Location = New System.Drawing.Point(157, 197)
+        Me.Address4.Location = New System.Drawing.Point(166, 262)
         Me.Address4.Name = "Address4"
         Me.Address4.Size = New System.Drawing.Size(168, 26)
         Me.Address4.TabIndex = 3
@@ -485,7 +487,7 @@ Partial Class AddCustomer
         Me.Gender.AutoSize = True
         Me.Gender.BackColor = System.Drawing.Color.Transparent
         Me.Gender.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Gender.Location = New System.Drawing.Point(21, 259)
+        Me.Gender.Location = New System.Drawing.Point(30, 324)
         Me.Gender.Name = "Gender"
         Me.Gender.Size = New System.Drawing.Size(63, 20)
         Me.Gender.TabIndex = 1
@@ -497,7 +499,7 @@ Partial Class AddCustomer
         Me.DOB.AutoSize = True
         Me.DOB.BackColor = System.Drawing.Color.Transparent
         Me.DOB.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DOB.Location = New System.Drawing.Point(21, 290)
+        Me.DOB.Location = New System.Drawing.Point(30, 355)
         Me.DOB.Name = "DOB"
         Me.DOB.Size = New System.Drawing.Size(52, 20)
         Me.DOB.TabIndex = 1
@@ -1067,6 +1069,50 @@ Partial Class AddCustomer
         Me.BodyB.TabIndex = 7
         Me.BodyB.Text = "Body Building"
         '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(30, 46)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(38, 20)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Title"
+        '
+        'Title
+        '
+        Me.Title.FormattingEnabled = True
+        Me.Title.Items.AddRange(New Object() {"Mr", "Mrs", "Miss", "Ms"})
+        Me.Title.Location = New System.Drawing.Point(166, 43)
+        Me.Title.Name = "Title"
+        Me.Title.Size = New System.Drawing.Size(168, 28)
+        Me.Title.TabIndex = 6
+        '
+        'KingswayFitnessDataSet1
+        '
+        Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
+        Me.KingswayFitnessDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource
+        '
+        Me.MembersBindingSource.DataMember = "Members"
+        Me.MembersBindingSource.DataSource = Me.KingswayFitnessDataSet1
+        '
+        'MembersTableAdapter
+        '
+        Me.MembersTableAdapter.ClearBeforeFill = True
+        '
+        'MemGender
+        '
+        Me.MemGender.FormattingEnabled = True
+        Me.MemGender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.MemGender.Location = New System.Drawing.Point(166, 322)
+        Me.MemGender.Name = "MemGender"
+        Me.MemGender.Size = New System.Drawing.Size(167, 28)
+        Me.MemGender.TabIndex = 7
+        '
         'AddCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1086,6 +1132,8 @@ Partial Class AddCustomer
         Me.Medical.PerformLayout()
         Me.Induction.ResumeLayout(False)
         Me.Induction.PerformLayout()
+        CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1120,7 +1168,6 @@ Partial Class AddCustomer
     Friend WithEvents HomePhoneNumber As Label
     Friend WithEvents Address2 As TextBox
     Friend WithEvents MobileNo As Label
-    Friend WithEvents MemGender As TextBox
     Friend WithEvents Address3 As TextBox
     Friend WithEvents Address5 As TextBox
     Friend WithEvents Address4 As TextBox
@@ -1176,4 +1223,10 @@ Partial Class AddCustomer
     Friend WithEvents Induct As Label
     Friend WithEvents BodyB As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Title As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents KingswayFitnessDataSet1 As KingswayFitnessDataSet1
+    Friend WithEvents MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter As KingswayFitnessDataSet1TableAdapters.MembersTableAdapter
+    Friend WithEvents MemGender As ComboBox
 End Class
