@@ -9,16 +9,24 @@
         Dim Sql2 As String
         Dim t = Title.SelectedItem
         Dim f = Firstname.Text
-        Dim s = Surname.Text
+        Dim s = Lastname.Text
         Dim h = MemHome.Text
         Dim m = MemMobile.Text
         Dim em = MemEmail.Text
-        Dim dob = MemDOB.Text
-        Sql1 = "INSERT INTO Members (Title, Forename, Surname, [House Phone], [Mobile Number], Email, DOB, Gender, [Membership Status], [Join Date], [Renewal Date], [Payment Method])
-        VALUES('" & t & "','" & f & "','" & h & "','" & m & "','" & em & "','" & dob & "',')"
+        Dim dob As Date = MemDOB.Text
+        Dim g = MemGender.SelectedItem
+        Dim stat = MemStatus.Text
+        If stat = "True" Then
+            stat = True
+        End If
+        Dim join As Date = MemDateJoin.Text
+        Dim ren As Date = MemRenewal.Text
+        Dim pay = MemType.Text
+        Sql1 = "INSERT INTO Members (Title, Forename, Surname, [House Phone Number], [Mobile Number], Email, DOB, Gender, [Membership Status], [Join Date], [Renewal Date], [Payment Method])
+        VALUES('" & t & "','" & f & "','" & s & "','" & h & "','" & m & "','" & em & "'," & dob & ",'" & g & "'," & stat & "," & join & "," & ren & ",'" & pay & "')"
         Sql2 = "INSERT INTO Members Address Table (MemberID, [House Number], Road, Town, County, [Post Code]"
         cmd = New OleDb.OleDbCommand(Sql1, conn)
-        cmd.ExecuteNonQuery()
+        MsgBox(cmd.ExecuteNonQuery())
         conn.Close()
     End Sub
 
@@ -27,4 +35,6 @@
         Me.MembersTableAdapter.Fill(Me.KingswayFitnessDataSet1.Members)
 
     End Sub
+
+
 End Class

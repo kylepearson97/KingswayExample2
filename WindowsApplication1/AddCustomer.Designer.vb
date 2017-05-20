@@ -27,8 +27,10 @@ Partial Class AddCustomer
         Me.CustomerFormLab = New System.Windows.Forms.Label()
         Me.CustomerShow = New System.Windows.Forms.TabControl()
         Me.Personal = New System.Windows.Forms.TabPage()
+        Me.MemGender = New System.Windows.Forms.ComboBox()
+        Me.Title = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.MemberID = New System.Windows.Forms.Label()
         Me.MemPhoto = New System.Windows.Forms.PictureBox()
         Me.MemType = New System.Windows.Forms.TextBox()
         Me.MemDateJoin = New System.Windows.Forms.TextBox()
@@ -37,7 +39,6 @@ Partial Class AddCustomer
         Me.MemEmail = New System.Windows.Forms.TextBox()
         Me.MemMobile = New System.Windows.Forms.TextBox()
         Me.MemHome = New System.Windows.Forms.TextBox()
-        Me.MembersID = New System.Windows.Forms.TextBox()
         Me.Forename = New System.Windows.Forms.Label()
         Me.MemberType = New System.Windows.Forms.Label()
         Me.DateJoin = New System.Windows.Forms.Label()
@@ -107,12 +108,9 @@ Partial Class AddCustomer
         Me.GFA = New System.Windows.Forms.Label()
         Me.Induct = New System.Windows.Forms.Label()
         Me.BodyB = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Title = New System.Windows.Forms.ComboBox()
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
-        Me.MemGender = New System.Windows.Forms.ComboBox()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerShow.SuspendLayout()
         Me.Personal.SuspendLayout()
@@ -165,7 +163,6 @@ Partial Class AddCustomer
         Me.Personal.Controls.Add(Me.Title)
         Me.Personal.Controls.Add(Me.Label1)
         Me.Personal.Controls.Add(Me.Button1)
-        Me.Personal.Controls.Add(Me.MemberID)
         Me.Personal.Controls.Add(Me.MemPhoto)
         Me.Personal.Controls.Add(Me.MemType)
         Me.Personal.Controls.Add(Me.MemDateJoin)
@@ -174,7 +171,6 @@ Partial Class AddCustomer
         Me.Personal.Controls.Add(Me.MemEmail)
         Me.Personal.Controls.Add(Me.MemMobile)
         Me.Personal.Controls.Add(Me.MemHome)
-        Me.Personal.Controls.Add(Me.MembersID)
         Me.Personal.Controls.Add(Me.Forename)
         Me.Personal.Controls.Add(Me.MemberType)
         Me.Personal.Controls.Add(Me.DateJoin)
@@ -202,6 +198,36 @@ Partial Class AddCustomer
         Me.Personal.TabIndex = 0
         Me.Personal.Text = "Personal Details"
         '
+        'MemGender
+        '
+        Me.MemGender.FormattingEnabled = True
+        Me.MemGender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.MemGender.Location = New System.Drawing.Point(166, 322)
+        Me.MemGender.Name = "MemGender"
+        Me.MemGender.Size = New System.Drawing.Size(167, 28)
+        Me.MemGender.TabIndex = 7
+        '
+        'Title
+        '
+        Me.Title.FormattingEnabled = True
+        Me.Title.Items.AddRange(New Object() {"Mr", "Mrs", "Miss", "Ms"})
+        Me.Title.Location = New System.Drawing.Point(166, 43)
+        Me.Title.Name = "Title"
+        Me.Title.Size = New System.Drawing.Size(168, 28)
+        Me.Title.TabIndex = 6
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(30, 46)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(38, 20)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Title"
+        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(340, 41)
@@ -210,18 +236,6 @@ Partial Class AddCustomer
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Add Customer"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'MemberID
-        '
-        Me.MemberID.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemberID.AutoSize = True
-        Me.MemberID.BackColor = System.Drawing.Color.Transparent
-        Me.MemberID.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MemberID.Location = New System.Drawing.Point(30, 76)
-        Me.MemberID.Name = "MemberID"
-        Me.MemberID.Size = New System.Drawing.Size(88, 20)
-        Me.MemberID.TabIndex = 1
-        Me.MemberID.Text = "Member ID"
         '
         'MemPhoto
         '
@@ -288,14 +302,6 @@ Partial Class AddCustomer
         Me.MemHome.Name = "MemHome"
         Me.MemHome.Size = New System.Drawing.Size(168, 26)
         Me.MemHome.TabIndex = 3
-        '
-        'MembersID
-        '
-        Me.MembersID.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MembersID.Location = New System.Drawing.Point(166, 76)
-        Me.MembersID.Name = "MembersID"
-        Me.MembersID.Size = New System.Drawing.Size(168, 26)
-        Me.MembersID.TabIndex = 3
         '
         'Forename
         '
@@ -1069,27 +1075,6 @@ Partial Class AddCustomer
         Me.BodyB.TabIndex = 7
         Me.BodyB.Text = "Body Building"
         '
-        'Label1
-        '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(30, 46)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(38, 20)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Title"
-        '
-        'Title
-        '
-        Me.Title.FormattingEnabled = True
-        Me.Title.Items.AddRange(New Object() {"Mr", "Mrs", "Miss", "Ms"})
-        Me.Title.Location = New System.Drawing.Point(166, 43)
-        Me.Title.Name = "Title"
-        Me.Title.Size = New System.Drawing.Size(168, 28)
-        Me.Title.TabIndex = 6
-        '
         'KingswayFitnessDataSet1
         '
         Me.KingswayFitnessDataSet1.DataSetName = "KingswayFitnessDataSet1"
@@ -1103,15 +1088,6 @@ Partial Class AddCustomer
         'MembersTableAdapter
         '
         Me.MembersTableAdapter.ClearBeforeFill = True
-        '
-        'MemGender
-        '
-        Me.MemGender.FormattingEnabled = True
-        Me.MemGender.Items.AddRange(New Object() {"Male", "Female"})
-        Me.MemGender.Location = New System.Drawing.Point(166, 322)
-        Me.MemGender.Name = "MemGender"
-        Me.MemGender.Size = New System.Drawing.Size(167, 28)
-        Me.MemGender.TabIndex = 7
         '
         'AddCustomer
         '
@@ -1143,7 +1119,6 @@ Partial Class AddCustomer
     Friend WithEvents CustomerFormLab As Label
     Friend WithEvents CustomerShow As TabControl
     Friend WithEvents Personal As TabPage
-    Friend WithEvents MemberID As Label
     Friend WithEvents MemPhoto As PictureBox
     Friend WithEvents MemType As TextBox
     Friend WithEvents MemDateJoin As TextBox
@@ -1152,7 +1127,6 @@ Partial Class AddCustomer
     Friend WithEvents MemEmail As TextBox
     Friend WithEvents MemMobile As TextBox
     Friend WithEvents MemHome As TextBox
-    Friend WithEvents MembersID As TextBox
     Friend WithEvents Forename As Label
     Friend WithEvents MemberType As Label
     Friend WithEvents DateJoin As Label
