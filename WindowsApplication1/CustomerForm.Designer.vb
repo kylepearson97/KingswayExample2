@@ -132,6 +132,7 @@ Partial Class CustomerForm
         Me.StaffBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Name_QueryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Name_QueryTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.Name_QueryTableAdapter()
+        Me.NameQueryBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         CType(Me.NameQueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KingswayFitnessDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -150,14 +151,14 @@ Partial Class CustomerForm
         CType(Me.Members_ReasonsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Name_QueryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NameQueryBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SearchBox
         '
         Me.SearchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.SearchBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.SearchBox.DataBindings.Add(New System.Windows.Forms.Binding("SelectedValue", Me.NameQueryBindingSource, "Expr1", True))
-        Me.SearchBox.DataSource = Me.NameQueryBindingSource
+        Me.SearchBox.DataSource = Me.NameQueryBindingSource1
         Me.SearchBox.DisplayMember = "Expr1"
         Me.SearchBox.Location = New System.Drawing.Point(258, 58)
         Me.SearchBox.Name = "SearchBox"
@@ -1252,6 +1253,11 @@ Partial Class CustomerForm
         '
         Me.Name_QueryTableAdapter.ClearBeforeFill = True
         '
+        'NameQueryBindingSource1
+        '
+        Me.NameQueryBindingSource1.DataMember = "Name Query"
+        Me.NameQueryBindingSource1.DataSource = Me.KingswayFitnessDataSet1
+        '
         'CustomerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1287,6 +1293,7 @@ Partial Class CustomerForm
         CType(Me.Members_ReasonsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StaffBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Name_QueryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NameQueryBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1403,4 +1410,5 @@ Partial Class CustomerForm
     Friend WithEvents Name_QueryTableAdapter As KingswayFitnessDataSet1TableAdapters.Name_QueryTableAdapter
     Friend WithEvents NameQueryBindingSource As BindingSource
     Friend WithEvents SearchBox As ComboBox
+    Friend WithEvents NameQueryBindingSource1 As BindingSource
 End Class

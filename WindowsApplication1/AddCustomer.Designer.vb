@@ -27,15 +27,16 @@ Partial Class AddCustomer
         Me.CustomerFormLab = New System.Windows.Forms.Label()
         Me.CustomerShow = New System.Windows.Forms.TabControl()
         Me.Personal = New System.Windows.Forms.TabPage()
+        Me.MemDateJoin = New System.Windows.Forms.DateTimePicker()
+        Me.MemRenewal = New System.Windows.Forms.DateTimePicker()
+        Me.MemDOB = New System.Windows.Forms.DateTimePicker()
+        Me.MemType = New System.Windows.Forms.ComboBox()
+        Me.MemStatus = New System.Windows.Forms.ComboBox()
         Me.MemGender = New System.Windows.Forms.ComboBox()
         Me.Title = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.MemPhoto = New System.Windows.Forms.PictureBox()
-        Me.MemType = New System.Windows.Forms.TextBox()
-        Me.MemDateJoin = New System.Windows.Forms.TextBox()
-        Me.MemRenewal = New System.Windows.Forms.TextBox()
-        Me.MemStatus = New System.Windows.Forms.TextBox()
         Me.MemEmail = New System.Windows.Forms.TextBox()
         Me.MemMobile = New System.Windows.Forms.TextBox()
         Me.MemHome = New System.Windows.Forms.TextBox()
@@ -43,7 +44,6 @@ Partial Class AddCustomer
         Me.MemberType = New System.Windows.Forms.Label()
         Me.DateJoin = New System.Windows.Forms.Label()
         Me.Email = New System.Windows.Forms.Label()
-        Me.MemDOB = New System.Windows.Forms.TextBox()
         Me.Renewal = New System.Windows.Forms.Label()
         Me.Firstname = New System.Windows.Forms.TextBox()
         Me.Surname = New System.Windows.Forms.Label()
@@ -111,6 +111,10 @@ Partial Class AddCustomer
         Me.KingswayFitnessDataSet1 = New WindowsApplication1.KingswayFitnessDataSet1()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.MembersTableAdapter = New WindowsApplication1.KingswayFitnessDataSet1TableAdapters.MembersTableAdapter()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.Logo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.CustomerShow.SuspendLayout()
         Me.Personal.SuspendLayout()
@@ -159,15 +163,20 @@ Partial Class AddCustomer
         '
         Me.Personal.AutoScroll = True
         Me.Personal.BackColor = System.Drawing.Color.Transparent
+        Me.Personal.Controls.Add(Me.Label5)
+        Me.Personal.Controls.Add(Me.Label4)
+        Me.Personal.Controls.Add(Me.Label3)
+        Me.Personal.Controls.Add(Me.Label2)
+        Me.Personal.Controls.Add(Me.MemDateJoin)
+        Me.Personal.Controls.Add(Me.MemRenewal)
+        Me.Personal.Controls.Add(Me.MemDOB)
+        Me.Personal.Controls.Add(Me.MemType)
+        Me.Personal.Controls.Add(Me.MemStatus)
         Me.Personal.Controls.Add(Me.MemGender)
         Me.Personal.Controls.Add(Me.Title)
         Me.Personal.Controls.Add(Me.Label1)
         Me.Personal.Controls.Add(Me.Button1)
         Me.Personal.Controls.Add(Me.MemPhoto)
-        Me.Personal.Controls.Add(Me.MemType)
-        Me.Personal.Controls.Add(Me.MemDateJoin)
-        Me.Personal.Controls.Add(Me.MemRenewal)
-        Me.Personal.Controls.Add(Me.MemStatus)
         Me.Personal.Controls.Add(Me.MemEmail)
         Me.Personal.Controls.Add(Me.MemMobile)
         Me.Personal.Controls.Add(Me.MemHome)
@@ -175,7 +184,6 @@ Partial Class AddCustomer
         Me.Personal.Controls.Add(Me.MemberType)
         Me.Personal.Controls.Add(Me.DateJoin)
         Me.Personal.Controls.Add(Me.Email)
-        Me.Personal.Controls.Add(Me.MemDOB)
         Me.Personal.Controls.Add(Me.Renewal)
         Me.Personal.Controls.Add(Me.Firstname)
         Me.Personal.Controls.Add(Me.Surname)
@@ -197,6 +205,49 @@ Partial Class AddCustomer
         Me.Personal.Size = New System.Drawing.Size(710, 409)
         Me.Personal.TabIndex = 0
         Me.Personal.Text = "Personal Details"
+        '
+        'MemDateJoin
+        '
+        Me.MemDateJoin.CustomFormat = "dd/MM/yyy"
+        Me.MemDateJoin.Location = New System.Drawing.Point(535, 291)
+        Me.MemDateJoin.Name = "MemDateJoin"
+        Me.MemDateJoin.Size = New System.Drawing.Size(168, 26)
+        Me.MemDateJoin.TabIndex = 11
+        '
+        'MemRenewal
+        '
+        Me.MemRenewal.CustomFormat = "dd/MM/yyy"
+        Me.MemRenewal.Location = New System.Drawing.Point(535, 260)
+        Me.MemRenewal.Name = "MemRenewal"
+        Me.MemRenewal.Size = New System.Drawing.Size(168, 26)
+        Me.MemRenewal.TabIndex = 10
+        '
+        'MemDOB
+        '
+        Me.MemDOB.CustomFormat = "dd/MM/yyy"
+        Me.MemDOB.Location = New System.Drawing.Point(166, 352)
+        Me.MemDOB.Name = "MemDOB"
+        Me.MemDOB.Size = New System.Drawing.Size(167, 26)
+        Me.MemDOB.TabIndex = 9
+        Me.MemDOB.Value = New Date(2017, 5, 22, 0, 0, 0, 0)
+        '
+        'MemType
+        '
+        Me.MemType.FormattingEnabled = True
+        Me.MemType.Items.AddRange(New Object() {"Cash", "Direct Debit"})
+        Me.MemType.Location = New System.Drawing.Point(535, 323)
+        Me.MemType.Name = "MemType"
+        Me.MemType.Size = New System.Drawing.Size(167, 28)
+        Me.MemType.TabIndex = 9
+        '
+        'MemStatus
+        '
+        Me.MemStatus.FormattingEnabled = True
+        Me.MemStatus.Items.AddRange(New Object() {"Active", "Non-Active"})
+        Me.MemStatus.Location = New System.Drawing.Point(535, 354)
+        Me.MemStatus.Name = "MemStatus"
+        Me.MemStatus.Size = New System.Drawing.Size(167, 28)
+        Me.MemStatus.TabIndex = 8
         '
         'MemGender
         '
@@ -247,38 +298,6 @@ Partial Class AddCustomer
         Me.MemPhoto.TabIndex = 2
         Me.MemPhoto.TabStop = False
         '
-        'MemType
-        '
-        Me.MemType.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemType.Location = New System.Drawing.Point(535, 326)
-        Me.MemType.Name = "MemType"
-        Me.MemType.Size = New System.Drawing.Size(168, 26)
-        Me.MemType.TabIndex = 3
-        '
-        'MemDateJoin
-        '
-        Me.MemDateJoin.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemDateJoin.Location = New System.Drawing.Point(536, 295)
-        Me.MemDateJoin.Name = "MemDateJoin"
-        Me.MemDateJoin.Size = New System.Drawing.Size(168, 26)
-        Me.MemDateJoin.TabIndex = 3
-        '
-        'MemRenewal
-        '
-        Me.MemRenewal.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemRenewal.Location = New System.Drawing.Point(535, 264)
-        Me.MemRenewal.Name = "MemRenewal"
-        Me.MemRenewal.Size = New System.Drawing.Size(168, 26)
-        Me.MemRenewal.TabIndex = 3
-        '
-        'MemStatus
-        '
-        Me.MemStatus.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemStatus.Location = New System.Drawing.Point(535, 355)
-        Me.MemStatus.Name = "MemStatus"
-        Me.MemStatus.Size = New System.Drawing.Size(168, 26)
-        Me.MemStatus.TabIndex = 3
-        '
         'MemEmail
         '
         Me.MemEmail.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -323,9 +342,9 @@ Partial Class AddCustomer
         Me.MemberType.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MemberType.Location = New System.Drawing.Point(356, 324)
         Me.MemberType.Name = "MemberType"
-        Me.MemberType.Size = New System.Drawing.Size(134, 20)
+        Me.MemberType.Size = New System.Drawing.Size(147, 20)
         Me.MemberType.TabIndex = 1
-        Me.MemberType.Text = "Membership Type"
+        Me.MemberType.Text = "Method of Payment"
         '
         'DateJoin
         '
@@ -350,14 +369,6 @@ Partial Class AddCustomer
         Me.Email.Size = New System.Drawing.Size(111, 20)
         Me.Email.TabIndex = 1
         Me.Email.Text = "Email Address"
-        '
-        'MemDOB
-        '
-        Me.MemDOB.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MemDOB.Location = New System.Drawing.Point(166, 355)
-        Me.MemDOB.Name = "MemDOB"
-        Me.MemDOB.Size = New System.Drawing.Size(168, 26)
-        Me.MemDOB.TabIndex = 3
         '
         'Renewal
         '
@@ -407,9 +418,9 @@ Partial Class AddCustomer
         Me.Address.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Address.Location = New System.Drawing.Point(30, 169)
         Me.Address.Name = "Address"
-        Me.Address.Size = New System.Drawing.Size(68, 20)
+        Me.Address.Size = New System.Drawing.Size(116, 20)
         Me.Address.TabIndex = 1
-        Me.Address.Text = "Address"
+        Me.Address.Text = "House Number"
         '
         'Status
         '
@@ -1089,6 +1100,54 @@ Partial Class AddCustomer
         '
         Me.MembersTableAdapter.ClearBeforeFill = True
         '
+        'Label2
+        '
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(30, 203)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(48, 20)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Road"
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(30, 234)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(77, 20)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "Town/City"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(30, 265)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 20)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "County"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(30, 296)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(83, 20)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Post Code"
+        '
         'AddCustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1120,10 +1179,6 @@ Partial Class AddCustomer
     Friend WithEvents CustomerShow As TabControl
     Friend WithEvents Personal As TabPage
     Friend WithEvents MemPhoto As PictureBox
-    Friend WithEvents MemType As TextBox
-    Friend WithEvents MemDateJoin As TextBox
-    Friend WithEvents MemRenewal As TextBox
-    Friend WithEvents MemStatus As TextBox
     Friend WithEvents MemEmail As TextBox
     Friend WithEvents MemMobile As TextBox
     Friend WithEvents MemHome As TextBox
@@ -1131,7 +1186,6 @@ Partial Class AddCustomer
     Friend WithEvents MemberType As Label
     Friend WithEvents DateJoin As Label
     Friend WithEvents Email As Label
-    Friend WithEvents MemDOB As TextBox
     Friend WithEvents Renewal As Label
     Friend WithEvents Firstname As TextBox
     Friend WithEvents Surname As Label
@@ -1203,4 +1257,13 @@ Partial Class AddCustomer
     Friend WithEvents MembersBindingSource As BindingSource
     Friend WithEvents MembersTableAdapter As KingswayFitnessDataSet1TableAdapters.MembersTableAdapter
     Friend WithEvents MemGender As ComboBox
+    Friend WithEvents MemType As ComboBox
+    Friend WithEvents MemStatus As ComboBox
+    Friend WithEvents MemDOB As DateTimePicker
+    Friend WithEvents MemDateJoin As DateTimePicker
+    Friend WithEvents MemRenewal As DateTimePicker
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
 End Class
