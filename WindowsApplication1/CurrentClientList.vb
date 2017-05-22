@@ -42,7 +42,7 @@
         Dim Sql As String
         Sql = "INSERT INTO [Member Activity Log](MemberID , [Time Logged out] , [Time Logged in])  VALUES('" & CurrentClient.CurrentRow.Cells.Item(0).Value & "','" & CurrentClient.CurrentRow.Cells.Item(3).Value & "','" & DateTime.Now.ToString("yyyy/MM/dd HH:mm") & "')"
         cmd = New OleDb.OleDbCommand(Sql, conn)
-        cmd.ExecuteNonQuery()
+        MsgBox(cmd.ExecuteNonQuery())
         conn.Close()
         MsgBox("User Logged Out")
         CurrentClient.Rows.Remove(CurrentClient.CurrentRow)

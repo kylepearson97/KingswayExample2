@@ -62,43 +62,49 @@
                 MemDateJoin.Text = rows(0).Item("Join Date")
                 MemType.Text = rows(0).Item("Payment Method")
                 'Medical Table
-                HeartCB.Checked = rows3(0).Item("Heart Condition")
-                FaintCB.Checked = rows3(0).Item("Faint/Dizziness")
-                ChestCB.Checked = rows3(0).Item("Chest Pain")
-                BloodPCB.Checked = rows3(0).Item("High/Low Blood Pressure")
-                EpiCB.Checked = rows3(0).Item("Epilepsy")
-                JointCB.Checked = rows3(0).Item("Joint Problems")
-                BackCB.Checked = rows3(0).Item("Back Problems")
-                DiaCB.Checked = rows3(0).Item("Diabetes")
-                AstCB.Checked = rows3(0).Item("Astma")
-                SmokeCB.Checked = rows3(0).Item("Smoker")
-                PregCB.Checked = rows3(0).Item("Pregnant")
-                OperCB.Checked = rows3(0).Item("Recent Operation")
-                If rows3(0).IsNull("Other") = True Then
-                    OtherDescGM.Text = ""
-                Else
-                    OtherDescGM.Text = rows3(0).Item("Other")
-                End If
-                DocReqCB.Checked = rows3(0).Item("Doctors Note Required")
-                DocPreCB.Checked = rows3(0).Item("Doctors Note Present")
-                'Induction
-                BodyBCB.Checked = rows4(0).Item("Body Builder")
-                WeightRCB.Checked = rows4(0).Item("Weight Reduction")
-                FitterCB.Checked = rows4(0).Item("Get Fitter")
-                InjuryACB.Checked = rows4(0).Item("Injury Avoidance")
-                If rows4(0).IsNull("Other") = True Then
-                    OtherDescGFA.Text = ""
-                Else
-                    OtherDescGFA.Text = rows4(0).Item("Other")
-                End If
-                InductCB.Checked = rows5(0).Item("Inducted")
-                If rows5(0).IsNull("Inducted By ID") = True Then
-                    InductName.Text = ""
-                Else
-                    Dim rows7() As DataRow = KingswayFitnessDataSet1.Staff.Select("[Staff-ID] =" + rows5(0).Item("Inducted By ID").ToString)
-                    InductName.Text = rows7(0).Item("Staff Name")
-                End If
+                If rows3.Length = 1 Then
+                    HeartCB.Checked = rows3(0).Item("Heart Condition")
+                    FaintCB.Checked = rows3(0).Item("Faint/Dizziness")
+                    ChestCB.Checked = rows3(0).Item("Chest Pain")
+                    BloodPCB.Checked = rows3(0).Item("High/Low Blood Pressure")
+                    EpiCB.Checked = rows3(0).Item("Epilepsy")
+                    JointCB.Checked = rows3(0).Item("Joint Problems")
+                    BackCB.Checked = rows3(0).Item("Back Problems")
+                    DiaCB.Checked = rows3(0).Item("Diabetes")
+                    AstCB.Checked = rows3(0).Item("Astma")
+                    SmokeCB.Checked = rows3(0).Item("Smoker")
+                    PregCB.Checked = rows3(0).Item("Pregnant")
+                    OperCB.Checked = rows3(0).Item("Recent Operation")
+                    If rows3(0).IsNull("Other") = True Then
+                        OtherDescGM.Text = ""
+                    Else
+                        OtherDescGM.Text = rows3(0).Item("Other")
 
+                    End If
+                    DocReqCB.Checked = rows3(0).Item("Doctors Note Required")
+                    DocPreCB.Checked = rows3(0).Item("Doctors Note Present")
+                Else
+                End If
+                If rows4.Length = 1 Then
+
+                    'Induction
+                    BodyBCB.Checked = rows4(0).Item("Body Builder")
+                    WeightRCB.Checked = rows4(0).Item("Weight Reduction")
+                    FitterCB.Checked = rows4(0).Item("Get Fitter")
+                    InjuryACB.Checked = rows4(0).Item("Injury Avoidance")
+                    If rows4(0).IsNull("Other") = True Then
+                        OtherDescGFA.Text = ""
+                    Else
+                        OtherDescGFA.Text = rows4(0).Item("Other")
+                    End If
+                    InductCB.Checked = rows5(0).Item("Inducted")
+                    If rows5(0).IsNull("Inducted By ID") = True Then
+                        InductName.Text = ""
+                    Else
+                        Dim rows7() As DataRow = KingswayFitnessDataSet1.Staff.Select("[Staff-ID] =" + rows5(0).Item("Inducted By ID").ToString)
+                        InductName.Text = rows7(0).Item("Staff Name")
+                    End If
+                End If
                 'Activity Log
                 If rows6.Length = 0 Then
 
@@ -116,6 +122,7 @@
                 End If
                 '^^^ Had a stab at this
             End If
+
 
         Catch ex As SyntaxErrorException
             MsgBox("Please enter a members id ")
@@ -256,43 +263,49 @@
                 MemDateJoin.Text = rows(0).Item("Join Date")
                 MemType.Text = rows(0).Item("Payment Method")
                 'Medical Table
-                HeartCB.Checked = rows3(0).Item("Heart Condition")
-                FaintCB.Checked = rows3(0).Item("Faint/Dizziness")
-                ChestCB.Checked = rows3(0).Item("Chest Pain")
-                BloodPCB.Checked = rows3(0).Item("High/Low Blood Pressure")
-                EpiCB.Checked = rows3(0).Item("Epilepsy")
-                JointCB.Checked = rows3(0).Item("Joint Problems")
-                BackCB.Checked = rows3(0).Item("Back Problems")
-                DiaCB.Checked = rows3(0).Item("Diabetes")
-                AstCB.Checked = rows3(0).Item("Astma")
-                SmokeCB.Checked = rows3(0).Item("Smoker")
-                PregCB.Checked = rows3(0).Item("Pregnant")
-                OperCB.Checked = rows3(0).Item("Recent Operation")
-                If rows3(0).IsNull("Other") = True Then
-                    OtherDescGM.Text = ""
-                Else
-                    OtherDescGM.Text = rows3(0).Item("Other")
-                End If
-                DocReqCB.Checked = rows3(0).Item("Doctors Note Required")
-                DocPreCB.Checked = rows3(0).Item("Doctors Note Present")
-                'Induction
-                BodyBCB.Checked = rows4(0).Item("Body Builder")
-                WeightRCB.Checked = rows4(0).Item("Weight Reduction")
-                FitterCB.Checked = rows4(0).Item("Get Fitter")
-                InjuryACB.Checked = rows4(0).Item("Injury Avoidance")
-                If rows4(0).IsNull("Other") = True Then
-                    OtherDescGFA.Text = ""
-                Else
-                    OtherDescGFA.Text = rows4(0).Item("Other")
-                End If
-                InductCB.Checked = rows5(0).Item("Inducted")
-                If rows5(0).IsNull("Inducted By ID") = True Then
-                    InductName.Text = ""
-                Else
-                    Dim rows7() As DataRow = KingswayFitnessDataSet1.Staff.Select("[Staff-ID] =" + rows5(0).Item("Inducted By ID").ToString)
-                    InductName.Text = rows7(0).Item("Staff Name")
-                End If
+                If rows3.Length = 1 Then
+                    HeartCB.Checked = rows3(0).Item("Heart Condition")
+                    FaintCB.Checked = rows3(0).Item("Faint/Dizziness")
+                    ChestCB.Checked = rows3(0).Item("Chest Pain")
+                    BloodPCB.Checked = rows3(0).Item("High/Low Blood Pressure")
+                    EpiCB.Checked = rows3(0).Item("Epilepsy")
+                    JointCB.Checked = rows3(0).Item("Joint Problems")
+                    BackCB.Checked = rows3(0).Item("Back Problems")
+                    DiaCB.Checked = rows3(0).Item("Diabetes")
+                    AstCB.Checked = rows3(0).Item("Astma")
+                    SmokeCB.Checked = rows3(0).Item("Smoker")
+                    PregCB.Checked = rows3(0).Item("Pregnant")
+                    OperCB.Checked = rows3(0).Item("Recent Operation")
+                    If rows3(0).IsNull("Other") = True Then
+                        OtherDescGM.Text = ""
+                    Else
+                        OtherDescGM.Text = rows3(0).Item("Other")
 
+                    End If
+                    DocReqCB.Checked = rows3(0).Item("Doctors Note Required")
+                    DocPreCB.Checked = rows3(0).Item("Doctors Note Present")
+                Else
+                End If
+                If rows4.Length = 1 Then
+
+                    'Induction
+                    BodyBCB.Checked = rows4(0).Item("Body Builder")
+                    WeightRCB.Checked = rows4(0).Item("Weight Reduction")
+                    FitterCB.Checked = rows4(0).Item("Get Fitter")
+                    InjuryACB.Checked = rows4(0).Item("Injury Avoidance")
+                    If rows4(0).IsNull("Other") = True Then
+                        OtherDescGFA.Text = ""
+                    Else
+                        OtherDescGFA.Text = rows4(0).Item("Other")
+                    End If
+                    InductCB.Checked = rows5(0).Item("Inducted")
+                    If rows5(0).IsNull("Inducted By ID") = True Then
+                        InductName.Text = ""
+                    Else
+                        Dim rows7() As DataRow = KingswayFitnessDataSet1.Staff.Select("[Staff-ID] =" + rows5(0).Item("Inducted By ID").ToString)
+                        InductName.Text = rows7(0).Item("Staff Name")
+                    End If
+                End If
                 'Activity Log
                 If rows6.Length = 0 Then
 
