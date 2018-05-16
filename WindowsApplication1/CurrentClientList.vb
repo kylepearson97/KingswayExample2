@@ -53,13 +53,18 @@
         If CurrentClient.RowCount.ToString < 45 Then
 
             Dim MemID = TextBox1.Text
-            Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MemID)
-            If rows.Length = 0 Or rows.Length > 1 Then
-                MsgBox("No File Found")
+            If Len(MemID) = 0 Then
+                MsgBox("Enter an ID")
             Else
-                CurrentClient.Rows.Add(rows(0).Item("MemberID"), rows(0).Item("Forename"), rows(0).Item("Surname"), DateTime.Now.ToString("yyyy/MM/dd HH:mm"))
+
+                Dim rows() As DataRow = KingswayFitnessDataSet1.Members.Select("MemberID =" + MemID)
+                If rows.Length = 0 Or rows.Length > 1 Then
+                    MsgBox("No File Found")
+                Else
+                    CurrentClient.Rows.Add(rows(0).Item("MemberID"), rows(0).Item("Forename"), rows(0).Item("Surname"), DateTime.Now.ToString("yyyy/MM/dd HH:mm"))
+                End If
+                NumberofCustomers.Text = (CurrentClient.RowCount.ToString)
             End If
-            NumberofCustomers.Text = (CurrentClient.RowCount.ToString)
         Else
             MsgBox("Gym Full")
         End If
